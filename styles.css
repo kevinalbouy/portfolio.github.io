@@ -52,56 +52,67 @@ header a:hover {
 
 /* Main content styles */
 main {
-  width: 80vw;
-  padding: 20px;
+  width: 95vw; /* Limite la largeur du contenu principal */
+  padding: 90px; /* Ajoute de l'espace autour du contenu */
+  background-color: #9a6565; /* Couleur de fond du contenu principal */
 
 }
 
 /**************************contact***********************************/
+
+.contact-mail {
+  text-align: center;
+  margin-bottom: 20px; 
+}
+
+
 h1 {
       text-align: center;
-      margin-top: 30px;
+      margin: 0 auto;
     }
 
     iframe {
       display: block;
-      margin: 70 auto 300px;
+      margin: 70 auto 300px; 
       width: 70vw;
-      max-width: 1000px;
+      max-width: 1000px; 
       height: 30vh;
       border: 5;
       border-radius: 1px;
     }
 
-    form {
-      max-width: 600px;
-      margin: 0 auto;
-      background-color: #f7f7f7;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
+form {
+  display: flex; /* ✅ utilise flexbox pour la mise en page */
+  flex-direction: column; /* ✅ disposition en colonne */
+  gap: 6px; /* ✅ espace entre les éléments du formulaire */
+  width: 40%; /* ✅ occupe toute la largeur disponible */
+  max-width: 300px;  /* ✅ limite la largeur */
+  margin: 0 auto;    /* ✅ centre horizontalement */
+  padding: 70px; /* ✅ ajoute de l'espace intérieur */
+  font-size: 1em; /* ✅ taille de police */
+  background-color: #f9f9f9;
+  border-radius: 20px; /* ✅ coins arrondis */
+  box-shadow: 0 0 10px rgba(0,0,0,0.1); 
+}
 
-    label {
-      display: inline-block;
-      width: 350px;
-      font-weight: bold;
-      margin-bottom: 60px;
-    }
 
-    input,
-    textarea {
-      width: calc(100% - 110px);
-      padding: 8px;
-      margin-bottom: 11px;
-      border: 1px solid #ccc;
-      border-radius: 0px;
-    }
+form label {
+  margin-bottom: 3px; /* ✅ espace en bas des labels */
+  font-weight: bold; /* ✅ texte en gras */
+}
+
+form input,
+form textarea {
+  padding: 8px; /* ✅ ajoute de l'espace intérieur */
+  font-size: 1em; /* ✅ taille de police */
+  border: 1px solid #ccc; /* ✅ bordure grise */    
+}
+
 
     button {
       display: block;
       margin: 0 auto;
-      padding: 10px 25px;
+      padding: 10px 25px; 
       background-color: #0078d4;
       color: white;
       border: none;
@@ -134,7 +145,7 @@ footer {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
-  padding: 20px;
+  padding: 80px;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -145,7 +156,7 @@ footer {
   border-radius: 12px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   text-align: center;
-  padding: 15px;
+  padding: 80px;
   transition: box-shadow 0.3s ease;
   cursor: pointer;
 }
