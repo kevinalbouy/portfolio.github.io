@@ -28,6 +28,21 @@ body {
   align-items: center;
     justify-content: space-between;
 
+    body {
+  /* 1) chemin vers ton image */
+  background-image: url("img/fond.jpg");
+
+  /* 2) éviter la répétition */
+  background-repeat: no-repeat;
+
+  /* 3) centrer et couvrir l’écran */
+  background-position: center center;
+  background-size: cover;
+
+  /* 4) optionnel : fixe l’image quand on fait défiler la page */
+  background-attachment: fixed;
+}
+
 }
 
 
