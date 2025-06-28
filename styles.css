@@ -1,9 +1,28 @@
+/* Remet à zéro toutes les marges/paddings par défaut */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  padding-bottom: 5px; /* espace sous la bannière */
+}
+
+main h1 {
+  margin-top: 0;         /* bien coller le h1 sous le header */
+  padding-top: 5px;      /* si tu veux un petit souffle supplémentaire */
+}
+
+
 body {
   margin: 0;
   padding: 0;
-    height: 100vh;
+    height: 120vh;
   font-family: 'Arial', sans-serif;
-  background-color: #f4f4f4;
+  background-color: #ffffff;
   display: flex;
     flex-direction: column;
   align-items: center;
@@ -11,8 +30,38 @@ body {
 
 }
 
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100h; /* occupe toute la hauteur de la fenêtre */
+}
+
+/* Ton header restera en haut */
+/* Ton main prendra tout l’espace restant */
+main {
+  flex: 1;
+  /* et ici tu règles ton padding‑top */
+  padding-top: 10px; /* ou ce que tu préfères */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Footer reste tout en bas */
+footer {
+  /* style de ton footer */
+}
+
+
 /***************************HEADER***************************/
 /* Header styles */
+
+/* prénom */
 header {
   background-color: #6ccfb7;
   color: rgb(255, 255, 255); /* couleur du nom et prénom */
@@ -52,10 +101,10 @@ header a:hover {
 
 /* Main content styles */
 main {
-  width: 95vw; /* Limite la largeur du contenu principal */
-  padding: 90px; /* Ajoute de l'espace autour du contenu */
-  background-color: #9a6565; /* Couleur de fond du contenu principal */
-
+    width: 95vw; /* Limite la largeur du contenu principal */
+    padding: 0; /* Supprime l'espace autour du contenu */
+    background-color: #ffffff; /* Couleur de fond du contenu principal */
+    margin-top: 0; /* Colle le contenu à la bannière */
 }
 
 /**************************contact***********************************/
@@ -69,41 +118,56 @@ h1 {
       display: block;
       margin: 70 auto 300px; 
       width: 70vw;
-      max-width: 1000px; 
+      max-width: 200px; 
       height: 30vh;
       border: 5;
       border-radius: 1px;
     }
 
 form {
-  display: flex; /* ✅ utilise flexbox pour la mise en page */
-  flex-direction: column; /* ✅ disposition en colonne */
-  gap: 6px; /* ✅ espace entre les éléments du formulaire */
-  width: 40%; /* ✅ occupe toute la largeur disponible */
-  max-width: 300px;  /* ✅ limite la largeur */
-  margin: 0 auto;    /* ✅ centre horizontalement */
-  padding: 70px; /* ✅ ajoute de l'espace intérieur */
-  font-size: 1em; /* ✅ taille de police */
-  background-color: #f9f9f9;
-  border-radius: 20px; /* ✅ coins arrondis */
-  box-shadow: 0 0 10px rgba(0,0,0,0.1); 
+    display: flex; /* ✅ utilise flexbox pour la mise en page */
+    flex-direction: column; /* ✅ disposition en colonne */
+    gap: 10px; /* ✅ espace entre les éléments du formulaire */
+    width: 100%; /* ✅ occupe toute la largeur disponible */
+    max-width: 500px;  /* ⬆️ largeur maximale agrandie */
+    margin: 0 auto;    /* ✅ centre horizontalement */
+    padding: 70px; /* ✅ ajoute de l'espace intérieur */
+    font-size: 1em; /* ✅ taille de police */
+    background-color: #f9f9f9;
+    border-radius: 20px; /* ✅ coins arrondis */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); 
 }
 
 
 form label {
-    margin-bottom: 3px; /* ✅ espace en bas des labels */
+    margin-bottom: 15px; /* ✅ espace en bas des labels */
     font-weight: bold; /* ✅ texte en gras */
     text-align: center; /* ✅ centre le texte du label */
     display: block; /* ✅ permet à text-align de fonctionner */
 }
 
-form input,
-form textarea {
-  padding: 8px; /* ✅ ajoute de l'espace intérieur */
-  font-size: 1em; /* ✅ taille de police */
-  border: 1px solid #ccc; /* ✅ bordure grise */    
+form input {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 8px; /* ✅ ajoute de l'espace intérieur */
+    font-size: 1em; /* ✅ taille de police */
+    border: 1px solid #ccc; /* ✅ bordure grise */
+    width: 80%; /* ✅ largeur réduite et centrée */
+    box-sizing: border-box; /* ✅ padding inclus dans la largeur */
 }
 
+form textarea {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 8px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    width: 95%; /* ✅ plus large que les inputs */
+    min-height: 100px; /* optionnel : plus haut */
+    box-sizing: border-box;
+}
 
     button {
       display: block;
