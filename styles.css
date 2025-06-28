@@ -1,0 +1,191 @@
+body {
+  margin: 0;
+  padding: 0;
+    height: 100vh;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+    flex-direction: column;
+  align-items: center;
+    justify-content: space-between;
+
+}
+
+/***************************HEADER***************************/
+/* Header styles */
+header {
+  background-color: #007cc9;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+
+
+}
+
+header div {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 8vh;
+    width: 100vw;
+
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20vw;
+    height: 8vh;
+    background-color: #0388dc;
+}
+
+header a:hover {
+  background-color: #85bae6;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/***************************MAIN***************************/
+
+/* Main content styles */
+main {
+  width: 80vw;
+  padding: 20px;
+
+}
+
+/**************************contact***********************************/
+h1 {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    iframe {
+      display: block;
+      margin: 70 auto 300px;
+      width: 70vw;
+      max-width: 1000px;
+      height: 30vh;
+      border: 5;
+      border-radius: 1px;
+    }
+
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #f7f7f7;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    label {
+      display: inline-block;
+      width: 350px;
+      font-weight: bold;
+      margin-bottom: 60px;
+    }
+
+    input,
+    textarea {
+      width: calc(100% - 110px);
+      padding: 8px;
+      margin-bottom: 11px;
+      border: 1px solid #ccc;
+      border-radius: 0px;
+    }
+
+    button {
+      display: block;
+      margin: 0 auto;
+      padding: 10px 25px;
+      background-color: #0078d4;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #005fa3;
+    }
+
+/***************************FOOTER***************************/
+/* Footer styles */
+
+
+footer {
+  background-color: #007cc9;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+    position: relative;
+    bottom: 0;
+
+
+  width: 100%;
+}
+
+/* Conteneur toutes les cases élèves ensembles */
+.eleves {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Conteneur case pour chaque élève */
+.eleve {
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 15px;
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.eleve:hover {
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* Photo de élève */
+.eleve img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+  display: block;
+  margin-bottom: 12px;
+}
+
+/* Nom élève */
+.eleve h2 {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 0;
+  padding: 0 5px;
+}
+
+/* Responsivité tablete */
+@media (max-width: 992px) {
+  .eleves {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Responsivité tél */
+@media (max-width: 600px) {
+  .eleves {
+    grid-template-columns: 1fr;
+  }
+
+  .eleve img {
+    height: 190px;
+  }
+}
