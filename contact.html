@@ -17,32 +17,32 @@
     </div>
 </header>
 
-  <main>
+<main style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 70vh;">
     <h1>Me contacter</h1>
 
-    <!-- modify this form HTML and place wherever you want your form -->
-<form
-  action="https://formspree.io/f/xwpbaaav"
-  method="POST"
->
-    <label>
-        Entrez votre nom :
-        <input type="text" name="nom" required>
-    </label>
-    <label>
-        Entrez votre prénom :
-        <input type="text" name="prenom" required>
-    </label>
-    <label>
-        Entrez votre adresse mail:
-        <input type="email" name="email" required>
-    </label>
-    <label>
-        Tapez votre message:
-        <textarea name="message" required rows="6" cols="40"></textarea>
-    </label>
-    <button type="submit">Envoyer</button>
-</form>
-  </main>
+    <form
+      action="https://formspree.io/f/xwpbaaav"
+      method="POST"
+      style="display: flex; flex-direction: column; gap: 1em; min-width: 320px; max-width: 400px; width: 100%;"
+    >
+        <label>
+            Entrez votre nom :
+            <input type="text" name="nom" required>
+        </label>
+        <label>
+            Entrez votre prénom :
+            <input type="text" name="prenom" required>
+        </label>
+        <label>
+            Entrez votre adresse mail:
+            <input type="email" name="email" required>
+        </label>
+        <label>
+            Tapez votre message:
+            <textarea name="message" required rows="6" cols="40"></textarea>
+        </label>
+        <button type="submit">Envoyer</button>
+    </form>
+</main>
 </body>
 </html>

@@ -12,14 +12,21 @@
 html, body {
   height: 100%;
   overflow: hidden;
+  background-color: #0a2f44; 
+  color: rgb(0, 0, 0);
+  padding: 10px 0;
+  text-align: center;
+  background-image: url("fond.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 
 
 /* =================== HEADER =================== */
 header {
-  background-color: #1671a2;
-  color: white;
+  background-color: #0e353a;
+  color: rgb(24, 184, 232);
   padding: 10px 0;
   text-align: center;
   background-image: url("fond.jpg");
@@ -37,7 +44,7 @@ header div {
 }
 
 header a {
-  color: white;
+  color: rgb(255, 255, 255);
   text-decoration: none;
   font-weight: bold;
   display: flex;
@@ -45,7 +52,7 @@ header a {
   justify-content: center;
   width: 20vw;
   height: 3vh;
-  background-color: #1671a2;
+  background-color: #204744;
 
   transition: background-color 0.3s ease-in-out;
 }
