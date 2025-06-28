@@ -12,7 +12,7 @@
 html, body {
   height: 100%;
   overflow: hidden;
-  background-color: #0a2f44; 
+  background-color: #0e353a;
   color: rgb(0, 0, 0);
   padding: 10px 0;
   text-align: center;
@@ -150,7 +150,7 @@ iframe {
 
 /* =================== FOOTER =================== */
 footer {
-  background-color: #6ccfb7;
+  background-color: #0e4741;
   color: white;
   text-align: center;
   padding: 10px 0;
