@@ -14,8 +14,8 @@ body {
 /***************************HEADER***************************/
 /* Header styles */
 header {
-  background-color: #007cc9;
-  color: white;
+  background-color: #36d2ab;
+  color: rgb(160, 219, 238);
   padding: 10px 0;
   text-align: center;
 
@@ -40,11 +40,11 @@ header a {
     justify-content: center;
     width: 20vw;
     height: 8vh;
-    background-color: #0388dc;
+    background-color: #84d4bb;
 }
 
 header a:hover {
-  background-color: #85bae6;
+  background-color: #4cd59c;
     transition: background-color 0.3s ease-in-out;
 }
 
