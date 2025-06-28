@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio de la classe</title>
+    <link rel="stylesheet" type="text/css" href="style/styles.css">
+</head>
+<body>
+<header>
+    <h1>Portfolio</h1>
+    <div>
+        <a href="index.html" class="headerButton">Accueil</a>
+        <a href="Projet.html" class="headerButton">Projet</a>
+        <a href="Veille.html" class="headerButton">Veille</a>
+        <a href="contact.html" class="headerButton">Contact</a>
+    </div>
+</header>
+
+<!-- Contenu de la page accueil -->
+<main >
+    <h1>Bienvenue sur mon Portfolio</h1>
+    <p>
+        Ce site a été conçu dans le but de présenter mon portfolio.
+    </p>
+
+    <p>
+        Le BTS Services Informatiques aux Organisations (SIO) est une formation en deux ans accessible après le baccalauréat.
+        Elle prépare les étudiants aux métiers de l'informatique à travers deux spécialités :
+    </p>
+
+    <ul>
+        <li><strong>SISR</strong> : axée sur la gestion des réseaux, la cybersécurité, l’administration systèmes et les infrastructures informatiques.</li>
+    </ul>
+
+    <p>
+        Ce site est à la fois une vitrine de présentation et un espace permettant aux professionnels
+        de découvrir mes compétences, mon parcours et mes réalisations. 
+    </p>
+
+    <h2>Que trouverez-vous ici ?</h2>
+    <ul>
+        <li>Une présentation de mes écoles et du BTS SIO</li>
+        <li>Des exemples de projets menés en cours de formation</li>
+        <li>Une page dédiée à la veille technologique</li>
+        <li>Un accès pour me contacter</li>
+       
+    </ul>
+
+    <p>
+       J'espère que ce site vous permettra de mieux comprendre ma formation, de découvrir l'étendue de mes compétences acquises jusqu'ici,
+        et peut-être d’entrer en contact avec moi pour un stage, une alternance ou une opportunité d’emploi.
+    </p>
+
+    <p><strong>Bonne visite.</strong></p>
+</main>
+
+
+<footer>
+    <p>© 2025 Portfolio de la classe. Tous droits réservés.</p>
+</footer>
+</body>
+
+</html>
