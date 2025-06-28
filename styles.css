@@ -14,8 +14,8 @@ body {
 /***************************HEADER***************************/
 /* Header styles */
 header {
-  background-color: #36d2ab;
-  color: rgb(160, 219, 238);
+  background-color: #6ccfb7;
+  color: rgb(255, 255, 255); /* couleur du nom et prénom */
   padding: 10px 0;
   text-align: center;
 
@@ -118,7 +118,7 @@ h1 {
 
 
 footer {
-  background-color: #007cc9;
+  background-color: #6ccfb7;
   color: white;
   text-align: center;
   padding: 10px 0;
