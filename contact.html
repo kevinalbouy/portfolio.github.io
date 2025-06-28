@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-<header>
+<header style="display: flex; flex-direction: column; align-items: center; text-align: center;">
     <h1>ALBOUY KÉVIN</h1>
     <div>
         <a href="index.html" class="headerButton">Accueil</a>
@@ -17,32 +17,34 @@
     </div>
 </header>
 
-<main style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 70vh;">
-    <h1>Me contacter</h1>
+<main style="display: flex; flex-direction: column; align-items: flex-start; justify-content: center; min-height: 70vh; margin-left: 60px;">
+    <h1 style="display: flex; justify-content: center; width: 97.4%;">Me contacter</h1>
 
-    <form
-      action="https://formspree.io/f/xwpbaaav"
-      method="POST"
-      style="display: flex; flex-direction: column; gap: 1em; min-width: 320px; max-width: 400px; width: 100%;"
-    >
-        <label>
-            Entrez votre nom :
-            <input type="text" name="nom" required>
-        </label>
-        <label>
-            Entrez votre prénom :
-            <input type="text" name="prenom" required>
-        </label>
-        <label>
-            Entrez votre adresse mail:
-            <input type="email" name="email" required>
-        </label>
-        <label>
-            Tapez votre message:
-            <textarea name="message" required rows="6" cols="40"></textarea>
-        </label>
-        <button type="submit">Envoyer</button>
-    </form>
+    <div style="display: flex; justify-content: center; width: 97.4%;">
+        <form
+          action="https://formspree.io/f/xwpbaaav"
+          method="POST"
+          style="display: flex; flex-direction: column; gap: 1em; min-width: 320px; max-width: 400px; width: 100%;"
+        >
+            <label>
+                Entrez votre nom :
+                <input type="text" name="nom" required>
+            </label>
+            <label>
+                Entrez votre prénom :
+                <input type="text" name="prenom" required>
+            </label>
+            <label>
+                Entrez votre adresse mail:
+                <input type="email" name="email" required>
+            </label>
+            <label>
+                Tapez votre message:
+                <textarea name="message" required rows="6" cols="40"></textarea>
+            </label>
+            <button type="submit">Envoyer</button>
+        </form>
+    </div>
 </main>
 </body>
 </html>
