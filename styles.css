@@ -5,7 +5,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
 
 header {
   padding-bottom: 5px; /* espace sous la bannière */
@@ -28,22 +27,13 @@ body {
   align-items: center;
     justify-content: space-between;
 
-    body {
-  /* 1) chemin vers ton image */
+  
+  body {
   background-image: url("img/fond.jpg");
-
-  /* 2) éviter la répétition */
-  background-repeat: no-repeat;
-
-  /* 3) centrer et couvrir l’écran */
   background-position: center center;
   background-size: cover;
-
-  /* 4) optionnel : fixe l’image quand on fait défiler la page */
-  background-attachment: fixed;
 }
 
-}
 
 
 html, body {
@@ -223,4 +213,9 @@ footer {
 .eleves {
     grid-template-columns: 1fr;
   }
+  header div {
+    flex-direction: column; /* Colonne pour les petits écrans */
+    align-items: center; /* Centre les éléments */
+  }
 }
+}}
