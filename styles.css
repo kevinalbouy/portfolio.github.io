@@ -10,8 +10,9 @@
 
 /* =================== GLOBAL =================== */
 html, body {
-  height: 100%;
-  overflow: hidden;
+  height: auto;
+  min-height: 100%;
+  overflow-y: auto;
   background-color: #0e353a;
   color: rgb(0, 0, 0);
   padding: 10px 0;
@@ -52,13 +53,13 @@ header a {
   justify-content: center;
   width: 20vw;
   height: 3vh;
-  background-color: #204744;
+  background-color: #b3ced6;
 
   transition: background-color 0.3s ease-in-out;
 }
 
 header a:hover {
-  background-color: #61d9d3;
+  background-color: #114161
 }
 
 /* =================== MAIN =================== */
@@ -150,7 +151,7 @@ iframe {
 
 /* =================== FOOTER =================== */
 footer {
-  background-color: #0e4741;
+  background-color: #b3ced6;
   color: white;
   text-align: center;
   padding: 10px 0;
