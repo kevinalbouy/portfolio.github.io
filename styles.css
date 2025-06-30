@@ -155,7 +155,9 @@ iframe {
 /* =================== FOOTER =================== */
 footer {
   background-color: #b3ced6;
-  color: white;
+ 
+
+  color: #0e353a;
   text-align: center;
   padding: 10px 0;
   width: 100%;
