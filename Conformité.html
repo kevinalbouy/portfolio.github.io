@@ -24,6 +24,8 @@
     <p style="margin-bottom: 2em;">
         <span style="margin-left: 2.2cm; display: inline-block;">
             J'ai créé cette page de conformité afin de respecter la réglementation en vigueur et d'assurer la transparence concernant l'utilisation des contenus et droits associés à ce portfolio.
+            <br><br>
+            La protection des données personnelles est également une priorité. Aucune donnée sensible n'est collectée ou stockée sans consentement explicite. Il est important de rappeler que la divulgation non maîtrisée d'informations personnelles sur Internet peut présenter des risques pour la vie privée et la sécurité des individus. Je m'engage à respecter la confidentialité des visiteurs et à limiter l'usage des données aux stricts besoins du site.
         </span>
     </p>
     
@@ -40,11 +42,87 @@
     </p>
 
  <div style="display: flex; justify-content: center; gap: 2em; margin-bottom: 2em; margin-left: 2.2cm;">
-    <img class="zoomable" src="codeportfolio.png" alt="Portfolio 2" style="width: 400px; height: auto; object-fit: cover;">
-    <img class="zoomable" src="codeportfolio2.png" alt="Portfolio 3" style="width: 400px; height: auto; object-fit: cover;">
-    <img class="zoomable" src="portfolio1.png" alt="Portfolio 1" style="width: 400px; height: auto; object-fit: cover;"> 
+    <img class="zoomable" src="Consentement1.png" alt="consentement1" style="width: 400px; height: auto; object-fit: cover;">
+    <img class="zoomable" src="Consentement2.png" alt="consentement2" style="width: 400px; height: auto; object-fit: cover;">
+    <img class="zoomable" src="Consentement3.png" alt="consentement3" style="width: 400px; height: auto; object-fit: cover;">
 </div>
 
     
 
     <hr style="border: 0; border-top: 3px solid #114161; width: 60%; margin: 3em 0 3em 1.7cm;">
+
+
+<style>
+.zoomable {
+    transition: transform 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.3s;
+    cursor: pointer;
+    z-index: 1;
+    position: relative;
+}
+.zoomable:hover {
+    box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+}
+.zoom-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0; top: 0; width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+}
+.zoom-modal.active {
+    display: flex;
+}
+.zoom-modal img {
+    max-width: 45vw;
+    max-height: 45vh;
+    border-radius: 10px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    transform: scale(1.35);
+    transition: transform 0.3s cubic-bezier(.4,2,.6,1);
+}
+.zoom-modal .close-btn {
+    position: absolute;
+    top: 2.5vh;
+    right: 4vw;
+    font-size: 2.5em;
+    color: #fff;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10000;
+}
+</style>
+<div class="zoom-modal" id="zoomModal">
+    <button class="close-btn" id="closeZoom" aria-label="Fermer l'image">&times;</button>
+    <img src="" alt="Agrandissement de l'image" id="zoomImg">
+</div>
+<script>
+document.querySelectorAll('.zoomable').forEach(img => {
+    img.addEventListener('click', function() {
+        const modal = document.getElementById('zoomModal');
+        const zoomImg = document.getElementById('zoomImg');
+        zoomImg.src = this.src;
+        zoomImg.alt = this.alt;
+        modal.classList.add('active');
+    });
+});
+document.getElementById('closeZoom').onclick = function() {
+    document.getElementById('zoomModal').classList.remove('active');
+    document.getElementById('zoomImg').src = '';
+};
+document.getElementById('zoomModal').onclick = function(e) {
+    if (e.target === this) {
+        this.classList.remove('active');
+        document.getElementById('zoomImg').src = '';
+    }
+};
+</script>
+
+
+
+
+    <footer style="position: fixed; left: 0; bottom: 0; width: 100%; background: #b3ced6; text-align: center; padding: 0.4em 0; box-shadow: 0 -2px 8px rgba(0,0,0,0.05); font-size: 0.95em;">
+    <p style="margin: 0;">© 2025 Portfolio de Albouy Kévin. Tous droits réservés.</p>
+</footer>
