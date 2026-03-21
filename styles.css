@@ -187,17 +187,78 @@ form button:hover {
 /* =================== FOOTER =================== */
 footer {
   width: 100%;
-  margin-top: 60px;
+  margin-top: 40px;
   padding: 30px 20px;
-
   text-align: center;
 
-  background: #111;
-  color: #00d2ff;
+  /* RÉGLAGE DE LA TRANSPARENCE ICI */
+  /* 0.1 = Presque invisible | 0.5 = Semi-transparent | 0.9 = Presque opaque */
+  background-color: rgba(255, 255, 255, 0.05) !important; 
+  
+  /* Optionnel : un léger flou pour un effet "verre" (Glassmorphism) */
+  backdrop-filter: blur(5px);
 
-  border-top: 2px solid #00d2ff;
-  font-weight: bold;
+  color: #ffffff;
+  border-top: 1px solid rgba(255, 255, 255, 0.1); /* Une ligne très discrète */
+  font-size: 0.9em;
 }
+
+
+/* =================== SECTION COMPÉTENCES =================== */
+.competence-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.comp-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 210, 255, 0.2);
+    border-radius: 15px;
+    padding: 20px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    text-align: left; /* Plus facile à lire pour des listes */
+}
+
+.comp-card:hover {
+    transform: translateY(-5px);
+    border-color: #00d2ff;
+    background: rgba(0, 210, 255, 0.05);
+}
+
+.comp-card h3 {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    color: #531ab5;
+    border-bottom: 1px solid rgba(0, 210, 255, 0.3);
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+.comp-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.comp-card li {
+    margin-bottom: 8px;
+    font-size: 0.95em;
+    display: flex;
+    align-items: center;
+}
+
+/* Petit indicateur devant chaque compétence */
+.comp-card li::before {
+    content: "▹";
+    color: #00d2ff;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+
+
 
 /* =================== RESPONSIVE =================== */
 @media (max-width: 768px) {
