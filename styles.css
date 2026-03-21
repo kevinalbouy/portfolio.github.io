@@ -15,152 +15,207 @@ html, body {
   color: #ffffff;
   font-family: 'Poppins', 'Segoe UI', sans-serif;
   overflow-x: hidden;
-  width: 100%;
+
+  /* CENTRAGE GLOBAL */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* =================== ANIMATIONS =================== */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
+  from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* =================== HEADER (ADAPTATIF) =================== */
+/* =================== HEADER (MODIFIÉ : SANS RECTANGLE) =================== */
 header {
   width: 100%;
-  padding: 20px 10px;
+  padding: 40px 20px; /* Un peu plus d'espace pour l'aération */
   text-align: center;
-  background: transparent;
+
+  /* On a enlevé le background, le blur et la border ici */
+  background: transparent; 
+  backdrop-filter: none;
+  border-bottom: none;
+
+  position: relative; /* On le passe en relative pour qu'il suive le scroll naturellement sans fond bizarre */
   z-index: 1000;
 }
 
 header h1 {
-  font-size: clamp(1.5rem, 5vw, 2.5rem); /* Taille fluide selon l'écran */
+  font-size: 2.5em;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 20px;
+  letter-spacing: 4px;
+  margin-bottom: 25px;
+
   color: #00d2ff;
-  text-shadow: 0 0 15px rgba(0, 210, 255, 0.6);
+  text-shadow: 0 0 20px rgba(0, 210, 255, 0.6);
 }
 
+/* NAVIGATION */
 header div {
   display: flex;
   justify-content: center;
-  gap: 10px;
-  flex-wrap: wrap; /* Crucial pour le mobile */
-  max-width: 1000px;
-  margin: 0 auto;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
 header a {
   color: #ffffff;
   text-decoration: none;
   font-weight: 600;
-  padding: 10px 15px;
+  padding: 12px 25px;
+
+  /* Les boutons gardent un fond léger pour rester lisibles */
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
+
   border-radius: 50px;
   transition: all 0.3s ease;
-  font-size: 0.9rem;
-  /* Évite que les boutons ne soient trop petits sur mobile */
-  flex: 1 1 auto; 
-  min-width: 100px;
 }
 
 header a:hover {
   background: #00d2ff;
   color: #03262c;
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0, 210, 255, 0.4);
+  transform: scale(1.08);
+  box-shadow: 0 0 20px rgba(0, 210, 255, 0.5);
 }
 
-/* =================== MAIN & CONTENT =================== */
+/* =================== MAIN =================== */
 main {
-  width: 90%;
+  width: 100%;
   max-width: 1100px;
   margin: 20px auto;
+  padding: 20px;
+
   text-align: center;
-  animation: fadeIn 0.8s ease-out;
+  animation: fadeIn 1s ease-out;
+}
+
+/* TITRES */
+h1, h2, h3 {
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 h2 {
-  font-size: clamp(1.2rem, 4vw, 1.8rem);
-  color: #00d2ff;
-  margin-bottom: 20px;
+  font-size: 1.8em;
+  color: #144855;
 }
 
+/* PARAGRAPHES */
 p {
   line-height: 1.6;
-  font-size: 1rem;
-  margin-bottom: 15px;
+  opacity: 0.9;
 }
 
-/* =================== SECTIONS =================== */
+/* =================== SECTIONS (effet carte) =================== */
 section {
   background: rgba(255, 255, 255, 0.05);
-  padding: clamp(15px, 5vw, 30px);
-  margin-bottom: 25px;
-  border-radius: 15px;
+  padding: 30px;
+  margin-bottom: 30px;
+
+  border-radius: 20px;
   backdrop-filter: blur(10px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  animation: fadeIn 1s ease;
 }
 
-/* =================== FORMULAIRE RESPONSIVE =================== */
+/* =================== FORMULAIRE =================== */
 form {
   background: #ffffff;
   color: #2c3e50;
-  padding: clamp(20px, 8vw, 40px);
+
+  padding: 40px;
   border-radius: 20px;
+
   width: 100%;
-  max-width: 500px;
+  max-width: 550px;
   margin: 20px auto;
+
   text-align: left;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
 }
 
-form input, form textarea {
+form label {
+  font-weight: 600;
+}
+
+form input,
+form textarea {
   width: 100%;
   padding: 12px;
-  margin: 8px 0 15px;
+  margin: 10px 0 20px;
+
   border: 2px solid #eee;
   border-radius: 10px;
+
+  font-size: 1em;
+  transition: 0.3s;
+}
+/* =================== COLOR FOCUS =================== */
+form input:focus,
+form textarea:focus {
+  border-color: #00d2ff;
+  outline: none;
 }
 
+/* BOUTON */
 form button {
   width: 100%;
-  padding: 15px;
+  padding: 12px;
+
   border: none;
   border-radius: 50px;
+
   background: #00d2ff;
   color: #0a282d;
   font-weight: bold;
+
   cursor: pointer;
+  transition: 0.3s;
+}
+
+form button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0,210,255,0.5);
 }
 
 /* =================== FOOTER =================== */
 footer {
   width: 100%;
-  margin-top: auto;
-  padding: 30px 15px;
+  margin-top: 60px;
+  padding: 30px 20px;
+
+  text-align: center;
+
   background: #111;
   color: #00d2ff;
+
   border-top: 2px solid #00d2ff;
+  font-weight: bold;
 }
 
-/* =================== MEDIA QUERIES (MOBILE) =================== */
-@media (max-width: 480px) {
-  header div {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* 2 boutons par ligne sur petit mobile */
-    gap: 8px;
-  }
-  
-  header a {
-    padding: 8px 5px;
-    font-size: 0.8rem;
-    min-width: 0;
+/* =================== RESPONSIVE =================== */
+@media (max-width: 768px) {
+
+  header h1 {
+    font-size: 1.6em;
   }
 
-  main {
-    width: 95%;
+  header a {
+    width: 80%;
+    text-align: center;
+  }
+
+  section {
+    padding: 20px;
+  }
+
+  form {
+    padding: 25px;
   }
 }
