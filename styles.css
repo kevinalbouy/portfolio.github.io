@@ -8,7 +8,7 @@
 html, body {
   min-height: 100vh;
   scroll-behavior: smooth;
-  background: linear-gradient(135deg, rgba(10, 40, 45, 0.9), rgba(16, 85, 145, 0.7)), url("fond.jpg");
+  background: linear-gradient(135deg, rgba(14, 53, 61, 0.9), rgba(99, 176, 220, 0.7)), url("fond.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -28,26 +28,26 @@ html, body {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* =================== HEADER =================== */
+/* =================== HEADER (MODIFIÉ : SANS RECTANGLE) =================== */
 header {
   width: 100%;
-  padding: 30px 20px;
+  padding: 40px 20px; /* Un peu plus d'espace pour l'aération */
   text-align: center;
 
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(15px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  /* On a enlevé le background, le blur et la border ici */
+  background: transparent; 
+  backdrop-filter: none;
+  border-bottom: none;
 
-  position: sticky;
-  top: 0;
+  position: relative; /* On le passe en relative pour qu'il suive le scroll naturellement sans fond bizarre */
   z-index: 1000;
 }
 
 header h1 {
-  font-size: 2.2em;
+  font-size: 2.5em;
   text-transform: uppercase;
   letter-spacing: 4px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 
   color: #00d2ff;
   text-shadow: 0 0 20px rgba(0, 210, 255, 0.6);
@@ -67,6 +67,7 @@ header a {
   font-weight: 600;
   padding: 12px 25px;
 
+  /* Les boutons gardent un fond léger pour rester lisibles */
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
 
@@ -76,7 +77,7 @@ header a {
 
 header a:hover {
   background: #00d2ff;
-  color: #0a282d;
+  color: #03262c;
   transform: scale(1.08);
   box-shadow: 0 0 20px rgba(0, 210, 255, 0.5);
 }
@@ -85,7 +86,7 @@ header a:hover {
 main {
   width: 100%;
   max-width: 1100px;
-  margin: 50px auto;
+  margin: 20px auto;
   padding: 20px;
 
   text-align: center;
