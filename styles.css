@@ -156,7 +156,7 @@ form textarea {
   font-size: 1em;
   transition: 0.3s;
 }
-
+/* =================== COLOR FOCUS =================== */
 form input:focus,
 form textarea:focus {
   border-color: #00d2ff;
