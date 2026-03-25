@@ -20,9 +20,11 @@
             margin-bottom: 5px;
         }
 
+        /* Couleur JAUNE pour les pourcentages */
         .comp-level {
-            font-size: 0.8em;
+            font-size: 0.85em;
             color: #ccd54a;
+            font-weight: bold;
         }
 
         .comp-bar {
@@ -35,16 +37,12 @@
 
         .comp-fill {
             height: 100%;
-            background: linear-gradient(90deg, #00d2ff, #00ff88);
+            /* Dégradé allant du Cyan vers ton Jaune */
+            background: linear-gradient(90deg, #00d2ff, #ccd54a);
             border-radius: 4px;
-            box-shadow: 0 0 10px rgba(0, 210, 255, 0.7);
-            width: 0; /* Départ à 0 pour l'animation */
+            box-shadow: 0 0 10px rgba(204, 213, 74, 0.5);
+            width: 0; 
             transition: width 1.5s ease-in-out;
-        }
-
-        /* Animation au survol de la carte */
-        .comp-card:hover .comp-fill {
-            /* Les largeurs finales sont définies ici */
         }
     </style>
 </head>
@@ -68,8 +66,8 @@
             <a href="projets.html" class="headerButton">projets ▾</a>
             <div class="dropdown-content">
                 <a href="projets.html#entreprise">Expériences en Entreprise</a>
-                <a href="projets.html#infrastructure">Infrastructure & Sécurité</a>
-                <a href="projets.html#developpement">Développement & Gestion</a>
+                <a href="projets.html#infrastructure">Infrastructure/Sécurité</a>
+                <a href="projets.html#developpement">Développement/Gestion</a>
             </div>
         </div>
 
@@ -126,7 +124,7 @@
             </div>
 
             <div class="comp-card">
-                <h3>Réseaux & Sécurité</h3>
+                <h3>Réseaux/Sécurité</h3>
                 <div class="comp-list">
                     <div class="comp-item">
                         <div class="comp-name">Protocoles TCP/IP & Routage <span class="comp-level">75%</span></div>
@@ -152,7 +150,7 @@
             </div>
 
             <div class="comp-card">
-                <h3>Développement & Outils</h3>
+                <h3>Développement/Gestion</h3>
                 <div class="comp-list">
                     <div class="comp-item">
                         <div class="comp-name">Scripting PowerShell & Bash <span class="comp-level">80%</span></div>
@@ -171,7 +169,7 @@
                         <div class="comp-bar"><div class="comp-fill" style="width: 90%;"></div></div>
                     </div>
                     <div class="comp-item">
-                        <div class="comp-name">Agilité (Scrum Master & Product Owner) <span class="comp-level">80%</span></div>
+                        <div class="comp-name">Agilité (Scrum Master & PO) <span class="comp-level">80%</span></div>
                         <div class="comp-bar"><div class="comp-fill" style="width: 80%;"></div></div>
                     </div>
                 </div>
@@ -184,103 +182,97 @@
         <h2 style="text-align: center; width: 100%;">Compétences Personnelles (Soft Skills)</h2>
     </div>
 
-
-<div class="competence-container" style="margin-top: 20px;">
-    
-    <div class="comp-card" style="text-align: left; padding: 25px;">
-        <div style="display: flex; align-items: center; margin-bottom: 15px;">
-            <i class="fas fa-brain" style="font-size: 1.8em; color: #ccd54a; margin-right: 15px;"></i>
-            <h3 style="margin: 0; font-size: 1.2em;">Autonomie et Adaptabilité</h3>
+    <div class="competence-container" style="margin-top: 20px;">
+        <div class="comp-card" style="text-align: left; padding: 25px;">
+            <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                <i class="fas fa-brain" style="font-size: 1.8em; color: #ccd54a; margin-right: 15px;"></i>
+                <h3 style="margin: 0; font-size: 1.2em;">Autonomie et Adaptabilité</h3>
+            </div>
+            <p style="font-size: 0.9em; line-height: 1.6; color: white; margin: 0;">Capacité démontrée à mener une <strong>reconversion professionnelle réussie</strong> et à monter rapidement en compétence sur de nouvelles technologies informatiques.</p>
         </div>
-        <p style="font-size: 0.9em; line-height: 1.6; color: white; margin: 0;">Capacité démontrée à mener une <strong>reconversion professionnelle réussie</strong> et à monter rapidement en compétence sur de nouvelles technologies informatiques.</p>
+
+        <div class="comp-card" style="text-align: left; padding: 25px;">
+            <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                <i class="fas fa-search" style="font-size: 1.8em; color: #ccd54a; margin-right: 15px;"></i>
+                <h3 style="margin: 0; font-size: 1.2em;">Esprit d'Analyse et Diagnostic</h3>
+            </div>
+            <p style="font-size: 0.9em; line-height: 1.6; color: white; margin: 0;">Rigueur appliquée lors des interventions de support de proximité (N1/N2) et <strong>résolution de problèmes</strong> d'infrastructure complexes.</p>
+        </div>
+
+        <div class="comp-card" style="text-align: left; padding: 25px;">
+            <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                <i class="fas fa-users" style="font-size: 1.8em; color: #ccd54a; margin-right: 15px;"></i>
+                <h3 style="margin: 0; font-size: 1.2em;">Communication et Équipe</h3>
+            </div>
+            <p style="font-size: 0.9em; line-height: 1.6; color: white; margin: 0;">Aptitude à faciliter la collaboration au sein d'une équipe projet et à <strong>respecter les délais de livraison</strong> (Rôle de Scrum Master).</p>
+        </div>
     </div>
 
-    <div class="comp-card" style="text-align: left; padding: 25px;">
-        <div style="display: flex; align-items: center; margin-bottom: 15px;">
-            <i class="fas fa-search" style="font-size: 1.8em; color: #ccd54a; margin-right: 15px;"></i>
-            <h3 style="margin: 0; font-size: 1.2em;">Esprit d'Analyse et Diagnostic</h3>
-        </div>
-        <p style="font-size: 0.9em; line-height: 1.6; color: white; margin: 0;">Rigueur appliquée lors des interventions de support de proximité (N1/N2) et <strong>résolution de problèmes</strong> d'infrastructure complexes.</p>
+    <div id="langues" class="category-header">
+        <i class="fas fa-language"></i>
+        <h2 style="text-align: center; width: 100%;">Langues</h2>
     </div>
 
-    <div class="comp-card" style="text-align: left; padding: 25px;">
-        <div style="display: flex; align-items: center; margin-bottom: 15px;">
-            <i class="fas fa-users" style="font-size: 1.8em; color: #ccd54a; margin-right: 15px;"></i>
-            <h3 style="margin: 0; font-size: 1.2em;">Communication et Équipe</h3>
+    <div class="competence-container" style="margin-top: 20px;">
+        <div class="comp-card" style="text-align: left; padding: 25px;">
+            <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                <i class="fas fa-comment-dots" style="font-size: 1.8em; color: #ccd54a; margin-right: 15px;"></i>
+                <h3 style="margin: 0; font-size: 1.2em;">Français</h3>
+            </div>
+            <div class="comp-item">
+                <div class="comp-name">Langue maternelle <span class="comp-level">100%</span></div>
+                <div class="comp-bar"><div class="comp-fill" style="width: 100%;"></div></div>
+            </div>
+            <p style="font-size: 0.85em; color: rgba(255,255,255,0.7); margin-top: 10px;">Excellente maîtrise rédactionnelle et orale.</p>
         </div>
-        <p style="font-size: 0.9em; line-height: 1.6; color: white; margin: 0;">Aptitude à faciliter la collaboration au sein d'une équipe projet et à <strong>respecter les délais de livraison</strong> (Rôle de Scrum Master).</p>
+
+        <div class="comp-card" style="text-align: left; padding: 25px;">
+            <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                <i class="fas fa-globe-americas" style="font-size: 1.8em; color: #ccd54a; margin-right: 15px;"></i>
+                <h3 style="margin: 0; font-size: 1.2em;">Anglais</h3>
+            </div>
+            <div class="comp-item">
+                <div class="comp-name">Technique / Professionnel <span class="comp-level">75%</span></div>
+                <div class="comp-bar"><div class="comp-fill" style="width: 75%;"></div></div>
+            </div>
+            <p style="font-size: 0.85em; color: rgba(255,255,255,0.7); margin-top: 10px;">Lecture de documentations et veille technologique.</p>
+        </div>
+
+        <div class="comp-card" style="text-align: left; padding: 25px;">
+            <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                <i class="fas fa-comments" style="font-size: 1.8em; color: #ccd54a; margin-right: 15px;"></i>
+                <h3 style="margin: 0; font-size: 1.2em;">Espagnol</h3>
+            </div>
+            <div class="comp-item">
+                <div class="comp-name">Niveau scolaire <span class="comp-level">40%</span></div>
+                <div class="comp-bar"><div class="comp-fill" style="width: 40%;"></div></div>
+            </div>
+            <p style="font-size: 0.85em; color: rgba(255,255,255,0.7); margin-top: 10px;">Bases fondamentales.</p>
+        </div>
     </div>
 
-</div>
- <div id="langues" class="category-header">
-    <i class="fas fa-language"></i>
-    <h2 style="text-align: center; width: 100%;">Langues</h2>
-</div>
-
-<div class="competence-container" style="margin-top: 20px;">
-    
-    <div class="comp-card" style="text-align: left; padding: 25px;">
-        <div style="display: flex; align-items: center; margin-bottom: 15px;">
-            <i class="fas fa-comment-dots" style="font-size: 1.8em; color: #ccd54a; margin-right: 15px;"></i>
-            <h3 style="margin: 0; font-size: 1.2em;">Français</h3>
-        </div>
-        <div class="comp-item">
-            <div class="comp-name">Langue maternelle <span class="comp-level">100%</span></div>
-            <div class="comp-bar"><div class="comp-fill" style="width: 100%;"></div></div>
-        </div>
-        <p style="font-size: 0.85em; color: rgba(255,255,255,0.7); margin-top: 10px;">Excellente maîtrise rédactionnelle et orale.</p>
+    <div id="certifications" class="category-header">
+        <i class="fas fa-certificate"></i>
+        <h2 style="text-align: center; width: 100%;">Certifications</h2>
     </div>
 
-    <div class="comp-card" style="text-align: left; padding: 25px;">
-        <div style="display: flex; align-items: center; margin-bottom: 15px;">
-            <i class="fas fa-globe-americas" style="font-size: 1.8em; color: #ccd54a; margin-right: 15px;"></i>
-            <h3 style="margin: 0; font-size: 1.2em;">Anglais</h3>
+    <div class="competence-container" style="margin-top: 20px;">
+        <div class="comp-card" style="display: flex; align-items: center; justify-content: space-between; padding: 25px;">
+            <div class="certif-text" style="text-align: left; flex: 1;">
+                <h3 style="margin: 0 0 10px 0; font-size: 1.2em;">Cisco Networking Academy</h3>
+                <p style="margin: 0; font-size: 0.9em; color: rgba(255,255,255,0.8);">Introduction à la Cybersécurité (2025)</p>
+            </div>
+            <img src="cisco.png" alt="Logo Cisco" style="height: 60px; margin-left: 20px; flex-shrink: 0;">
         </div>
-        <div class="comp-item">
-            <div class="comp-name">Technique / Professionnel <span class="comp-level">75%</span></div>
-            <div class="comp-bar"><div class="comp-fill" style="width: 75%;"></div></div>
+
+        <div class="comp-card" style="display: flex; align-items: center; justify-content: space-between; padding: 25px;">
+            <div class="certif-text" style="text-align: left; flex: 1;">
+                <h3 style="margin: 0 0 10px 0; font-size: 1.2em;">ANSSI - SecNumAcadémie</h3>
+                <p style="margin: 0; font-size: 0.9em; color: rgba(255,255,255,0.8);">Attestation de réussite - Initiation à la cybersécurité</p>
+            </div>
+            <img src="anssi.png" alt="Logo ANSSI" style="height: 60px; margin-left: 20px; flex-shrink: 0;">
         </div>
-        <p style="font-size: 0.85em; color: rgba(255,255,255,0.7); margin-top: 10px;">Lecture de documentations, configurations et veille technologique.</p>
     </div>
-
-    <div class="comp-card" style="text-align: left; padding: 25px;">
-        <div style="display: flex; align-items: center; margin-bottom: 15px;">
-            <i class="fas fa-comments" style="font-size: 1.8em; color: #ccd54a; margin-right: 15px;"></i>
-            <h3 style="margin: 0; font-size: 1.2em;">Espagnol</h3>
-        </div>
-        <div class="comp-item">
-            <div class="comp-name">Niveau scolaire <span class="comp-level">40%</span></div>
-            <div class="comp-bar"><div class="comp-fill" style="width: 40%;"></div></div>
-        </div>
-        <p style="font-size: 0.85em; color: rgba(255,255,255,0.7); margin-top: 10px;">Bases fondamentales et compréhension simple.</p>
-    </div>
-
-</div>
-
-<div id="certifications" class="category-header">
-    <i class="fas fa-certificate"></i>
-    <h2 style="text-align: center; width: 100%;">Certifications</h2>
-</div>
-
-<div class="competence-container" style="margin-top: 20px;">
-    
-    <div class="comp-card" style="display: flex; align-items: center; justify-content: space-between; padding: 25px;">
-        <div class="certif-text" style="text-align: left; flex: 1;">
-            <h3 style="margin: 0 0 10px 0; font-size: 1.2em;">Cisco Networking Academy</h3>
-            <p style="margin: 0; font-size: 0.9em; color: rgba(255,255,255,0.8);">Introduction à la Cybersécurité (2025)</p>
-        </div>
-        <img src="cisco.png" alt="Logo Cisco" style="height: 60px; margin-left: 20px; flex-shrink: 0;">
-    </div>
-
-    <div class="comp-card" style="display: flex; align-items: center; justify-content: space-between; padding: 25px;">
-        <div class="certif-text" style="text-align: left; flex: 1;">
-            <h3 style="margin: 0 0 10px 0; font-size: 1.2em;">ANSSI - SecNumAcadémie</h3>
-            <p style="margin: 0; font-size: 0.9em; color: rgba(255,255,255,0.8);">Attestation de réussite - Initiation à la cybersécurité</p>
-        </div>
-        <img src="anssi.png" alt="Logo ANSSI" style="height: 60px; margin-left: 20px; flex-shrink: 0;">
-    </div>
-
-</div>
 
     <div id="synthese" class="category-header">
         <i class="fas fa-file-alt"></i>
@@ -304,23 +296,12 @@
 </footer>
 
 <script>
-    // Smooth scroll pour les ancres
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-    });
-
-    // Animation des jauges au chargement
     window.addEventListener('load', () => {
         document.querySelectorAll('.comp-fill').forEach(fill => {
             const level = fill.style.width;
-            fill.style.width = '0'; // Reset
+            fill.style.width = '0';
             setTimeout(() => {
-                fill.style.width = level; // Charge
+                fill.style.width = level;
             }, 100);
         });
     });
