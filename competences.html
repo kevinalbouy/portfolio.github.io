@@ -2,108 +2,280 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Portfolio de Albouy Kévin</title>
+    <title>Portfolio de Albouy Kévin - Compétences</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Styles spécifiques pour les jauges de compétences */
+        .comp-item {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .comp-name {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9em;
+            color: white;
+            margin-bottom: 5px;
+        }
+
+        .comp-level {
+            font-size: 0.8em;
+            color: #00d2ff;
+        }
+
+        .comp-bar {
+            height: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .comp-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #00d2ff, #00ff88);
+            border-radius: 4px;
+            box-shadow: 0 0 10px rgba(0, 210, 255, 0.7);
+            width: 0; /* Départ à 0 pour l'animation */
+            transition: width 1.5s ease-in-out;
+        }
+
+        /* Animation au survol de la carte */
+        .comp-card:hover .comp-fill {
+            /* Les largeurs finales sont définies ici */
+        }
+    </style>
 </head>
 <body>
 <header style="display: flex; flex-direction: column; align-items: center; text-align: center;">
     <h1>ALBOUY KÉVIN</h1>
-    <div>
-        <a href="index.html" class="headerButton">à propos</a>
-        <a href="projets.html" class="headerButton">projets</a>
-        <a href="competences.html" class="headerButton">compétences</a>
+    <div class="nav-container">
+        
+        <div class="dropdown">
+            <a href="index.html" class="headerButton">à propos ▾</a>
+            <div class="dropdown-content">
+                <a href="index.html#bienvenue">Bienvenue</a>
+                <a href="index.html#contenu">Sommaire</a>
+                <a href="index.html#sisr">BTS SIO</a>
+                <a href="index.html#qui-suis-je">Présentation</a>
+                <a href="index.html#experiences">Expériences</a>
+                <a href="index.html#formations">Formations</a>
+                <a href="index.html#environnement">Environnement</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <a href="projets.html" class="headerButton">projets ▾</a>
+            <div class="dropdown-content">
+                <a href="projets.html#entreprise">Expériences en Entreprise</a>
+                <a href="projets.html#infrastructure">Infrastructure & Sécurité</a>
+                <a href="projets.html#developpement">Développement & Gestion</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <a href="competences.html" class="headerButton">compétences ▾</a>
+            <div class="dropdown-content">
+                <a href="competences.html#techniques">Techniques (Savoir-faire)</a>
+                <a href="competences.html#personnelles">Personnelles (Soft Skills)</a>
+                <a href="competences.html#langues">Langues</a>
+                <a href="competences.html#certifications">Certifications</a>
+                <a href="competences.html#synthese">Tableau de Synthèse</a>
+            </div>
+        </div>
+
         <a href="veille.html" class="headerButton">veille</a>
         <a href="contact.html" class="headerButton">contact</a>
         <a href="conformite.html" class="headerButton">conformite</a>
     </div>
 </header>
 
-<section class="competences">
-    <h2>Mes Compétences Techniques</h2>
+<main class="projets-main">
     
-    <div class="competence-container">
-        <div class="comp-card">
-            <h3>Administration Système</h3>
-            <ul class="comp-list">
-                <li>Windows Server 2019/2022</li>
-                <li>Active Directory (AD DS, GPO)</li>
-                <li>Rôles DNS, DHCP, Print</li>
-                <li>Linux Debian & Ubuntu Server</li>
-                <li>Virtualisation Proxmox & VMware</li>
-                <li>Sauvegarde & Image système (Masters)</li>
-            </ul>
-        </div>
-
-        <div class="comp-card">
-            <h3>Réseaux</h3>
-            <ul class="comp-list">
-                <li>Analyse de vulnérabilités & Pentest</li>
-                <li>Sécurisation Réseau & VPN</li>
-                <li>Supervision (Zabbix, Wazuh, Data Pulse)</li>
-                <li>Protocoles TCP/IP & Routage</li>
-                <li>Certifié Cisco & MOOC ANSSI</li>
-                <li>Firewalling & Sécurité des accès</li>
-            </ul>
-        </div>
-
-        <div class="comp-card">
-            <h3>Développement & +</h3>
-            <ul class="comp-list">
-                <li>Web: HTML5, CSS3, JS, PHP</li>
-                <li>Langages: Java, Python, SQL</li>
-                <li>Scripting PowerShell (Automatisation)</li>
-                <li>Versionnage Git / GitHub Desktop</li>
-                <li>Ticketing & Inventaire GLPI</li>
-                <li>Agilité: Scrum Master & Product Owner</li>
-            </ul>
-        </div>
+    <div id="techniques" class="category-header">
+        <i class="fas fa-tools"></i>
+        <h2 style="text-align: center; width: 100%;">Compétences Techniques</h2>
     </div>
 
-</section>
+    <section class="competences">
+        <div class="competence-container">
+            <div class="comp-card">
+                <h3>Administration Système</h3>
+                <div class="comp-list">
+                    <div class="comp-item">
+                        <div class="comp-name">Windows Server 2019/2022 <span class="comp-level">85%</span></div>
+                        <div class="comp-bar"><div class="comp-fill" style="width: 85%;"></div></div>
+                    </div>
+                    <div class="comp-item">
+                        <div class="comp-name">Active Directory (GPO, AD DS) <span class="comp-level">90%</span></div>
+                        <div class="comp-bar"><div class="comp-fill" style="width: 90%;"></div></div>
+                    </div>
+                    <div class="comp-item">
+                        <div class="comp-name">Rôles DNS, DHCP, Print <span class="comp-level">80%</span></div>
+                        <div class="comp-bar"><div class="comp-fill" style="width: 80%;"></div></div>
+                    </div>
+                    <div class="comp-item">
+                        <div class="comp-name">Linux Debian & Ubuntu Server <span class="comp-level">70%</span></div>
+                        <div class="comp-bar"><div class="comp-fill" style="width: 70%;"></div></div>
+                    </div>
+                    <div class="comp-item">
+                        <div class="comp-name">Virtualisation Proxmox & VMware <span class="comp-level">75%</span></div>
+                        <div class="comp-bar"><div class="comp-fill" style="width: 75%;"></div></div>
+                    </div>
+                </div>
+            </div>
 
+            <div class="comp-card">
+                <h3>Réseaux & Sécurité</h3>
+                <div class="comp-list">
+                    <div class="comp-item">
+                        <div class="comp-name">Protocoles TCP/IP & Routage <span class="comp-level">85%</span></div>
+                        <div class="comp-bar"><div class="comp-fill" style="width: 85%;"></div></div>
+                    </div>
+                    <div class="comp-item">
+                        <div class="comp-name">Sécurisation Réseau & VPN <span class="comp-level">80%</span></div>
+                        <div class="comp-bar"><div class="comp-fill" style="width: 80%;"></div></div>
+                    </div>
+                    <div class="comp-item">
+                        <div class="comp-name">Supervision (Zabbix) <span class="comp-level">85%</span></div>
+                        <div class="comp-bar"><div class="comp-fill" style="width: 85%;"></div></div>
+                    </div>
+                    <div class="comp-item">
+                        <div class="comp-name">Firewalling (PFSense, Iptables) <span class="comp-level">70%</span></div>
+                        <div class="comp-bar"><div class="comp-fill" style="width: 70%;"></div></div>
+                    </div>
+                    <div class="comp-item">
+                        <div class="comp-name">Analyse de vulnérabilités <span class="comp-level">65%</span></div>
+                        <div class="comp-bar"><div class="comp-fill" style="width: 65%;"></div></div>
+                    </div>
+                </div>
+            </div>
 
-     
-    <hr style="border: 0; border-top: 3px solid #114161; width: 40%; margin: 3em auto;">
+            <div class="comp-card">
+                <h3>Développement & Outils</h3>
+                <div class="comp-list">
+                    <div class="comp-item">
+                        <div class="comp-name">Scripting PowerShell & Bash <span class="comp-level">80%</span></div>
+                        <div class="comp-bar"><div class="comp-fill" style="width: 80%;"></div></div>
+                    </div>
+                    <div class="comp-item">
+                        <div class="comp-name">SQL (Gestion de données) <span class="comp-level">75%</span></div>
+                        <div class="comp-bar"><div class="comp-fill" style="width: 75%;"></div></div>
+                    </div>
+                    <div class="comp-item">
+                        <div class="comp-name">Web (HTML5, CSS3, JS, PHP) <span class="comp-level">70%</span></div>
+                        <div class="comp-bar"><div class="comp-fill" style="width: 70%;"></div></div>
+                    </div>
+                    <div class="comp-item">
+                        <div class="comp-name">Versionnage Git / GitHub <span class="comp-level">75%</span></div>
+                        <div class="comp-bar"><div class="comp-fill" style="width: 75%;"></div></div>
+                    </div>
+                    <div class="comp-item">
+                        <div class="comp-name">Agilité (Scrum Master) <span class="comp-level">90%</span></div>
+                        <div class="comp-bar"><div class="comp-fill" style="width: 90%;"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <h2 style="margin-top:1em; margin-bottom:1.5em; margin-left:auto; margin-right:auto; text-align:center;">Tableau de synthèse — Épreuve E5 BTS SIO</h2>
-    <div style="display:flex; justify-content:center; margin-left:0cm; margin-bottom:1em;">
-        <figure style="margin:0; max-width:500px;">
-            <a href="synthese.jpg" target="_blank" rel="noopener">
-                <img src="synthese.jpg" alt="Tableau de synthèse pour l'épreuve E5 du BTS SIO" style="width:100%; height:auto; display:block; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.12); cursor:pointer;">
+    <div id="personnelles" class="category-header">
+        <i class="fas fa-user-check"></i>
+        <h2 style="text-align: center; width: 100%;">Compétences Personnelles (Soft Skills)</h2>
+    </div>
+
+    <div class="projet-container">
+        <section class="projet-card ecole">
+            <div class="comp-list" style="text-align: left;">
+                <p><strong>Autonomie et Adaptabilité</strong> : Capacité démontrée à mener une reconversion professionnelle réussie et à monter rapidement en compétence sur de nouvelles technologies informatiques.</p>
+                <p><strong>Esprit d'Analyse et Diagnostic</strong> : Rigueur appliquée lors des interventions de support de proximité (N1/N2) et résolution de problèmes d'infrastructure complexes.</p>
+                <p><strong>Communication et Gestion d'Équipe</strong> : Aptitude à faciliter la collaboration au sein d'une équipe projet et à respecter les délais de livraison (Rôle de Scrum Master).</p>
+            </div>
+        </section>
+    </div>
+
+    <div id="langues" class="category-header">
+        <i class="fas fa-language"></i>
+        <h2 style="text-align: center; width: 100%;">Langues</h2>
+    </div>
+
+    <div class="projet-container">
+        <section class="projet-card entreprise">
+            <div class="comp-list" style="text-align: left;">
+                <p><strong>Français</strong> : Langue maternelle (Excellente maîtrise rédactionnelle et orale).</p>
+                <p><strong>Anglais</strong> : Niveau professionnel technique (Lecture de documentations, configurations de serveurs, veille technologique).</p>
+                <p><strong>Espagnol</strong> : Niveau débutant (Bases).</p>
+            </div>
+        </section>
+    </div>
+
+    <div id="certifications" class="category-header">
+        <i class="fas fa-certificate"></i>
+        <h2 style="text-align: center; width: 100%;">Certifications</h2>
+    </div>
+
+    <div class="projet-container">
+        <section class="projet-card ecole" style="display: flex; align-items: center; justify-content: space-between;">
+            <div>
+                <h3>Cisco Networking Academy</h3>
+                <p>Introduction à la Cybersécurité (2025)</p>
+            </div>
+            <img src="cisco.png" alt="Logo Cisco" style="height: 60px;">
+        </section>
+
+        <section class="projet-card ecole" style="display: flex; align-items: center; justify-content: space-between;">
+            <div>
+                <h3>ANSSI - SecNumAcadémie</h3>
+                <p>Attestation de réussite - Initiation à la cybersécurité</p>
+            </div>
+            <img src="anssi.png" alt="Logo ANSSI" style="height: 60px;">
+        </section>
+    </div>
+
+    <div id="synthese" class="category-header">
+        <i class="fas fa-file-alt"></i>
+        <h2 style="text-align: center; width: 100%;">Tableau de Synthèse — Épreuve E5</h2>
+    </div>
+
+    <div style="display:flex; flex-direction: column; align-items:center; margin-bottom:120px;">
+        <p style="max-width: 800px; text-align: center; margin-bottom: 30px;">Ce tableau récapitule l'ensemble des réalisations professionnelles présentées dans mon portfolio, validant les compétences du bloc 1 pour la session 2025.</p>
+        <figure style="margin:0; max-width:600px; text-align: center;">
+            <a href="synthese.jpg" target="_blank">
+                <img src="synthese.jpg" alt="Tableau de synthèse BTS SIO E5" style="width:100%; border-radius:10px; box-shadow:0 4px 15px rgba(0,0,0,0.3); border: 1px solid #ccd54a;">
             </a>
-            <figcaption style="font-size:0.9em; color:#333; margin-top:0.4em; text-align:center;">Cliquez pour ouvrir l'image en taille réelle</figcaption>
+            <figcaption style="margin-top: 10px; color: #ccd54a;">Cliquez pour agrandir</figcaption>
         </figure>
     </div>
 
-
-
-    <br>
-    <br>
-    <hr style="border: 0; border-top: 3px solid #114161; width: 40%; margin: 3em auto;">
-
- <h2 style="margin-top: 20px; margin-bottom: 20px; margin-left: 0cm;">Certifications :</h2>
-    <ul style="line-height: 2; display: inline-block; text-align: left; list-style: none; padding: 0;">
-         <li style="margin-top: 40px; margin-bottom: 20px; margin-left: 0cm;">
-            <span style="min-width: 320px; display: inline-block;">
-                Certification : introduction à la cybersécurité - Cisco (2025)
-                   <a href="https://www.netacad.com/courses/introduction-to-cybersecurity?courseLang=en-US" target="_blank">
-                <img src="cisco.png" alt="Logo Cisco" style="height: 80px; vertical-align: middle; margin-left: 8px;">
-            </a>
-            </span>
-        </li>
-
-
-
-    <br>
-    <br>
-    
 </main>
 
-
-  
-<footer style="position: fixed; left: 0; bottom: 0; width: 100%; background: #b3ced6; text-align: center; padding: 0.4em 0; box-shadow: 0 -2px 8px rgba(0,0,0,0.05); font-size: 0.95em;">
+<footer style="position: fixed; left: 0; bottom: 0; width: 100%; background: #b3ced6; text-align: center; padding: 0.4em 0; box-shadow: 0 -2px 8px rgba(0,0,0,0.05); font-size: 0.95em; z-index: 1000;">
     <p style="margin: 0;">© 2026 Portfolio de Albouy Kévin. Tous droits réservés.</p>
 </footer>
-</body>
 
+<script>
+    // Smooth scroll pour les ancres
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // Animation des jauges au chargement
+    window.addEventListener('load', () => {
+        document.querySelectorAll('.comp-fill').forEach(fill => {
+            const level = fill.style.width;
+            fill.style.width = '0'; // Reset
+            setTimeout(() => {
+                fill.style.width = level; // Charge
+            }, 100);
+        });
+    });
+</script>
+</body>
 </html>

@@ -8,9 +8,28 @@
 <body>
 <header style="display: flex; flex-direction: column; align-items: center; text-align: center;">
     <h1>ALBOUY KÉVIN</h1>
-    <div>
-        <a href="index.html" class="headerButton">à propos</a>
-        <a href="projets.html" class="headerButton">projets</a>
+   <div class="nav-container">
+        <div class="dropdown">
+            <a href="index.html" class="headerButton">à propos ▾</a>
+            <div class="dropdown-content">
+                <a href="#contenu">Sommaire</a>
+                <a href="#sisr">BTS SIO</a>
+                <a href="#qui-suis-je">Présentation</a>
+                <a href="#experiences">Expériences</a>
+                <a href="#formations">Formations</a>
+                <a href="#environnement">Environnement</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <a href="projets.html" class="headerButton">projets ▾</a>
+            <div class="dropdown-content">
+                <a href="projets.html#entreprise">Expériences en Entreprise</a>
+                <a href="projets.html#infrastructure">Infrastructure & Sécurité</a>
+                <a href="projets.html#developpement">Développement & Gestion</a>
+            </div>
+        </div>
+
         <a href="competences.html" class="headerButton">compétences</a>
         <a href="veille.html" class="headerButton">veille</a>
         <a href="contact.html" class="headerButton">contact</a>
