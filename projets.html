@@ -4,13 +4,34 @@
     <meta charset="UTF-8">
     <title>Portfolio de Albouy Kévin</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 <header style="display: flex; flex-direction: column; align-items: center; text-align: center;">
     <h1>ALBOUY KÉVIN</h1>
-    <div>
-        <a href="index.html" class="headerButton">à propos</a>
-        <a href="projets.html" class="headerButton">projets</a>
+    <div class="nav-container">
+        <div class="dropdown">
+            <a href="index.html" class="headerButton">à propos ▾</a>
+            <div class="dropdown-content">
+                <a href="index.html#bienvenue">Bienvenue</a>
+                <a href="index.html#contenu">Que trouverez-vous ici ?</a>
+                <a href="index.html#sisr">La Spécialité SISR</a>
+                <a href="index.html#qui-suis-je">Qui suis-je ?</a>
+                <a href="index.html#experiences">Expériences</a>
+                <a href="index.html#formations">Mes Formations</a>
+                <a href="index.html#environnement">Environnement</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <a href="projets.html" class="headerButton">projets ▾</a>
+            <div class="dropdown-content">
+                <a href="#entreprise">Expériences en Entreprise</a>
+                <a href="#infrastructure">Infrastructure & Sécurité</a>
+                <a href="#developpement">Développement & Gestion</a>
+            </div>
+        </div>
+
         <a href="competences.html" class="headerButton">compétences</a>
         <a href="veille.html" class="headerButton">veille</a>
         <a href="contact.html" class="headerButton">contact</a>
@@ -18,15 +39,11 @@
     </div>
 </header>
 
-
-
-
-
 <main class="projets-main">
     <h1 class="main-title">Dossier de Réalisations Professionnelles</h1>
     <p class="intro-text">Ce portfolio présente les 9 réalisations mobilisant l'ensemble des compétences du bloc "Support et mise à disposition de services informatiques".</p>
 
-    <div class="category-header">
+    <div id="entreprise" class="category-header">
         <i class="fas fa-briefcase"></i>
         <h2>📍 Expériences en Entreprise (Suez & Mairie)</h2>
     </div>
@@ -39,8 +56,8 @@
             <p>Dans l'objectif de vérifier la continuité d'un service informatique, j'ai mis en place une solution de monitoring basée sur Zabbix afin d'assurer le maintien en condition opérationnelle des infrastructures. Cette réalisation a nécessité la configuration de triggers d'alerte et la création de tableaux de bord personnalisés pour anticiper les pannes et exploiter les indicateurs de performance en temps réel.</p>
             <div class="skill-tags"><span class="tag">MCO</span> <span class="tag">Zabbix</span> <span class="tag">Continuité</span></div>
             <div class="image-grid">
-                <div class="placeholder-img">Dashboard Zabbix</div>
-                <div class="placeholder-img">Alertes Triggers</div>
+                 <img class="zoomable" src="zabbix2.png" alt="Zabbix 1">
+                 <img class="zoomable" src="zabbix1.png" alt="Zabbix 2">
             </div>
         </section>
 
@@ -84,7 +101,7 @@
         </section>
     </div>
 
-    <div class="category-header">
+    <div id="infrastructure" class="category-header">
         <i class="fas fa-server"></i>
         <h2>⚙️ Infrastructure, Systèmes & Sécurité</h2>
     </div>
@@ -117,13 +134,13 @@
             <div class="skill-tags"><span class="tag">RGPD</span> <span class="tag">Veille</span> <span class="tag">ANSSI</span></div>
             <div class="image-grid">
                 <img class="zoomable" src="stage1.png" alt="Rapport RGPD">
-               <img class="zoomable" src="stage2.png" alt="Rapport RGPD">
-               <img class="zoomable" src="stage3.png" alt="Rapport RGPD">
+                <img class="zoomable" src="stage2.png" alt="Rapport RGPD">
+                <img class="zoomable" src="stage3.png" alt="Rapport RGPD">
             </div>
         </section>
     </div>
 
-    <div class="category-header">
+    <div id="developpement" class="category-header">
         <i class="fas fa-code"></i>
         <h2>💻 Développement Web & Gestion de Projet</h2>
     </div>
@@ -149,62 +166,25 @@
         </section>
     </div>
 </main>
-<br>
-<br>
-<br>
 
-
-
-<footer style="position: fixed; left: 0; bottom: 0; width: 100%; background: #b3ced6; text-align: center; padding: 0.4em 0; box-shadow: 0 -2px 8px rgba(0,0,0,0.05); font-size: 0.95em;">
+<footer style="position: fixed; left: 0; bottom: 0; width: 100%; background: #b3ced6; text-align: center; padding: 0.4em 0; box-shadow: 0 -2px 8px rgba(0,0,0,0.05); font-size: 0.95em; z-index: 100;">
     <p style="margin: 0;">© 2026 Portfolio de Albouy Kévin. Tous droits réservés.</p>
 </footer>
 
 <style>
-.zoomable {
-    transition: transform 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.3s;
-    cursor: pointer;
-    z-index: 1;
-    position: relative;
-}
-.zoomable:hover {
-    box-shadow: 0 20px 60px rgba(0,0,0,0.25);
-}
-.zoom-modal {
-    display: none;
-    position: fixed;
-    z-index: 9999;
-    left: 0; top: 0; width: 100vw; height: 100vh;
-    background: rgba(0,0,0,0.7);
-    justify-content: center;
-    align-items: center;
-}
-.zoom-modal.active {
-    display: flex;
-}
-.zoom-modal img {
-    max-width: 45vw;
-    max-height: 45vh;
-    border-radius: 10px;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
-    transform: scale(1.35);
-    transition: transform 0.3s cubic-bezier(.4,2,.6,1);
-}
-.zoom-modal .close-btn {
-    position: absolute;
-    top: 2.5vh;
-    right: 4vw;
-    font-size: 2.5em;
-    color: #fff;
-    background: none;
-    border: none;
-    cursor: pointer;
-    z-index: 10000;
-}
+.zoomable { transition: transform 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.3s; cursor: pointer; z-index: 1; position: relative; }
+.zoomable:hover { box-shadow: 0 20px 60px rgba(0,0,0,0.25); }
+.zoom-modal { display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.7); justify-content: center; align-items: center; }
+.zoom-modal.active { display: flex; }
+.zoom-modal img { max-width: 45vw; max-height: 45vh; border-radius: 10px; box-shadow: 0 20px 60px rgba(0,0,0,0.5); transform: scale(1.35); transition: transform 0.3s cubic-bezier(.4,2,.6,1); }
+.zoom-modal .close-btn { position: absolute; top: 2.5vh; right: 4vw; font-size: 2.5em; color: #fff; background: none; border: none; cursor: pointer; z-index: 10000; }
 </style>
+
 <div class="zoom-modal" id="zoomModal">
     <button class="close-btn" id="closeZoom" aria-label="Fermer l'image">&times;</button>
     <img src="" alt="Agrandissement de l'image" id="zoomImg">
 </div>
+
 <script>
 document.querySelectorAll('.zoomable').forEach(img => {
     img.addEventListener('click', function() {
@@ -226,9 +206,5 @@ document.getElementById('zoomModal').onclick = function(e) {
     }
 };
 </script>
-
-
-
 </body>
-
 </html>

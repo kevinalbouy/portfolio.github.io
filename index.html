@@ -4,13 +4,24 @@
     <meta charset="UTF-8">
     <title>Portfolio de Albouy Kévin</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
 <header>
     <h1>ALBOUY KÉVIN</h1>
-    <div>
-        <a href="index.html" class="headerButton">à propos</a>
+    <div class="nav-container">
+        <div class="dropdown">
+            <a href="index.html" class="headerButton">à propos ▾</a>
+            <div class="dropdown-content">
+                <a href="#contenu">Que trouverez-vous ici ?</a>
+                <a href="#sisr">Le BTS SIO</a>
+                <a href="#qui-suis-je">Qui suis-je ?</a>
+                <a href="#experiences">Expériences</a>
+                <a href="#formations">Mes Formations</a>
+                <a href="#environnement">Environnement</a>
+            </div>
+        </div>
         <a href="projets.html" class="headerButton">projets</a>
         <a href="competences.html" class="headerButton">compétences</a>
         <a href="veille.html" class="headerButton">veille</a>
@@ -19,152 +30,204 @@
     </div>
 </header>
 
-<!-- Contenu de la page accueil -->
-<main>
-    <div style="max-width: 1000px; margin: 0 auto;">
-        <h1 style="margin-left:0cm;">Bienvenue sur mon Portfolio</h1>
-        <p style="margin-left:0; margin-right:0; width:100%; box-sizing:border-box;"></p>
-            <br>
-            Ce site a été créé dans le cadre de ma formation en BTS Services Informatiques aux Organisations (SIO) spécialité SISR (Solutions d'Infrastructure, Systèmes et Réseaux).
-            Il a pour but de présenter mon parcours, mes compétences et les projets réalisés durant ma formation, ainsi que de vous permettre de me contacter pour toute question ou opportunité professionnelle.
-        </p>
-
-        <p style="margin-left:0cm;">
-            Le BTS SIO est une formation en deux ans accessible après le baccalauréat.
-            Elle prépare les étudiants aux métiers de l'informatique à travers deux spécialités, SLAM axé sur le développement logiciel et SISR, systèmes et réseaux, spécialité que j'ai choisie.
-        </p>
-
-        <ul style="text-align: left; display: inline-block; margin-left:0cm;">
-            <li><strong>SISR</strong> : axée sur la gestion des réseaux, la cybersécurité, l’administration systèmes et les infrastructures informatiques.</li>
-        </ul>
-
-     <hr style="border: 0; border-top: 3px solid #114161; width: 50%; margin: 3em auto;">
-
-        <h2 style="margin-top: 1em; margin-bottom: 1.5em; margin-left:0cm;">Que trouverez-vous ici ?</h2>
-
-        <ul style="margin-bottom: 2em; text-align: left; display: inline-block; margin-left:0cm;">
-            <li style="margin-bottom: 1.5em;">Une présentation de mes écoles, du BTS SIO et de moi-même.</li>
-            <li style="margin-bottom: 1.5em;">Des exemples de projets menés en cours de formation.</li>
-            <li style="margin-bottom: 1.5em;">Une page dédiée à la veille technologique.</li>
-            <li style="margin-bottom: 1.5em;">Un accès pour me contacter.</li>
-            <li style="margin-bottom: 1.5em;">Des informations sur la conformité du site.</li>
-        </ul>
-
-        <p style="margin-left:0cm;">
-            J'espère que ce site vous permettra de mieux comprendre ma formation, de découvrir l'étendue de mes compétences acquises jusqu'ici,
-            et vous donnera l'envie d’entrer en contact avec moi pour un stage, une alternance ou une opportunité d’emploi.
-        </p>
-
+<main class="projets-main">
+    <section id="bienvenue" class="projet-card entreprise" style="margin-bottom: 40px;">
+        <h1 class="main-title" style="margin-top: 0; text-align: center;">Bienvenue sur mon Portfolio</h1>
+        <p>Ce site a été conçu dans le cadre de ma formation en <strong>BTS Services Informatiques aux Organisations (SIO)</strong>, spécialité <strong>SISR</strong> (Solutions d'Infrastructure, Systèmes et Réseaux).</p>
+        <p>Il a pour but de présenter mon parcours, mes compétences techniques et les projets réalisés durant ma formation, tout en facilitant une future collaboration professionnelle.</p>
         
+        <div class="skill-tags" style="margin-top: 20px;">
+            <span class="tag">BTS SIO SISR</span>
+            <span class="tag">Systèmes & Réseaux</span>
+            <span class="tag">Cybersécurité</span>
+        </div>
+    </section>
+
+    <div id="contenu" class="category-header">
+        <i class="fas fa-th-list"></i>
+        <h2 style="text-align: center; width: 100%;">Que trouverez-vous ici ?</h2>
     </div>
 
-    <hr style="border: 0; border-top: 3px solid #114161; width: 50%; margin: 3em auto;">
+    <div class="projet-container">
+        <section class="projet-card ecole">
+            <div class="comp-list" style="text-align: left; margin-top: 15px;">
+                <p><strong>📍</strong> Présentation de mon parcours et de mes écoles</p>
+                <p><strong>💻</strong> Projets techniques et réalisations académiques</p>
+                <p><strong>🛡️</strong> Veille technologique et Cybersécurité</p>
+                <p><strong>📧</strong> Formulaire de contact et réseaux professionnels</p>
+            </div>
+        </section>
+    </div>
 
-    <h2 style="margin-left: 0cm;">Qui suis-je ?</h2>
-    <p style="margin-left: 0cm;">
+    <div id="sisr" class="category-header">
+        <i class="fas fa-network-wired"></i>
+        <h2 style="text-align: center; width: 100%;">Le BTS SIO</h2>
+    </div>
     
-        Je m'appelle Albouy Kévin, j'ai 35 ans et je suis passionné par l'informatique. 
-        Après avoir travaillé dans un autre domaine, j'ai décidé de poursuivre ma passion pour les technologies du numérique.
-        En reconversion professionnelle, j'ai obtenu mon baccalauréat à 34 ans afin de concrétiser mon projet dans l'informatique. Actuellement en deuxième année de BTS SIO, je suis motivé à réussir ce diplôme et à poursuivre mes études pour approfondir mes compétences et élargir mes perspectives professionnelles.
-    </p>
-    <br>
-    <div style="margin-left:0cm; margin-bottom:1em;">
-        <img src="kevin1.jpg" alt="Albouy Kévin smiling and looking at the camera, seated indoors in a well-lit room with a calm and welcoming atmosphere" style="width: 400px; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.12);">
+    <section class="projet-card ecole" style="margin-bottom: 40px;">
+        <p>Le BTS SIO est une formation supérieure d'une durée de deux ans qui prépare aux métiers de l'informatique à travers deux parcours distincts. J'ai choisi l'option <strong>SISR</strong> pour son approche concrète des infrastructures.</p>
+        <div class="comp-list" style="text-align: left; margin-top: 15px;">
+            <p><strong>SISR</strong> : Une expertise axée sur la gestion des réseaux, la cybersécurité, l’administration systèmes et le maintien en condition opérationnelle des infrastructures informatiques.</p>
+        </div>
+    </section>
+
+    <div id="qui-suis-je" class="category-header">
+        <i class="fas fa-user-tie"></i>
+        <h2 style="text-align: center; width: 100%;">Qui suis-je ?</h2>
     </div>
 
-    <div style="margin-left: 0cm;">
-        <a href="CV-Albouy-Kevin.pdf" class="btn-cv" target="_blank" download>
-            Télécharger mon CV
+    <section class="projet-card entreprise">
+        <div class="projet-content">
+            <p>Je m'appelle <strong>Albouy Kévin</strong>. Passionné par l'informatique depuis toujours, j'ai entrepris une <strong>reconversion professionnelle</strong> pour concrétiser mon projet dans le numérique.</p>
+            <p>Après avoir obtenu mon baccalauréat à 34 ans, je suis aujourd'hui en deuxième année de BTS SIO. Mon objectif est de réussir ce diplôme et de poursuivre mes études en Licence ou Bachelor pour approfondir mes compétences en ingénierie système et réseau.</p>
+            <p>Motivé et résilient, je suis activement à la recherche d'opportunités pour mettre mon dynamisme au service d'une infrastructure innovante.</p>
+        </div>
+    </section>
+
+    <div style="text-align: center; margin: 2em 0;">
+        <img src="kevin1.jpg" alt="Albouy Kévin" style="width: 300px; border-radius:10px; box-shadow:0 4px 15px rgba(0,0,0,0.3);">
+        <br><br>
+        <a href="CV-Albouy-Kevin.pdf" class="btn-cv" target="_blank" download style="color: #ccd54a; text-decoration: none; font-weight: bold; border: 1px solid #ccd54a; padding: 10px 20px; border-radius: 5px;">
+            <i class="fas fa-file-download"></i> Télécharger mon CV
         </a>
     </div>
 
-    <hr style="border: 0; border-top: 3px solid #114161; width: 50%; margin: 3em auto;">
+    <div id="experiences" class="category-header">
+        <i class="fas fa-briefcase"></i>
+        <h2 style="text-align: center; width: 100%;">Expériences Professionnelles</h2>
+    </div>
 
-        <h2 style="margin-top: 20px; margin-bottom: 20px; margin-left: 0cm;">Expériences Professionnelles :</h2>
-        <ul style="line-height: 2; display: inline-block; text-align: left; list-style: none; padding: 0;">
-            <li style="display: flex; flex-direction: column; align-items: flex-start; margin-top: 40px; margin-bottom: 20px; margin-left: 0cm;">
-                <span style="min-width: 320px; display: inline-block;">
-                    Technicien en informatique - Stage à la mairie du Grau du Roi (Juin 2025 & Janvier 2026)
-                </span>
-                <a href="https://www.ville-legrauduroi.fr/" target="_blank" style="text-decoration: none; color: #114161; font-size: 0.9em; margin-top: 4px;">
-                    https://www.ville-legrauduroi.fr/
+    <div class="projet-container">
+        <section class="projet-card entreprise">
+            <div class="projet-header">
+                <h3>Technicien en informatique (Stage)</h3>
+                <span class="badge-lieu">Mairie du Grau du Roi</span>
+            </div>
+            <div class="projet-content">
+                <p>Missions techniques au sein du service informatique de la ville. Participation à la maintenance et à l'évolution de l'infrastructure.</p>
+                <div class="skill-tags">
+                    <span class="tag">Juin 2025</span>
+                    <span class="tag">Janvier 2026</span>
+                </div>
+                <div style="margin-top: 15px;">
+                    <a href="https://www.ville-legrauduroi.fr/" target="_blank" style="color: #ccd54a; text-decoration: none; font-size: 0.9em;">
+                        <i class="fas fa-external-link-alt"></i> Visiter le site de la mairie
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="projet-card entreprise">
+            <div class="projet-header">
+                <h3>Data Analyst / Data Entry Clerk (Stage)</h3>
+                <span class="badge-lieu">DataPulse Suez Nîmes</span>
+            </div>
+            <div class="projet-content">
+                <p>Analyse de données et gestion des flux d'informations au sein du centre DataPulse.</p>
+                <div class="skill-tags">
+                    <span class="tag">Février / Mars 2026</span>
+                </div>
+                <div style="margin-top: 15px;">
+                    <a href="https://www.suez.com/fr/" target="_blank" style="color: #ccd54a; text-decoration: none; font-size: 0.9em;">
+                        <i class="fas fa-external-link-alt"></i> Visiter le site de Suez
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+      <div class="category-header">
+        <i class="fas fa-graduation-cap"></i>
+        <h2 style="text-align: center; width: 100%;">Mes Formations</h2>
+    </div>
+
+    <div class="projet-container">
+        <section class="projet-card ecole">
+            <div class="projet-header">
+                <h3>Projet pour l'avenir - Bachelor</h3>
+                <span class="badge-lieu">Bac +3</span>
+            </div>
+            <div class="projet-content">
+                <p style="text-align: left;">Poursuite d'études envisagée</p>
+                <div class="skill-tags">
+                    <span class="tag">2026 - 2027</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="projet-card ecole">
+            <div class="projet-header">
+                <h3>BTS SIO SISR (2ème Année)</h3>
+                <span class="badge-lieu">MydigitalSchool</span>
+            </div>
+            <div class="projet-content" style="display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                    <p>Apprentissage des solutions d'infrastructure, systèmes et réseaux.</p>
+                    <div class="skill-tags">
+                        <span class="tag">2025 - 2026</span>
+                    </div>
+                </div>
+                <a href="https://www.mydigitalschool.com/" target="_blank">
+                    <img src="MDSL.jpg" alt="Logo MydigitalSchool" style="height: 60px; border-radius: 5px; background: white; padding: 2px;">
                 </a>
-            </li>
-            <li style="display: flex; flex-direction: column; align-items: flex-start; margin-top: 40px; margin-bottom: 20px; margin-left: 0cm;">
-                <span style="min-width: 320px; display: inline-block;">
-                    Data Analyst/Data Entry Clerk - Stage à DataPulse Suez Nîmes (Février/Mars 2026)
-                </span>
-                <a href="https://www.suez.com/fr/" target="_blank" style="text-decoration: none; color: #114161; font-size: 0.9em; margin-top: 4px;">
-                    https://www.suez.com/fr/
+            </div>
+        </section>
+
+        <section class="projet-card ecole">
+            <div class="projet-header">
+                <h3>BTS SIO SISR (1ère Année)</h3>
+                <span class="badge-lieu">Esicad</span>
+            </div>
+            <div class="projet-content" style="display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                    <p>Bases fondamentales de l'informatique de gestion et des réseaux.</p>
+                    <div class="skill-tags">
+                        <span class="tag">2024 - 2025</span>
+                    </div>
+                </div>
+                <a href="https://www.esicad.com/" target="_blank">
+                    <img src="esicad.png" alt="Logo Esicad" style="height: 60px; border-radius: 5px; background: white; padding: 2px;">
                 </a>
-            </li>
-        </ul>
+            </div>
+        </section>
 
-    <hr style="border: 0; border-top: 3px solid #114161; width: 50%; margin: 3em auto;">
+        <section class="projet-card ecole">
+            <div class="projet-header">
+                <h3>DAEU B (Scientifique)</h3>
+                <span class="badge-lieu">IUT Montpellier</span>
+            </div>
+            <div class="projet-content" style="display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                    <p>Diplôme d'Accès aux Études Universitaires - Option Scientifique.</p>
+                    <div class="skill-tags">
+                        <span class="tag">2023 - 2024</span>
+                    </div>
+                </div>
+                <a href="https://iut-montpellier-sete.edu.umontpellier.fr/" target="_blank">
+                    <img src="iut.jpg" alt="Logo IUT" style="height: 60px; border-radius: 5px; background: white; padding: 2px;">
+                </a>
+            </div>
+        </section>
+    </div>
 
-
-    
-
-    <h2 style="margin-top: 40px; margin-bottom: 20px; margin-left: 0cm;">Formations :</h2>
-    <ul style="margin-bottom: 36px; line-height: 2; display: inline-block; text-align: left; list-style: none; padding: 0;">
-        <li style="margin-top: 40px; margin-bottom: 20px; margin-left: 0cm;">
-            <span style="min-width: 320px; display: inline-block;">
-                Projet pour l'avenir - Bachelor (2026-2027)
-            </span>
-        </li>
-        <li style="margin-top: 40px; margin-bottom: 20px; margin-left: 0cm;">
-            <span style="min-width: 320px; display: inline-block;">
-                BTS SIO - MydigitalSchool (2025-2026)
-            </span>
-            <a href="https://www.mydigitalschool.com/" target="_blank" style="text-decoration: none;">
-                <img src="MDSL.jpg" alt="Logo MydigitalSchool" style="height: 80px; vertical-align: middle; margin-left: 4px;">
-            </a>
-        </li>
-        <li style="margin-top: 40px; margin-bottom: 20px; margin-left: 0cm;">
-            <span style="min-width: 320px; display: inline-block;">
-                BTS SIO - Esicad (2024-2025)
-            </span>
-            <a href="https://www.esicad.com/" target="_blank" style="text-decoration: none;">
-                <img src="esicad.png" alt="Logo Esicad" style="height: 80px; vertical-align: middle; margin-left: 8px;">
-            </a>
-        </li>
-        <li style="margin-top: 40px; margin-bottom: 20px; margin-left: 0cm;">
-            <span style="min-width: 320px; display: inline-block;">
-                DAEU B - IUT Montpellier (2023-2024)
-            </span>
-            <a href="https://iut-montpellier-sete.edu.umontpellier.fr/" target="_blank">
-                <img src="iut.jpg" alt="Logo IUT Montpellier" style="height: 80px; vertical-align: middle; margin-left: 8px;">
-            </a>
-        </li>
-    </ul>
+    <div id="environnement" class="category-header">
+        <i class="fas fa-map-marked-alt"></i>
+        <h2 style="text-align: center; width: 100%;">Environnement Professionnel</h2>
+    </div>
     <div style="width: 100%; display: flex; justify-content: center;">
         <iframe 
             src="https://www.google.com/maps/d/embed?mid=1hEJkPE6QpfV5Q7b3e37wr1tH_hR63oo&ehbc=2E312F&noprof=1" 
             width="90%" 
-            height="400" 
-            style="border-radius: 20px; border: none; min-height: 350px; max-width: 60%; display: block; margin-left: auto; margin-right: auto; margin-bottom: 0;">
+            height="500" 
+            style="border-radius: 20px; border: none; display: block; margin-left: auto; margin-right: auto; margin-bottom: 0;">
         </iframe>
     </div>
 
-        <br>
-        <br>
-       
-
-
-
-    <p style="margin-left:0cm;"><strong>Bonne visite.</strong></p>
 </main>
-<style>
-    main p {
-        margin-bottom: 1em;
-    }
-</style>
 
-
-
-<footer style="position: fixed; left: 0; bottom: 0; width: 100%; background: #b3ced6; text-align: center; padding: 0.4em 0; box-shadow: 0 -2px 8px rgba(0,0,0,0.05); font-size: 0.95em;">
+<footer style="position: fixed; left: 0; bottom: 0; width: 100%; background: #b3ced6; text-align: center; padding: 0.4em 0; font-size: 0.95em; z-index: 100;">
     <p style="margin: 0;">© 2026 Portfolio de Albouy Kévin. Tous droits réservés.</p>
 </footer>
-</body>
 
+</body>
 </html>
