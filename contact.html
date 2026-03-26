@@ -74,7 +74,7 @@
 </header>
 
 <main style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 70vh;">
-    <h1>Formulaire de Contact</h1>
+    <h1 style="color: #0f3c5c; text-shadow: 0 0 15px rgba(0,210,255,0.5); margin-bottom: 30px;">Formulaire de Contact</h1>
 
     <div style="display: flex; justify-content: center; width: 100%;">
         <form
@@ -106,17 +106,31 @@
     </div>
     </form>
 
-   <div style="max-width: 600px; margin: 20px auto; padding: 15px; border-radius: 8px; background-color: #f9f9f9; border-left: 4px solid #3498db; font-family: sans-serif; color: #444; line-height: 1.5;">
-    <p style="margin: 0; font-size: 0.9em;">
-        <strong>Politique de confidentialité :</strong> 
+ <div style="max-width: 900px; margin: 30px auto; padding: 25px 40px; border-radius: 12px; background: rgba(17, 65, 97, 0.4); border: 1px solid rgba(0, 210, 255, 0.2); border-left: 5px solid #ccd54a; backdrop-filter: blur(10px); box-shadow: 0 10px 20px rgba(0,0,0,0.2); font-family: 'Poppins', 'Segoe UI', sans-serif; color: #ffffff; line-height: 1.6; animation: fadeInConformite 1.5s ease-out;">
+    
+    <style>
+        @keyframes fadeInConformite {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .conformite-link { transition: all 0.3s ease; }
+        .conformite-link:hover { color: #ffffff !important; text-shadow: 0 0 10px rgba(204, 213, 74, 0.7); }
+    </style>
+
+    <div style="text-align: center; margin-bottom: 15px;">
+        <i class="fas fa-user-lock" style="color: #ccd54a; margin-right: 10px;"></i>
+        <strong style="font-size: 1.1em; text-transform: uppercase; letter-spacing: 1px;">Politique de confidentialité</strong>
+    </div>
+
+    <p style="margin: 0; font-size: 0.95em; text-align: center;">
         Les informations recueillies sur ce formulaire sont traitées pour répondre à votre demande. 
         Elles sont conservées pendant la durée nécessaire à la gestion de notre échange et ne sont jamais cédées à des tiers.
     </p>
     
-    <p style="margin: 10px 0 0 0; font-size: 0.85em;">
+    <p style="margin: 15px 0 0 0; font-size: 0.9em; border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 15px; text-align: center;">
         Conformément au RGPD, vous pouvez exercer votre droit d'accès, de rectification ou d'effacement de vos données. 
         Pour en savoir plus, consultez notre 
-        <a href="https://kevinalbouy.github.io/portfolio.github.io/conformite.html" style="color: #3498db; text-decoration: underline; font-weight: bold;">page de conformité</a>.
+        <a href="conformite.html" class="conformite-link" style="color: #ccd54a; text-decoration: underline; font-weight: bold;">page de conformité</a>.
     </p>
 </div>
 
@@ -128,25 +142,25 @@
     <div style="display: flex; justify-content: center; align-items: flex-start; gap: 30px; margin-top: 20px; flex-wrap: wrap;">
         
         <a href="https://www.linkedin.com/in/kevin-albouy-1b15aa2a1" target="_blank" style="text-decoration: none; color: white; display: flex; flex-direction: column; align-items: center; transition: transform 0.3s ease;">
-            <div class="source-card" style="width: 180px; min-height: 160px; background: rgba(0, 119, 181, 0.2); border: 1px solid #0077b5; border-radius: 12px; padding: 20px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1); backdrop-filter: blur(5px);">
+            <div class="source-card" style="width: 180px; min-height: 160px; background: rgba(0, 119, 181, 0.2); border: 1px solid #0077b5; border-radius: 12px; padding: 20px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 4px 6px rgba(255, 255, 255, 0.711); backdrop-filter: blur(5px);">
                 <img src="linkedinlogo.png" alt="Logo LinkedIn" style="max-height: 40px; margin-bottom: 15px;">
                 <p style="font-weight: bold; margin: 0; color: #ffffff;">Kévin Albouy</p>
                 <p style="font-size: 0.8em; color: rgba(255,255,255,0.7); margin-top: 5px;">Profil Professionnel</p>
             </div>
             
-            <span style="color: #ccd54a; font-size: 0.85em; font-style: italic; margin-top: 10px; letter-spacing: 1px;">
+            <span style="color: #000000; font-size: 0.85em; font-style: italic; margin-top: 10px; letter-spacing: 1px;">
                 <i class="fas fa-mouse-pointer" style="margin-right: 5px;"></i> Cliquez pour être redirigé
             </span>
         </a>
 
         <div style="display: flex; flex-direction: column; align-items: center;">
-            <div class="source-card" style="width: 180px; min-height: 160px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 12px; padding: 15px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1); backdrop-filter: blur(5px);">
-                <img src="qrcode.jpg" alt="QR Code Profil LinkedIn" style="width: 100px; height: 95px; border-radius: 8px; border: 4px solid white;">
-                <p style="font-weight: bold; margin: 10px 0 0 0; color: #ffffff; font-size: 0.8em;">Scanner mon profil</p>
+            <div class="source-card" style="width: 180px; min-height: 160px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(19, 132, 181, 0.738); border-radius: 12px; padding: 15px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 4px 6px rgba(255, 255, 255, 0.711); backdrop-filter: blur(5px);">
+                <img src="qrcode.jpg" alt="QR Code Profil LinkedIn" style="width: 100px; height: 95px; border-radius: 8px; border: 4px solid rgb(8, 139, 191);">
+                <p style="font-weight: bold; margin: 10px 0 0 0; color: #000000; font-size: 0.8em;">Scanner mon profil</p>
             </div>
             
-            <span style="color: rgba(255,255,255,0.7); font-size: 0.85em; font-style: italic; margin-top: 10px; letter-spacing: 1px;">
-                <i class="fas fa-qrcode" style="margin-right: 5px;"></i> Via l'application mobile
+            <span style="color: #000000; font-size: 0.85em; font-style: italic; margin-top: 10px; letter-spacing: 1px;">
+                <i class="fas fa-mouse-pointer" style="margin-right: 5px;"></i> Via l'application mobile
             </span>
         </div>
 
@@ -161,10 +175,15 @@
             
             <div style="flex: 1; min-width: 300px;">
                 <img src="grandemotte.jpg" alt="La Grande-Motte" style="width: 100%; border-radius: 15px; border: 2px solid #00d2ff; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
-                <p style="margin-top: 10px; font-style: italic; font-size: 0.9em; color: #ccd54a;">Secteur d'activité : Littoral & Montpellier Métropole</p>
+                <p style="margin-top: 10px; font-style: italic; font-size: 0.9em; color: #000000;">Secteur d'activité : La Grande-Motte +/- 30 km</p>
             </div>
 
-     <hr style="border: 0; border-top: 3px solid #114161; width: 40%; margin: 3em auto;">  
+            <div style="flex: 1; min-width: 300px;">
+                <img src="montpellier.jpg" alt="La Grande-Motte" style="width: 94%; border-radius: 15px; border: 2px solid #00d2ff; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+                <p style="margin-top: 10px; font-style: italic; font-size: 0.9em; color: #000000;">Secteur d'activité : Montpellier Métropole +/- 30 km</p>
+            </div>
+
+     
     </div>
 
 </main>
