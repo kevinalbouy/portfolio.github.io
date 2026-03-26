@@ -2,240 +2,228 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Portfolio de Albouy Kévin</title>
+    <title>Conformité - Portfolio de Albouy Kévin</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Style des H2 avec le fond et l'italique demandé */
+        h2 {
+            font-size: 1.6em;
+            color: #123147;
+            font-style: italic;
+            
+            padding: 10px 25px;
+            border-radius: 12px;
+            display: inline-block;
+            
+            margin-bottom: 25px;
+            backdrop-filter: blur(5px);
+        }
+
+        .container-conformite {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        /* Style spécifique pour les grilles d'images de preuves */
+        .evidence-grid {
+            display: flex; 
+            justify-content: center; 
+            gap: 1.5em; 
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .evidence-grid img {
+            width: 220px; 
+            height: auto; 
+            border-radius: 8px;
+            border: 2px solid rgba(0, 210, 255, 0.2);
+        }
+    </style>
 </head>
 <body>
-<header style="display: flex; flex-direction: column; align-items: center; text-align: center;">
-    <h1>ALBOUY KÉVIN</h1>
-   <div class="nav-container">
+
+<header style="width: 100%; padding: 40px 20px; text-align: center; background: transparent !important; position: relative; z-index: 1000;">
+    <h1 style="font-size: 2.5em; text-transform: uppercase; letter-spacing: 4px; margin-bottom: 25px; color: #00d2ff; text-shadow: 0 0 20px rgba(0, 210, 255, 0.6);">
+        ALBOUY KÉVIN
+    </h1>
+    
+    <div class="nav-container" style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+        
         <div class="dropdown">
             <a href="index.html" class="headerButton">à propos ▾</a>
             <div class="dropdown-content">
-                <a href="#contenu">Sommaire</a>
-                <a href="#sisr">BTS SIO</a>
-                <a href="#qui-suis-je">Présentation</a>
-                <a href="#experiences">Expériences</a>
-                <a href="#formations">Formations</a>
-                <a href="#environnement">Environnement</a>
+                <a href="index.html#sisr">BTS SIO</a>
+                <a href="index.html#qui-suis-je">Présentation</a>
+                <a href="index.html#experiences">Expériences</a>
+                <a href="index.html#formations">Formations</a>
             </div>
         </div>
 
         <div class="dropdown">
             <a href="projets.html" class="headerButton">projets ▾</a>
             <div class="dropdown-content">
-                <a href="projets.html#entreprise">Expériences en Entreprise</a>
-                <a href="projets.html#infrastructure">Infrastructure & Sécurité</a>
-                <a href="projets.html#developpement">Développement & Gestion</a>
+                <a href="projets.html#entreprise">En Entreprise</a>
+                <a href="projets.html#infrastructure">Infrastructure</a>
+                <a href="projets.html#developpement">Développement</a>
             </div>
         </div>
 
-        <a href="competences.html" class="headerButton">compétences</a>
-        <a href="veille.html" class="headerButton">veille</a>
-        <a href="contact.html" class="headerButton">contact</a>
-        <a href="conformite.html" class="headerButton">conformite</a>
+        <div class="dropdown">
+            <a href="competences.html" class="headerButton">compétences ▾</a>
+            <div class="dropdown-content">
+                <a href="competences.html#techniques">Techniques</a>
+                <a href="competences.html#personnelles">Soft Skills</a>
+                <a href="competences.html#synthese">Synthèse</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <a href="veille.html" class="headerButton">veille ▾</a>
+            <div class="dropdown-content">
+                <a href="veille.html#methode">Méthodologie</a>
+                <a href="veille.html#certif">Certifications</a>
+                <a href="veille.html#sources">Sources</a>
+                <a href="veille.html#outils">Environnement</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <a href="conformite.html" class="headerButton">conformité ▾</a>
+            <div class="dropdown-content">
+                <a href="conformite.html#rgpd">RGPD</a>
+                <a href="conformite.html#consentement">Consentements</a>
+                <a href="conformite.html#directeur-projet">Directeur</a>
+                <a href="conformite.html#hebergement">Hébergement</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <a href="contact.html" class="headerButton">contact ▾</a>
+            <div class="dropdown-content">
+                <a href="contact.html#formulaire">Me contacter</a>
+                <a href="contact.html#reseaux">Réseaux Sociaux</a>
+                <a href="contact.html#localisation">Localisation</a>
+            </div>
+        </div>
+
     </div>
 </header>
 
-<main>
 
 
-       <h1 style="margin-left: 0cm;">Conformité</h1>
-<br>
-    <p style="margin-bottom: 2em;">
-        <span style="margin-left: 0cm; display: inline-block;">
+<main class="container-conformite">
+
+    <h1 style="color: #0f3c5c; text-shadow: 0 0 15px rgba(0,210,255,0.5); margin-bottom: 30px;">Conformité & Transparence</h1>
+
+    <section class="projet-card" style="text-align: left;">
+        <p>
             J'ai créé cette page de conformité afin de respecter la réglementation en vigueur et d'assurer la transparence concernant l'utilisation des contenus et droits associés à ce portfolio.
             <br><br>
-            La protection des données personnelles est également une priorité. Aucune donnée sensible n'est collectée ou stockée sans consentement explicite. Il est important de rappeler que la divulgation non maîtrisée d'informations personnelles sur Internet peut présenter des risques pour la vie privée et la sécurité des individus. Je m'engage à respecter la confidentialité des visiteurs et à limiter l'usage des données aux stricts besoins du site.
-        </span>
-    </p>
-
-    <section style="display: flex; flex-direction: column; align-items: center; padding: 40px 20px; background-color: #f8f9fa; font-family: sans-serif; color: #333;">
-    <h2 style="margin-bottom: 30px; color: #2c3e50;">Règlement Général sur la Protection des Données (RGPD)</h2>
-
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; width: 100%; max-width: 1000px; margin-bottom: 30px;">
-        
-        <div style="background: #fff5eb; border-radius: 10px; padding: 20px; border-top: 5px solid #e67e22;">
-            <h3 style="color: #e67e22; margin-top: 0;">📸 Données Collectées</h3>
-            <p style="font-size: 0.9em;">Nom, prénom, adresse email et message via le formulaire de contact.</p>
-        </div>
-
-        <div style="background: #ebf5ff; border-radius: 10px; padding: 20px; border-top: 5px solid #3498db;">
-            <h3 style="color: #3498db; margin-top: 0;">⚖️ Consentement</h3>
-            <p style="font-size: 0.9em;">En soumettant le formulaire, vous consentez explicitement au traitement de vos données pour répondre à votre demande.</p>
-        </div>
-
-        <div style="background: #f0fff4; border-radius: 10px; padding: 20px; border-top: 5px solid #27ae60;">
-            <h3 style="color: #27ae60; margin-top: 0;">🎯 Finalité</h3>
-            <p style="font-size: 0.9em;">Les données sont traitées uniquement pour la gestion de la relation client et ne sont jamais revendues.</p>
-        </div>
-    </div>
-
-    <div style="background: white; border-radius: 10px; padding: 30px; width: 100%; max-width: 1000px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
-        <h3 style="margin-top: 0; display: flex; align-items: center; gap: 10px;">
-            <span style="color: #e74c3c;">🔒</span> Vos Droits (RGPD)
-        </h3>
-        <p>Conformément au Règlement (UE) 2016/679, vous disposez des droits suivants :</p>
-        
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 20px;">
-            <div style="font-size: 0.9em;"><strong>👁️ Droit d'accès :</strong> Consulter vos données.</div>
-            <div style="font-size: 0.9em;"><strong>📝 Droit de rectification :</strong> Corriger vos informations.</div>
-            <div style="font-size: 0.9em;"><strong>🗑️ Droit à l'effacement :</strong> Supprimer vos données.</div>
-            <div style="font-size: 0.9em;"><strong>⏳ Droit à la limitation :</strong> Suspendre le traitement.</div>
-        </div>
-        
-        <p style="margin-top: 25px; font-size: 0.85em; font-style: italic; border-top: 1px solid #eee; padding-top: 15px;">
-            Pour exercer ces droits, contactez-nous directement via le formulaire. Nous nous engageons à répondre à votre demande dans les meilleurs délais.
+            La protection des données personnelles est une priorité. Aucune donnée sensible n'est collectée ou stored sans consentement explicite. Je m'engage à respecter la confidentialité des visiteurs et à limiter l'usage des données aux stricts besoins du site.
         </p>
+    </section>
+
+    <section id="rgpd" class="projet-card">
+        <h2>Règlement Général sur la Protection des Données (RGPD)</h2>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 20px;">
+            <div style="background: rgba(255, 255, 255, 0.1); border-radius: 10px; padding: 20px; border-top: 4px solid #ccd54a;">
+                <h3 style="color: #ccd54a;">📸 Collecte</h3>
+                <p style="font-size: 0.9em;">Nom, prénom et email via le formulaire de contact.</p>
+            </div>
+            <div style="background: rgba(255, 255, 255, 0.1); border-radius: 10px; padding: 20px; border-top: 4px solid #00d2ff;">
+                <h3 style="color: #00d2ff;">⚖️ Consentement</h3>
+                <p style="font-size: 0.9em;">Traitement basé sur l'envoi volontaire de vos informations.</p>
+            </div>
+            <div style="background: rgba(255, 255, 255, 0.1); border-radius: 10px; padding: 20px; border-top: 4px solid #ffffff;">
+                <h3 style="color: #ffffff;">🎯 Finalité</h3>
+                <p style="font-size: 0.9em;">Données utilisées uniquement pour la gestion de la relation professionnelle.</p>
+            </div>
+        </div>
+
+       <div style="margin-top: 30px; text-align: center; background: rgba(17, 65, 97, 0.3); padding: 30px; border-radius: 12px; border: 1px solid rgba(0, 210, 255, 0.1); backdrop-filter: blur(5px);">
+    
+    <h3 style="color: #00d2ff; margin-bottom: 20px;">
+        <i class="fas fa-user-shield" style="margin-right: 10px;"></i>Vos Droits RGPD
+    </h3>
+    
+    <ul style="list-style: none; padding: 0; margin-top: 10px; line-height: 2;">
+        <li style="margin-bottom: 15px;">
+            Droit d'accès & <strong style="color: #ccd54a;">Rectification</strong> : Consulter et corriger vos informations.
+        </li>
+        <li style="margin-bottom: 15px;">
+            Droit à l'<strong>effacement</strong> : Demander la <strong style="color: #ccd54a;">suppression</strong> de vos données.
+        </li>
+        <li style="margin-bottom: 15px;">
+            Droit à la <strong>limitation</strong> : <strong style="color: #ccd54a;">Suspendre</strong> temporairement le traitement.
+        </li>
+    </ul>
+</div>
+    </section>
+
+    <section id="consentement" class="projet-card">
+        <h2>Consentements Écoles</h2>
+        <p style="margin-bottom: 20px;">
+            Utilisation autorisée des logos MyDigitalSchool, Esicad et IUT Montpellier dans le cadre de la présentation de mon parcours académique.
+        </p>
+        <div class="evidence-grid">
+            <img class="zoomable" src="Consentement1.png" alt="Consentement MDS">
+            <img class="zoomable" src="Consentement2.png" alt="Consentement Esicad">
+            <img class="zoomable" src="Consentement3.png" alt="Consentement IUT">
+        </div>
+    </section>
+
+    <section class="projet-card">
+        <h2>Consentements CNIL & ANSSI</h2>
+        <p style="margin-bottom: 20px;">
+            Consentements obtenus pour l'illustration des projets de veille et de cybersécurité.
+        </p>
+        <div class="evidence-grid">
+            <img class="zoomable" src="cnil1.jpg" alt="Preuve CNIL">
+            <img class="zoomable" src="anssi1.jpg" alt="Preuve ANSSI">
+        </div>
+    </section>
+
+    <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-top: 40px; padding-bottom: 50px;">
+        <div id="directeur-projet" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 15px; min-width: 250px;">
+            <h3 style="color: #ccd54a; font-size: 1em;">Directeur de publication</h3>
+            <p>Albouy Kévin</p>
+        </div>
+        <div id="hebergement" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 15px; min-width: 250px;">
+            <h3 style="color: #ccd54a; font-size: 1em;">Hébergement</h3>
+            <p>GitHub Pages (Irlande)</p>
+        </div>
     </div>
-</section>
-</div>
 
-<hr style="border: 0; border-top: 3px solid #114161; width: 40%; margin: 3em auto;">
+</main>
 
-    <h2 style="margin-left: 0cm; color: #114161;">Logo des écoles Esicad, MyDigitalSchool et IUT Montpellier</h2>
-    <br>
-    <p style="margin-bottom: 2em;">
-        <span style="margin-left: 0cm; display: inline-block;">
-            Dans le cadre de mon portfolio, j’ai utilisé les logos des écoles MyDigitalSchool, Esicad, et de l'IUT Montpellier. Conformément à la réglementation sur la propriété intellectuelle, j’ai veillé à respecter les droits d’auteur et les conditions d’utilisation du logo.
-            J’ai pris contact avec les écoles MyDigitalSchool, Esicad, et l'IUT Montpellier afin d’obtenir leur consentement pour l’utilisation de leur logo dans ce portfolio.
-        </span>
-        <br>
-    </p>
-
-<div style="display: flex; justify-content: center; gap: 2em; margin-bottom: 2em; margin-left: 0cm;">
-    <img class="zoomable" src="Consentement1.png" alt="consentement1" style="width: 300px; height: auto; object-fit: cover;">
-    <img class="zoomable" src="Consentement2.png" alt="consentement2" style="width: 300px; height: auto; object-fit: cover;">
-    <img class="zoomable" src="Consentement3.png" alt="consentement3" style="width: 300px; height: auto; object-fit: cover;">
-
-</div>
-
-<hr style="border: 0; border-top: 3px solid #114161; width: 40%; margin: 3em auto;">
-
-
-<h2 style="margin-left: 0cm; color: #114161;">Logo CNIL </h2>
-    <br>
-    <p style="margin-bottom: 2em;">
-        <span style="margin-left: 0cm; display: inline-block;">
-            Dans le cadre de mon portfolio, j’ai utilisé le logo de la CNIL pour illustrer mon projet. Conformément à la réglementation sur la propriété intellectuelle, j’ai veillé à respecter les droits d’auteur et les conditions d’utilisation du logo.
-            J’ai pris contact avec la CNIL afin d’obtenir leur consentement pour l’utilisation de leur logo dans ce portfolio.
-        </span>
-        <br>
-    </p>
-
- <div style="display: flex; justify-content: center; gap: 2em; margin-bottom: 2em; margin-left: 0cm;">
-    <img class="zoomable" src="cnil1.jpg" alt="cnil1" style="width: 200px; height: auto; object-fit: cover;">
-    <img class="zoomable" src="cnil2.png" alt="cnil2" style="width: 200px; height: auto; object-fit: cover;">
-    <img class="zoomable" src="cnil3.jpg" alt="cnil3" style="width: 200px; height: auto; object-fit: cover;">
-</div>
-
-
-    <hr style="border: 0; border-top: 3px solid #114161; width: 40%; margin: 3em auto;">
-
-
-    <h2 style="margin-left: 0cm; color: #114161;">Logo ANSSI </h2>
-    <br>
-    <p style="margin-bottom: 2em;">
-        <span style="margin-left: 0cm; display: inline-block;">
-            Dans le cadre de mon portfolio, j'ai utilisé le logo de l'ANSSI pour illustrer mon projet. Conformément à la réglementation sur la propriété intellectuelle, j'ai veillé à respecter les droits d'auteur et les conditions d'utilisation du logo.
-            J'ai pris contact avec l'ANSSI afin d'obtenir leur consentement pour l'utilisation de leur logo dans ce portfolio.
-        </span>
-        <br>
-    </p>
-
- <div style="display: flex; justify-content: center; gap: 2em; margin-bottom: 2em; margin-left: 0cm;">
-    <img class="zoomable" src="anssi1.jpg" alt="anssi1" style="width: 200px; height: auto; object-fit: cover;">
-    <img class="zoomable" src="anssi2.jpg" alt="anssi2" style="width: 200px; height: auto; object-fit: cover;">
-</div>
-
-<br>
-<hr style="border: 0; border-top: 3px solid #114161; width: 40%; margin: 3em auto;">
-
-
-
-   
-<h2 style="margin-left: 0cm; color: #114161;">Directeur de publication</h2>
-<p style="margin-left: 0cm; margin-top: 0.2em;">Albouy Kévin</p>
-
-<br>
-
-<h2 style="margin-left: 0cm; color: #114161;">Hébergement</h2>
-<p style="margin-left: 0cm; margin-top: 0.2em;">GitHub</p>
-
-<br>
-
-
-<style>
-.zoomable {
-    transition: transform 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.3s;
-    cursor: pointer;
-    z-index: 1;
-    position: relative;
-}
-.zoomable:hover {
-    box-shadow: 0 20px 60px rgba(0,0,0,0.25);
-}
-.zoom-modal {
-    display: none;
-    position: fixed;
-    z-index: 9999;
-    left: 0; top: 0; width: 100vw; height: 100vh;
-    background: rgba(0,0,0,0.7);
-    justify-content: center;
-    align-items: center;
-}
-.zoom-modal.active {
-    display: flex;
-}
-.zoom-modal img {
-    max-width: 45vw;
-    max-height: 45vh;
-    border-radius: 10px;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
-    transform: scale(1.35);
-    transition: transform 0.3s cubic-bezier(.4,2,.6,1);
-}
-.zoom-modal .close-btn {
-    position: absolute;
-    top: 2.5vh;
-    right: 4vw;
-    font-size: 2.5em;
-    color: #fff;
-    background: none;
-    border: none;
-    cursor: pointer;
-    z-index: 10000;
-}
-</style>
 <div class="zoom-modal" id="zoomModal">
-    <button class="close-btn" id="closeZoom" aria-label="Fermer l'image">&times;</button>
-    <img src="" alt="Agrandissement de l'image" id="zoomImg">
+    <button class="close-btn" id="closeZoom">&times;</button>
+    <img src="" id="zoomImg">
 </div>
+
 <script>
-document.querySelectorAll('.zoomable').forEach(img => {
-    img.addEventListener('click', function() {
-        const modal = document.getElementById('zoomModal');
-        const zoomImg = document.getElementById('zoomImg');
-        zoomImg.src = this.src;
-        zoomImg.alt = this.alt;
-        modal.classList.add('active');
+    // Script de zoom
+    document.querySelectorAll('.zoomable').forEach(img => {
+        img.addEventListener('click', function() {
+            const modal = document.getElementById('zoomModal');
+            const zoomImg = document.getElementById('zoomImg');
+            zoomImg.src = this.src;
+            modal.classList.add('active');
+        });
     });
-});
-document.getElementById('closeZoom').onclick = function() {
-    document.getElementById('zoomModal').classList.remove('active');
-    document.getElementById('zoomImg').src = '';
-};
-document.getElementById('zoomModal').onclick = function(e) {
-    if (e.target === this) {
-        this.classList.remove('active');
-        document.getElementById('zoomImg').src = '';
-    }
-};
+    document.getElementById('closeZoom').onclick = function() {
+        document.getElementById('zoomModal').classList.remove('active');
+    };
 </script>
 
-
-
-
-    <footer style="position: fixed; left: 0; bottom: 0; width: 100%; background: #b3ced6; text-align: center; padding: 0.4em 0; box-shadow: 0 -2px 8px rgba(0,0,0,0.05); font-size: 0.95em;">
-    <p style="margin: 0;">© 2026 Portfolio de Albouy Kévin. Tous droits réservés.</p>
+<footer style="margin-top: 60px; background: rgba(255, 255, 255, 0.05); padding: 20px; text-align: center;">
+    <p>© 2026 Portfolio de Albouy Kévin. Tous droits réservés.</p>
 </footer>
+
+</body>
+</html>

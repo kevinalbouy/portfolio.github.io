@@ -2,138 +2,289 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Portfolio de Albouy Kévin</title>
+    <title>Veille Stratégique - Albouy Kévin</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Style des H2 en Italique avec fond comme sur les autres pages */
+        h2 {
+            font-size: 1.6em;
+            color: #123147;
+            font-style: italic;
+            background: rgba(204, 213, 74, 0.15);
+            padding: 10px 25px;
+            border-radius: 12px;
+            display: inline-block;
+            border: 1px solid rgba(17, 65, 97, 0.1);
+            margin-bottom: 25px;
+            backdrop-filter: blur(5px);
+        }
+
+        .source-card {
+            background: #ffffff;
+            border: 1px solid rgba(17, 65, 97, 0.1);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 150px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            text-decoration: none;
+            color: inherit;
+        }
+        .source-card:hover {
+            transform: translateY(-5px);
+            border-color: #ccd54a;
+            box-shadow: 0 8px 15px rgba(204, 213, 74, 0.2);
+        }
+
+        .info-section {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 20px;
+            margin-bottom: 40px;
+            border-left: 5px solid #ccd54a;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .comp-card {
+            background: rgba(17, 65, 97, 0.05);
+            border: 1px solid rgba(17, 65, 97, 0.1);
+            border-radius: 15px;
+            transition: 0.3s;
+        }
+        /* =================== HEADER (RESTORED TO TRANSPARENT) =================== */
+header {
+  width: 100%;
+  padding: 40px 20px;
+  text-align: center;
+  
+  /* --- CETTE LIGNE EST LA CORRECTION --- */
+  background: transparent !important; /* Force le fond à être transparent */
+  /* ------------------------------------ */
+  
+  backdrop-filter: none;
+  border-bottom: none;
+  position: relative;
+  z-index: 1000;
+}
+
+header h1 {
+  font-size: 2.5em;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-bottom: 25px;
+  color: #00d2ff;
+  text-shadow: 0 0 20px rgba(0, 210, 255, 0.6);
+}
+
+header a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 12px 25px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+header a:hover {
+  background: #00d2ff;
+  color: #03262c;
+  transform: scale(1.08);
+  box-shadow: 0 0 20px rgba(0, 210, 255, 0.5);
+}
+    </style>
 </head>
-<body>
-<header style="display: flex; flex-direction: column; align-items: center; text-align: center;">
-    <h1>ALBOUY KÉVIN</h1>
-   <div class="nav-container">
+<body style="background-color: #f4f7f6; color: #333; font-family: 'Segoe UI', sans-serif; margin: 0; padding-bottom: 100px;">
+
+<header style="width: 100%; padding: 40px 20px; text-align: center; background: transparent !important; position: relative; z-index: 1000;">
+    <h1 style="font-size: 2.5em; text-transform: uppercase; letter-spacing: 4px; margin-bottom: 25px; color: #00d2ff; text-shadow: 0 0 20px rgba(0, 210, 255, 0.6);">
+        ALBOUY KÉVIN
+    </h1>
+    
+    <div class="nav-container" style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+        
         <div class="dropdown">
             <a href="index.html" class="headerButton">à propos ▾</a>
             <div class="dropdown-content">
-                <a href="#contenu">Sommaire</a>
-                <a href="#sisr">BTS SIO</a>
-                <a href="#qui-suis-je">Présentation</a>
-                <a href="#experiences">Expériences</a>
-                <a href="#formations">Formations</a>
-                <a href="#environnement">Environnement</a>
+                <a href="index.html#sisr">BTS SIO</a>
+                <a href="index.html#qui-suis-je">Présentation</a>
+                <a href="index.html#experiences">Expériences</a>
+                <a href="index.html#formations">Formations</a>
             </div>
         </div>
 
         <div class="dropdown">
             <a href="projets.html" class="headerButton">projets ▾</a>
             <div class="dropdown-content">
-                <a href="projets.html#entreprise">Expériences en Entreprise</a>
-                <a href="projets.html#infrastructure">Infrastructure & Sécurité</a>
-                <a href="projets.html#developpement">Développement & Gestion</a>
+                <a href="projets.html#entreprise">En Entreprise</a>
+                <a href="projets.html#infrastructure">Infrastructure</a>
+                <a href="projets.html#developpement">Développement</a>
             </div>
         </div>
 
-        <a href="competences.html" class="headerButton">compétences</a>
-        <a href="veille.html" class="headerButton">veille</a>
-        <a href="contact.html" class="headerButton">contact</a>
-        <a href="conformite.html" class="headerButton">conformite</a>
+        <div class="dropdown">
+            <a href="competences.html" class="headerButton">compétences ▾</a>
+            <div class="dropdown-content">
+                <a href="competences.html#techniques">Techniques</a>
+                <a href="competences.html#personnelles">Soft Skills</a>
+                <a href="competences.html#synthese">Synthèse</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <a href="veille.html" class="headerButton">veille ▾</a>
+            <div class="dropdown-content">
+                <a href="veille.html#methode">Méthodologie</a>
+                <a href="veille.html#certif">Certifications</a>
+                <a href="veille.html#sources">Sources</a>
+                <a href="veille.html#outils">Environnement</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <a href="conformite.html" class="headerButton">conformité ▾</a>
+            <div class="dropdown-content">
+                <a href="conformite.html#rgpd">RGPD</a>
+                <a href="conformite.html#consentement">Consentements</a>
+                <a href="conformite.html#directeur-projet">Directeur</a>
+                <a href="conformite.html#hebergement">Hébergement</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <a href="contact.html" class="headerButton">contact ▾</a>
+            <div class="dropdown-content">
+                <a href="contact.html#formulaire">Me contacter</a>
+                <a href="contact.html#reseaux">Réseaux Sociaux</a>
+                <a href="contact.html#localisation">Localisation</a>
+            </div>
+        </div>
+
     </div>
 </header>
 
-<main>
-    <h1 style="margin-left: 0cm;">Veille technologique</h1>
-    <br>
-
-    <p style="margin-left: 0cm;">
-        La veille technologique est essentielle pour rester à jour dans le domaine de l'informatique. Elle permet de découvrir les dernières tendances, outils et technologies qui peuvent influencer notre travail.
-    </p>
-    <br>
-   <hr style="border: 0; border-top: 3px solid #114161; width: 40%; margin: 3em auto;">
-
-    <h2 style="margin-left: 0cm;">Pourquoi la veille technologique est-elle importante ?</h2>
-    <div style="margin-left: 0cm;">
-    <br>
+<main style="max-width: 1100px; margin: 0 auto; padding: 40px 20px; text-align: center;">
     
-    <div>Rester informé des dernières innovations.</div>
-    <br>
-    <div>Comprendre les évolutions du marché.</div>
-    <br>
-    <div>Anticiper les besoins futurs en compétences.</div>
-    <br>
-    <div style="display: flex; justify-content: center; margin-top: 20px;">
-         <a href="https://www.greenit.fr/" target="_blank" style="text-decoration: none;">
-        <img src="green.jpg" alt="A clear light bulb filled with water used as a vase, holding a green leafy plant cutting with visible roots. The bulb is resting on weathered wooden planks in an outdoor rustic setting. The scene feels creative and peaceful." style="height: 250px;">
-    </div>
- <hr style="border: 0; border-top: 3px solid #114161; width: 40%; margin: 3em auto;">
-    </a>
-    </div>>
-
-    <h2 style="margin-left: 0cm;">Mes sources de veille technologique</h2>
-    <p style="margin-left: 0cm;">
-        <br>
-        Je consulte régulièrement des blogs, des forums, des podcasts et des conférences pour me tenir informé. Voici quelques-unes de mes sources préférées :
-    </p>
-    <br>
-   <div style="display: flex; flex-direction: column; align-items: center; gap: 3em; width: 100%;">
-
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
-        <a href="https://www.cnil.fr/fr" target="_blank" style="text-decoration: none;">
-            <img src="logo-cnil.jpg" alt="Logo CNIL" style="height: 80px; border-radius: 5px; display: block; margin: 0 auto;">
-        </a>
-        <a href="https://www.cnil.fr" target="_blank" style="color: #ccd54a; text-decoration: none; font-style: italic; font-weight: bold;">
-            CNIL (Commission Nationale de l'Informatique et des Libertés)
-            <span style="font-size: 0.8em; color: #000000; display: block; text-align: center; margin-top: 5px;">Cliquez pour redirection</span>
-        </a>
+    <div style="margin-bottom: 60px;">
+        <h1 style="color: #114161; text-transform: uppercase; letter-spacing: 3px; font-size: 2.2em; margin-bottom: 10px;">
+            <i class="fas fa-satellite-dish" style="color: #ccd54a;"></i> Veille Stratégique
+        </h1>
+        <p style="color: #666; max-width: 750px; margin: 0 auto; font-style: italic;">
+            "Anticiper les menaces, découvrir les innovations et adapter mes compétences pour les infrastructures de demain."
+        </p>
     </div>
 
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
-        <a href="https://www.ssi.gouv.fr" target="_blank" style="text-decoration: none;">
-            <img src="anssi.png" alt="Logo ANSSI" style="height: 80px; border-radius: 5px; display: block; margin: 0 auto;">
-        </a>
-        <a href="https://www.ssi.gouv.fr" target="_blank" style="color: #ccd54a; text-decoration: none; font-style: italic; font-weight: bold;">
-            ANSSI (Agence nationale de la sécurité des systèmes d'information)
-            <span style="font-size: 0.8em; color: #000000; display: block; text-align: center; margin-top: 5px;">Cliquez pour redirection</span>
-        </a>
-    </div>
+    <section id="methode" class="info-section">
+        <h2><i class="fas fa-sync-alt"></i> Méthodologie : Le Cycle de Veille</h2>
+        <p>Ma démarche se décompose en quatre étapes itératives permettant de transformer une donnée brute en information exploitable :</p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 20px;">
+            <div>
+                <i class="fas fa-search-plus" style="font-size: 2em; color: #ccd54a;"></i>
+                <h4 style="margin: 10px 0;">Sourcing</h4>
+                <p style="font-size: 0.85em;">Identification des flux RSS et experts du secteur SISR.</p>
+            </div>
+            <div>
+                <i class="fas fa-filter" style="font-size: 2em; color: #ccd54a;"></i>
+                <h4 style="margin: 10px 0;">Curation</h4>
+                <p style="font-size: 0.85em;">Filtrage via Feedly pour éliminer le "bruit" numérique.</p>
+            </div>
+            <div>
+                <i class="fas fa-file-invoice" style="font-size: 2em; color: #ccd54a;"></i>
+                <h4 style="margin: 10px 0;">Analyse</h4>
+                <p style="font-size: 0.85em;">Étude de l'impact technique des vulnérabilités détectées.</p>
+            </div>
+            <div>
+                <i class="fas fa-share-square" style="font-size: 2em; color: #ccd54a;"></i>
+                <h4 style="margin: 10px 0;">Diffusion</h4>
+                <p style="font-size: 0.85em;">Partage des connaissances et mise à jour des procédures.</p>
+            </div>
+        </div>
+    </section>
 
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
-        <a href="https://feedly.com" target="_blank" style="color: #ccd54a; text-decoration: none; font-weight: bold; font-size: 1.2em;">
-            Feedly
-            <span style="font-size: 0.6em; color: #000000; display: block; text-align: center; margin-top: 5px;">Cliquez pour redirection</span>
-        </a>
-    </div>
-    
-</div>
-    </div>
-    </div>
-    <br>
+    <section id="certif">
+        <h2><i class="fas fa-certificate"></i> Mes Certifications</h2>
+        <div class="competence-container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;">
+            <div class="comp-card" style="display: flex; align-items: center; padding: 20px;">
+                <div style="text-align: left; flex: 1;">
+                    <h3 style="margin: 0; font-size: 1.1em; color: #114161;">Cisco Networking Academy</h3>
+                    <p style="margin: 5px 0 0 0; font-size: 0.9em;">Introduction à la Cybersécurité (2025)</p>
+                </div>
+                <img src="cisco.png" alt="Cisco" style="height: 50px;">
+            </div>
+            <div class="comp-card" style="display: flex; align-items: center; padding: 20px;">
+                <div style="text-align: left; flex: 1;">
+                    <h3 style="margin: 0; font-size: 1.1em; color: #114161;">ANSSI - SecNumAcadémie</h3>
+                    <p style="margin: 5px 0 0 0; font-size: 0.9em;">Initiation à la cybersécurité</p>
+                </div>
+                <img src="anssi.png" alt="ANSSI" style="height: 50px;">
+            </div>
+        </div>
+    </section>
 
-       
-  <hr style="border: 0; border-top: 3px solid #114161; width: 40%; margin: 3em auto;">
+    <section id="sources">
+        <h2><i class="fas fa-book-reader"></i> Références & Conformité</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 20px;">
+            <a href="https://www.cnil.fr/fr/actualites" target="_blank" class="source-card">
+                <img src="logo-cnil.jpg" alt="CNIL">
+                <div class="source-title">CNIL Actualités</div>
+                <div class="source-desc">Suivi juridique du RGPD.</div>
+            </a>
+            <a href="https://www.cert.ssi.gouv.fr/" target="_blank" class="source-card">
+                <img src="anssi.png" alt="ANSSI">
+                <div class="source-title">CERT-FR (ANSSI)</div>
+                <div class="source-desc">Alertes critiques de sécurité.</div>
+            </a>
+            <a href="https://www.legifrance.gouv.fr/" target="_blank" class="source-card">
+                <i class="fas fa-balance-scale"></i>
+                <div class="source-title">Légifrance</div>
+                <div class="source-desc">Veille réglementaire numérique.</div>
+            </a>
+        </div>
 
-    <h2 style="margin-left: 0cm;">Comment je réalise ma veille technologique ?</h2>
-     <br>
-    <p style="margin-left: 0cm;">
-        J'utilise des outils comme Feedly pour centraliser mes sources d'information et organiser ma veille. Je prends également le temps de lire des articles, de regarder des vidéos et d'écouter des podcasts pour approfondir mes connaissances.
-    </p>
-    <br>
-    <br>
-<div style="display: flex; justify-content: center; gap: 2em; margin-bottom: 2em; margin-left: 0.2cm;">
-    <img class="zoomable" src="feedly.png" alt="Acronis 1" style="width: 400px; height: auto; object-fit: cover;" onclick="this.style.transform='scale(3)'; this.style.transition='transform 0.3s';" onmouseout="this.style.transform='scale(1)';">
-</div>
+        <h2 style="margin-top: 50px;"><i class="fas fa-play-circle"></i> Médias Audio & Vidéo</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 20px;">
+            <a href="https://www.nolimitsecu.fr/" target="_blank" class="source-card">
+                <i class="fas fa-microphone-alt" style="color: #ff6b6b;"></i>
+                <div class="source-title">NoLimitSecu</div>
+                <div class="source-desc">Podcast technique SSI.</div>
+            </a>
+            <a href="https://www.youtube.com/@ANSSI_FR" target="_blank" class="source-card">
+                <i class="fab fa-youtube" style="color: #ff0000;"></i>
+                <div class="source-title">ANSSI TV</div>
+                <div class="source-desc">Conférences techniques.</div>
+            </a>
+            <a href="https://www.youtube.com/@CookieConnecte" target="_blank" class="source-card">
+                <i class="fab fa-youtube" style="color: #ff0000;"></i>
+                <div class="source-title">Cookie Connecté</div>
+                <div class="source-desc">Tutos réseaux et infrastructure.</div>
+            </a>
+        </div>
+    </section>
 
- <hr style="border: 0; border-top: 3px solid #114161; width: 40%; margin: 3em auto;"> 
-    <h2 style="margin-left: 0cm;">Conclusion</h2>
-    <br>
-    <p style="margin-left: 0cm;">
-        La veille technologique est un processus continu qui me permet de rester à jour dans un domaine en constante évolution. En utilisant les bonnes sources et les bons outils, je peux anticiper les changements et adapter mes compétences en conséquence.
-    </p>
+    <section id="outils">
+        <h2><i class="fas fa-layer-group"></i> Environnement de Veille</h2>
+        <div style="margin-top: 30px; display: flex; gap: 40px; align-items: center; flex-wrap: wrap; text-align: left;">
+            <div style="flex: 1; min-width: 300px;">
+                <p style="line-height: 1.8;">
+                    Pour centraliser et traiter ce volume d'informations, j'utilise <strong>Feedly</strong>. Cet agrégateur me permet d'organiser ma lecture par dossiers thématiques (Cyber, Infrastructure, Cloud). Les articles pertinents sont archivés sur <strong>Notion</strong>.
+                </p>
+            </div>
+            <img class="zoomable" src="feedly.png" alt="Feedly" style="width: 450px; border-radius: 12px; border: 2px solid #114161;">
+        </div>
+    </section>
 
-    <br>
- 
-   <br>
-   <br>
- 
-<footer style="position: fixed; left: 0; bottom: 0; width: 100%; background: #b3ced6; text-align: center; padding: 0.4em 0; box-shadow: 0 -2px 8px rgba(0,0,0,0.05); font-size: 0.95em;">
-    <p style="margin: 0;">© 2026 Portfolio de Albouy Kévin. Tous droits réservés.</p>
+</main>
+
+<footer style="position: fixed; left: 0; bottom: 0; width: 100%; background: #b3ced6; text-align: center; padding: 10px; font-size: 0.9em; z-index: 100;">
+    <p>© 2026 Portfolio de Albouy Kévin. Tous droits réservés.</p>
 </footer>
-</body>
 
+</body>
 </html>

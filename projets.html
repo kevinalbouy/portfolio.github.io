@@ -7,9 +7,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-<header style="display: flex; flex-direction: column; align-items: center; text-align: center;">
-    <h1>ALBOUY KÉVIN</h1>
-    <div class="nav-container">
+<header style="width: 100%; padding: 40px 20px; text-align: center; background: transparent !important; position: relative; z-index: 1000;">
+    <h1 style="font-size: 2.5em; text-transform: uppercase; letter-spacing: 4px; margin-bottom: 25px; color: #00d2ff; text-shadow: 0 0 20px rgba(0, 210, 255, 0.6);">
+        ALBOUY KÉVIN
+    </h1>
+    
+    <div class="nav-container" style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
         
         <div class="dropdown">
             <a href="index.html" class="headerButton">à propos ▾</a>
@@ -18,33 +21,56 @@
                 <a href="index.html#qui-suis-je">Présentation</a>
                 <a href="index.html#experiences">Expériences</a>
                 <a href="index.html#formations">Formations</a>
-                <a href="index.html#environnement">Environnement</a>
             </div>
         </div>
 
         <div class="dropdown">
             <a href="projets.html" class="headerButton">projets ▾</a>
             <div class="dropdown-content">
-                <a href="projets.html#entreprise">Expériences en Entreprise</a>
-                <a href="projets.html#infrastructure">Infrastructure/Sécurité</a>
-                <a href="projets.html#developpement">Développement/Gestion</a>
+                <a href="projets.html#entreprise">En Entreprise</a>
+                <a href="projets.html#infrastructure">Infrastructure</a>
+                <a href="projets.html#developpement">Développement</a>
             </div>
         </div>
 
         <div class="dropdown">
             <a href="competences.html" class="headerButton">compétences ▾</a>
             <div class="dropdown-content">
-                <a href="competences.html#techniques">Techniques (Savoir-faire)</a>
-                <a href="competences.html#personnelles">Personnelles (Soft Skills)</a>
-                <a href="competences.html#langues">Langues</a>
-                <a href="competences.html#certifications">Certifications</a>
-                <a href="competences.html#synthese">Tableau de Synthèse</a>
+                <a href="competences.html#techniques">Techniques</a>
+                <a href="competences.html#personnelles">Soft Skills</a>
+                <a href="competences.html#synthese">Synthèse</a>
             </div>
         </div>
 
-        <a href="veille.html" class="headerButton">veille</a>
-        <a href="contact.html" class="headerButton">contact</a>
-        <a href="conformite.html" class="headerButton">conformite</a>
+        <div class="dropdown">
+            <a href="veille.html" class="headerButton">veille ▾</a>
+            <div class="dropdown-content">
+                <a href="veille.html#methode">Méthodologie</a>
+                <a href="veille.html#certif">Certifications</a>
+                <a href="veille.html#sources">Sources</a>
+                <a href="veille.html#outils">Environnement</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <a href="conformite.html" class="headerButton">conformité ▾</a>
+            <div class="dropdown-content">
+                <a href="conformite.html#rgpd">RGPD</a>
+                <a href="conformite.html#consentement">Consentements</a>
+                <a href="conformite.html#directeur-projet">Directeur</a>
+                <a href="conformite.html#hebergement">Hébergement</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <a href="contact.html" class="headerButton">contact ▾</a>
+            <div class="dropdown-content">
+                <a href="contact.html#formulaire">Me contacter</a>
+                <a href="contact.html#reseaux">Réseaux Sociaux</a>
+                <a href="contact.html#localisation">Localisation</a>
+            </div>
+        </div>
+
     </div>
 </header>
 
@@ -532,47 +558,47 @@
     </div>
 
     <div class="image-grid">
-        <img class="zoomable" src="tp1.png" alt="Aperçu Portfolio">
-        <img class="zoomable" src="tp2.png" alt="Structure du Code">
+        <img class="zoomable" src="portfolio1.png" alt="Aperçu Portfolio">
+        <img class="zoomable" src="portfolio2.png" alt="Structure du Code">
     </div>
 
-    <div style="flex-basis: 100%; height: 0;"></div>
+<div style="flex-basis: 100%; height: 0;"></div>
 
-    <div class="competences-validees" style="width: 100%; margin-top: 25px; padding-top: 20px; border-top: 1px solid rgba(204, 213, 74, 0.2); text-align: center;">
-        
-        <p style="font-size: 0.85em; color: #ccd54a; margin: 0 0 20px 0; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 600;">
-            Compétences du référentiel validées
-        </p>
-        
-        <div style="display: inline-block; text-align: left; margin-bottom: 25px;">
-            <ul style="color: #ffffff; font-size: 0.9em; list-style: none; padding: 0; margin: 0; line-height: 1.8;">
-                <li style="margin-bottom: 10px;">
-                    <i class="fas fa-check" style="color: #ccd54a; margin-right: 12px;"></i>Gérer son <strong>identité professionnelle</strong> et ses compétences
-                </li>
-                <li style="margin-bottom: 10px;">
-                    <i class="fas fa-check" style="color: #ccd54a; margin-right: 12px;"></i>Développer son <strong>projet professionnel</strong> (Portfolio)
-                </li>
-                <li style="margin-bottom: 10px;">
-                    <i class="fas fa-check" style="color: #ccd54a; margin-right: 12px;"></i>Analyser les objectifs et les <strong>modalités d'organisation</strong> d'un projet
-                </li>
-            </ul>
-        </div>
-
-        <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
-            <a href="competences.html#synthese" style="text-decoration: none;">
-                <span style="display: inline-block; border: 1px solid #ccd54a; color: #ccd54a; padding: 4px 12px; border-radius: 4px; font-size: 0.75em; font-weight: bold; text-transform: uppercase; background: rgba(204, 213, 74, 0.05);">Item 1.4</span>
-            </a>
-            <a href="competences.html#synthese" style="text-decoration: none;">
-                <span style="display: inline-block; border: 1px solid #ccd54a; color: #ccd54a; padding: 4px 12px; border-radius: 4px; font-size: 0.75em; font-weight: bold; text-transform: uppercase; background: rgba(204, 213, 74, 0.05);">Item 1.6</span>
-            </a>
-        </div>
-        
-        <p style="margin-top: 15px;">
-            <a href="competences.html#synthese" style="font-size: 0.75em; color: rgba(255,255,255,0.5); text-decoration: underline;">
-                <i class="fas fa-link"></i> Justifications sur le tableau de synthèse
-            </a>
-        </p>
+<div class="competences-validees" style="width: 100%; margin-top: 25px; padding-top: 20px; border-top: 1px solid rgba(204, 213, 74, 0.2); text-align: center;">
+    
+    <p style="font-size: 0.85em; color: #ccd54a; margin: 0 0 20px 0; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 600;">
+        Compétences du référentiel validées
+    </p>
+    
+    <div style="display: inline-block; text-align: left; margin-bottom: 25px;">
+        <ul style="color: #ffffff; font-size: 0.9em; list-style: none; padding: 0; margin: 0; line-height: 1.8;">
+            <li style="margin-bottom: 10px;">
+                <i class="fas fa-check" style="color: #ccd54a; margin-right: 12px;"></i>Mettre en place son <strong>environnement d’apprentissage</strong> personnel
+            </li>
+            <li style="margin-bottom: 10px;">
+                <i class="fas fa-check" style="color: #ccd54a; margin-right: 12px;"></i>Mettre en œuvre des outils et stratégies de <strong>veille informationnelle</strong>
+            </li>
+            <li style="margin-bottom: 10px;">
+                <i class="fas fa-check" style="color: #ccd54a; margin-right: 12px;"></i>Gérer son <strong>identité professionnelle</strong>
+            </li>
+            <li style="margin-bottom: 10px;">
+                <i class="fas fa-check" style="color: #ccd54a; margin-right: 12px;"></i>Développer son <strong>projet professionnel</strong>
+            </li>
+        </ul>
     </div>
+
+    <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+        <a href="competences.html#synthese" style="text-decoration: none;">
+            <span style="display: inline-block; border: 1px solid #ccd54a; color: #ccd54a; padding: 4px 12px; border-radius: 4px; font-size: 0.75em; font-weight: bold; text-transform: uppercase; background: rgba(204, 213, 74, 0.05);">Item 1.6</span>
+        </a>
+    </div>
+    
+    <p style="margin-top: 15px;">
+        <a href="competences.html#synthese" style="font-size: 0.75em; color: rgba(0, 0, 0, 0.5); text-decoration: underline;">
+            <i class="fas fa-link"></i> Tableau de synthèse
+        </a>
+    </p>
+</div>
 </section>
     </div>
 </main>

@@ -8,7 +8,8 @@
 html, body {
   min-height: 100vh;
   scroll-behavior: smooth;
-  background: linear-gradient(135deg, rgba(14, 53, 61, 0.9), rgba(99, 176, 220, 0.7)), url("fond.jpg");
+  /* RESTAURATION DU FOND D'ORIGINE */
+  background: linear-gradient(135deg, rgba(17, 68, 80, 0.9), rgba(99, 176, 220, 0.7)), url("fond.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -27,7 +28,7 @@ html, body {
 .placeholder-img {
     width: 100%;
     height: 180px;
-    background: rgba(0, 210, 255, 0.05);
+    background: rgba(23, 165, 197, 0.563);
     border: 2px dashed rgba(0, 210, 255, 0.3);
     border-radius: 8px;
     display: flex;
@@ -45,23 +46,23 @@ html, body {
 }
 
 .category-header {
-    margin: 60px 0 30px;
+    margin: 50px 0 20px;
     padding: 15px;
-    background: rgba(0, 210, 255, 0.1);
+    background: rgba(23, 96, 112, 0);
     border-radius: 12px;
-    border-left: 5px solid #00d2ff;
+    border-left: 5px solid #143b4c; /* Couleur Cyan */
     display: flex;
     align-items: center;
     gap: 15px;
 }
 
 .projet-card {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgb(80, 118, 136); /* Couleur Vert/Bleu d'origine */
     border-radius: 15px;
     padding: 25px;
     margin-bottom: 30px;
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(252, 244, 244, 0.893);
     transition: transform 0.3s;
 }
 
@@ -78,8 +79,8 @@ html, body {
 }
 
 .badge-lieu {
-    background: #00d2ff;
-    color: #03262c;
+    background: #050f607b;
+    color:  #ffee00;
     padding: 4px 12px;
     border-radius: 20px;
     font-size: 0.8em;
@@ -94,9 +95,9 @@ html, body {
 }
 
 .tag {
-    background: rgba(0, 210, 255, 0.2);
-    border: 1px solid #00d2ff;
-    color: #fff;
+    background: #050f607b;
+    border: 1px solid #56676f;
+    color: #fffb04;
     padding: 2px 10px;
     border-radius: 5px;
     font-size: 0.85em;
@@ -118,7 +119,7 @@ html, body {
 
 .btn-download {
     display: inline-block;
-    background: #ccd54a;
+    background: #ccd54a; /* Couleur Jaune Suez */
     color: #000;
     padding: 10px 20px;
     border-radius: 8px;
@@ -127,27 +128,21 @@ html, body {
     margin: 10px 0;
 }
 
-
-
-
 /* =================== ANIMATIONS =================== */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* =================== HEADER (MODIFIÉ : SANS RECTANGLE) =================== */
+/* =================== HEADER =================== */
 header {
   width: 100%;
-  padding: 40px 20px; /* Un peu plus d'espace pour l'aération */
+  padding: 40px 20px;
   text-align: center;
-
-  /* On a enlevé le background, le blur et la border ici */
   background: transparent; 
   backdrop-filter: none;
   border-bottom: none;
-
-  position: relative; /* On le passe en relative pour qu'il suive le scroll naturellement sans fond bizarre */
+  position: relative;
   z-index: 1000;
 }
 
@@ -156,9 +151,8 @@ header h1 {
   text-transform: uppercase;
   letter-spacing: 4px;
   margin-bottom: 25px;
-
-  color: #00d2ff;
-  text-shadow: 0 0 20px rgba(0, 210, 255, 0.6);
+  color: #00d2ff;; /* Texte Cyan */
+  text-shadow: 0 0 20px rgba(5, 8, 8, 0.6);
 }
 
 /* NAVIGATION */
@@ -174,20 +168,17 @@ header a {
   text-decoration: none;
   font-weight: 600;
   padding: 12px 25px;
-
-  /* Les boutons gardent un fond léger pour rester lisibles */
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(26, 148, 185, 0.619);
   border: 1px solid rgba(255, 255, 255, 0.2);
-
   border-radius: 50px;
   transition: all 0.3s ease;
 }
 
 header a:hover {
-  background: #00d2ff;
-  color: #03262c;
+  background: #00d0ff; /* Fond Cyan au survol */
+  color: #275a63;
   transform: scale(1.08);
-  box-shadow: 0 0 20px rgba(0, 210, 255, 0.5);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 /* =================== MAIN =================== */
@@ -196,7 +187,6 @@ main {
   max-width: 1100px;
   margin: 20px auto;
   padding: 20px;
-
   text-align: center;
   animation: fadeIn 1s ease-out;
 }
@@ -208,26 +198,26 @@ h1, h2, h3 {
 }
 
 h2 {
-  font-size: 1.8em;
-  color: #144855;
+    font-size: 1.8em;
+    color: #0f3c5c;
+    font-style: italic; /* MET LE TEXTE EN ITALIQUE */
+    
+   
 }
-
 /* PARAGRAPHES */
 p {
   line-height: 1.6;
   opacity: 0.9;
 }
 
-/* =================== SECTIONS (effet carte) =================== */
+/* =================== SECTIONS =================== */
 section {
-  background: rgba(255, 255, 255, 0.05);
+  background:  rgba(255, 255, 255, 0.05);
   padding: 30px;
   margin-bottom: 30px;
-
   border-radius: 20px;
   backdrop-filter: blur(10px);
-
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  box-shadow: 0 10px 30px rgba(10, 49, 83, 0.3);
   animation: fadeIn 1s ease;
 }
 
@@ -235,54 +225,40 @@ section {
 form {
   background: #ffffff;
   color: #2c3e50;
-
   padding: 40px;
   border-radius: 20px;
-
   width: 100%;
   max-width: 550px;
   margin: 20px auto;
-
   text-align: left;
-
   box-shadow: 0 20px 40px rgba(0,0,0,0.4);
 }
 
-form label {
-  font-weight: 600;
-}
+form label { font-weight: 600; }
 
-form input,
-form textarea {
+form input, form textarea {
   width: 100%;
   padding: 12px;
   margin: 10px 0 20px;
-
   border: 2px solid #eee;
   border-radius: 10px;
-
   font-size: 1em;
   transition: 0.3s;
 }
-/* =================== COLOR FOCUS =================== */
-form input:focus,
-form textarea:focus {
+
+form input:focus, form textarea:focus {
   border-color: #00d2ff;
   outline: none;
 }
 
-/* BOUTON */
 form button {
   width: 100%;
   padding: 12px;
-
   border: none;
   border-radius: 50px;
-
   background: #00d2ff;
-  color: #0a282d;
+  color: #0a2125;
   font-weight: bold;
-
   cursor: pointer;
   transition: 0.3s;
 }
@@ -298,20 +274,14 @@ footer {
   margin-top: 40px;
   padding: 30px 20px;
   text-align: center;
-
-  /* RÉGLAGE DE LA TRANSPARENCE ICI */
-  /* 0.1 = Presque invisible | 0.5 = Semi-transparent | 0.9 = Presque opaque */
   background-color: rgba(255, 255, 255, 0.05) !important; 
-  
-  /* Optionnel : un léger flou pour un effet "verre" (Glassmorphism) */
   backdrop-filter: blur(5px);
-
   color: #ffffff;
-  border-top: 1px solid rgba(255, 255, 255, 0.1); /* Une ligne très discrète */
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   font-size: 0.9em;
 }
 
-/* =================== SECTION COMPÉTENCES (LISTE MODERNE) =================== */
+/* =================== COMPÉTENCES =================== */
 .competence-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -327,7 +297,7 @@ footer {
     padding: 30px;
     transition: all 0.3s ease;
     backdrop-filter: blur(10px);
-    text-align: left; /* Alignement à gauche pour les listes */
+    text-align: left;
 }
 
 .comp-card:hover {
@@ -339,13 +309,13 @@ footer {
 .comp-card h3 {
     font-size: 1.4em;
     margin-bottom: 20px;
-    color: #273ddf;
+    color: #00d2ff; /* Remis en Cyan */
     border-bottom: 2px solid rgba(0, 210, 255, 0.2);
     padding-bottom: 10px;
 }
 
 .comp-list {
-    list-style: none; /* On enlève les points noirs par défaut */
+    list-style: none;
     padding: 0;
 }
 
@@ -358,7 +328,6 @@ footer {
     line-height: 1.4;
 }
 
-/* Création de la puce personnalisée (petit carré cyan) */
 .comp-list li::before {
     content: "";
     position: absolute;
@@ -366,47 +335,37 @@ footer {
     top: 8px;
     width: 8px;
     height: 8px;
-    background-color: #00d2ff;
+    background-color: #00d2ff; /* Puce Cyan */
     box-shadow: 0 0 8px #00d2ff;
     border-radius: 2px;
 }
 
-/* Optionnel : couleur différente au survol du texte */
-.comp-list li:hover {
-    color: #ffffff;
-}
-
-
-
-/* Container du Header pour aligner les boutons */
+/* =================== DROPDOWN =================== */
 .nav-container {
     display: flex;
     gap: 10px;
     align-items: center;
 }
 
-/* Dropdown (Conteneur principal) */
 .dropdown {
     position: relative;
     display: inline-block;
 }
 
-/* Contenu du volet roulant */
 .dropdown-content {
-    display: none; /* Masqué par défaut */
+    display: none;
     position: absolute;
-    background-color: rgba(17, 65, 97, 0.95); /* Bleu sombre assorti */
+    background-color: rgba(53, 154, 185, 0.95);
     min-width: 220px;
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.4);
+    box-shadow: 0px 8px 16px rgba(28, 64, 149, 0.4);
     z-index: 1000;
     border-radius: 8px;
-    border: 1px solid rgba(204, 213, 74, 0.3); /* Bordure légère jaune/cyan */
+    border: 1px solid rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(10px);
     margin-top: 5px;
     overflow: hidden;
 }
 
-/* Liens à l'intérieur du volet */
 .dropdown-content a {
     color: white;
     padding: 12px 16px;
@@ -417,48 +376,21 @@ footer {
     text-align: left;
 }
 
-/* Effet au survol des liens du volet */
 .dropdown-content a:hover {
-    background-color: rgba(204, 213, 74, 0.2);
-    color: #ccd54a;
+    background-color: rgba(221, 255, 0, 0.201);
+    color: #eeff00; /* Texte Jaune au survol */
     padding-left: 25px;
 }
 
-/* Affichage du volet au survol du bouton "à propos" */
 .dropdown:hover .dropdown-content {
     display: block;
     animation: slideDown 0.3s ease-out;
 }
 
-/* Animation de descente fluide */
-@keyframes slideDown {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* Optionnel : Smooth scroll pour un défilement doux quand on clique */
-html {
-    scroll-behavior: smooth;
-}
-
-
 /* =================== RESPONSIVE =================== */
 @media (max-width: 768px) {
-
-  header h1 {
-    font-size: 1.6em;
-  }
-
-  header a {
-    width: 80%;
-    text-align: center;
-  }
-
-  section {
-    padding: 20px;
-  }
-
-  form {
-    padding: 25px;
-  }
+  header h1 { font-size: 1.6em; }
+  header a { width: 80%; text-align: center; }
+  section { padding: 20px; }
+  form { padding: 25px; }
 }
