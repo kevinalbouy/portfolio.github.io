@@ -182,6 +182,14 @@ header a:hover {
 }
 
 /* =================== MAIN =================== */
+/* On cible les titres des deux pages pour les rendre identiques */
+h1, h2, .category-header h2, .veille-header h1 {
+    font-size: 2.2em !important; /* Ajuste la taille selon tes préférences */
+    font-weight: bold !important;
+    text-transform: none !important; /* Pour éviter que l'un soit en majuscules et l'autre non */
+    letter-spacing: 1px !important;
+}
+
 main {
   width: 100%;
   max-width: 1100px;
