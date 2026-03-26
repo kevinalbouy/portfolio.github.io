@@ -147,21 +147,38 @@
 
        <div style="margin-top: 30px; text-align: center; background: rgba(17, 65, 97, 0.3); padding: 30px; border-radius: 12px; border: 1px solid rgba(0, 210, 255, 0.1); backdrop-filter: blur(5px);">
     
-    <h3 style="color: #00d2ff; margin-bottom: 20px;">
-        <i class="fas fa-user-shield" style="margin-right: 10px;"></i>Vos Droits RGPD
+    <div style="margin-top: 40px; padding: 30px; background: rgba(17, 65, 97, 0.2); border-radius: 20px; border: 1px solid rgba(0, 210, 255, 0.2); backdrop-filter: blur(10px);">
+    
+    <h3 style="color: #00d2ff; margin-bottom: 25px; text-align: center; text-transform: uppercase; letter-spacing: 2px;">
+        <i class="fas fa-user-shield" style="margin-right: 15px; color: #ccd54a;"></i>Vos Droits RGPD
     </h3>
     
-    <ul style="list-style: none; padding: 0; margin-top: 10px; line-height: 2;">
-        <li style="margin-bottom: 15px;">
-            Droit d'accès & <strong style="color: #ccd54a;">Rectification</strong> : Consulter et corriger vos informations.
-        </li>
-        <li style="margin-bottom: 15px;">
-            Droit à l'<strong>effacement</strong> : Demander la <strong style="color: #ccd54a;">suppression</strong> de vos données.
-        </li>
-        <li style="margin-bottom: 15px;">
-            Droit à la <strong>limitation</strong> : <strong style="color: #ccd54a;">Suspendre</strong> temporairement le traitement.
-        </li>
-    </ul>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+        
+        <div style="background: rgba(255, 255, 255, 0.05); padding: 20px; border-radius: 12px; border-left: 4px solid #ccd54a; transition: 0.3s;" onmouseover="this.style.background='rgba(255,255,255,0.1)'" onmouseout="this.style.background='rgba(255,255,255,0.05)'">
+            <i class="fas fa-edit" style="color: #ccd54a; font-size: 1.2em; margin-bottom: 10px;"></i>
+            <p style="margin: 0; font-weight: bold; color: #fff;">Accès & Rectification</p>
+            <p style="margin: 5px 0 0 0; font-size: 0.85em; color: rgba(255,255,255,0.7);">Consulter et modifier vos informations à tout moment.</p>
+        </div>
+
+        <div style="background: rgba(255, 255, 255, 0.05); padding: 20px; border-radius: 12px; border-left: 4px solid #00d2ff; transition: 0.3s;" onmouseover="this.style.background='rgba(255,255,255,0.1)'" onmouseout="this.style.background='rgba(255,255,255,0.05)'">
+            <i class="fas fa-trash-alt" style="color: #00d2ff; font-size: 1.2em; margin-bottom: 10px;"></i>
+            <p style="margin: 0; font-weight: bold; color: #fff;">Droit à l'oubli</p>
+            <p style="margin: 5px 0 0 0; font-size: 0.85em; color: rgba(255,255,255,0.7);">Demander la suppression définitive de vos données.</p>
+        </div>
+
+        <div style="background: rgba(255, 255, 255, 0.05); padding: 20px; border-radius: 12px; border-left: 4px solid #ffffff; transition: 0.3s;" onmouseover="this.style.background='rgba(255,255,255,0.1)'" onmouseout="this.style.background='rgba(255,255,255,0.05)'">
+            <i class="fas fa-pause-circle" style="color: #ffffff; font-size: 1.2em; margin-bottom: 10px;"></i>
+            <p style="margin: 0; font-weight: bold; color: #fff;">Limitation du traitement</p>
+            <p style="margin: 5px 0 0 0; font-size: 0.85em; color: rgba(255,255,255,0.7);">Suspendre temporairement l'usage de vos données.</p>
+        </div>
+
+    </div>
+
+    <p style="margin-top: 25px; font-size: 0.8em; color: rgba(255,255,255,0.5); font-style: italic; text-align: center;">
+        * Pour exercer ces droits, contactez-moi via le formulaire de la page contact.
+    </p>
+</div>
 </div>
     </section>
 
@@ -178,15 +195,29 @@
     </section>
 
     <section class="projet-card">
-        <h2>Consentements CNIL & ANSSI</h2>
+        <h2>Consentement CNIL</h2>
         <p style="margin-bottom: 20px;">
             Consentements obtenus pour l'illustration des projets de veille et de cybersécurité.
         </p>
         <div class="evidence-grid">
             <img class="zoomable" src="cnil1.jpg" alt="Preuve CNIL">
-            <img class="zoomable" src="anssi1.jpg" alt="Preuve ANSSI">
+            <img class="zoomable" src="cnil2.png" alt="Preuve ANSSI">
+            <img class="zoomable" src="cnil3.jpg" alt="Preuve ANSSI">
         </div>
     </section>
+    
+    <section class="projet-card2">
+        <h2>Consentement ANSSI</h2>
+        <p style="margin-bottom: 20px;">
+            Consentements obtenus pour l'illustration des projets de veille et de cybersécurité.
+        </p>
+        <div class="evidence-grid">
+            
+            <img class="zoomable" src="anssi1.jpg" alt="Preuve ANSSI">
+            <img class="zoomable" src="anssi2.jpg" alt="Preuve ANSSI">
+        </div>
+    </section>
+
 
     <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-top: 40px; padding-bottom: 50px;">
         <div id="directeur-projet" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 15px; min-width: 250px;">
@@ -201,11 +232,25 @@
 
 </main>
 
-<div class="zoom-modal" id="zoomModal">
-    <button class="close-btn" id="closeZoom">&times;</button>
-    <img src="" id="zoomImg">
+<div id="zoomModal" style="display: none; position: fixed; z-index: 2000; padding-top: 100px; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.9);">
+    <span id="closeZoom" style="position: absolute; top: 15px; right: 35px; color: #f1f1f1; font-size: 40px; font-weight: bold; cursor: pointer;">&times;</span>
+    <img id="zoomImg" style="margin: auto; display: block; width: 80%; max-width: 700px; border-radius: 10px; border: 2px solid #00d2ff;">
 </div>
 
+<style>
+    /* Petit ajout CSS pour que le modal s'affiche quand il est actif */
+    #zoomModal.active {
+        display: block !important;
+    }
+    .zoomable {
+        cursor: zoom-in;
+        transition: 0.3s;
+    }
+    .zoomable:hover {
+        opacity: 0.8;
+        transform: scale(1.05);
+    }
+</style>
 <script>
     // Script de zoom
     document.querySelectorAll('.zoomable').forEach(img => {
@@ -221,9 +266,13 @@
     };
 </script>
 
-<footer style="margin-top: 60px; background: rgba(255, 255, 255, 0.05); padding: 20px; text-align: center;">
-    <p>© 2026 Portfolio de Albouy Kévin. Tous droits réservés.</p>
+
+<footer style="position: fixed; left: 0; bottom: 0; width: 100%; background: #b3ced6; text-align: center; padding: 0.4em 0; box-shadow: 0 -2px 8px rgba(0,0,0,0.05); font-size: 0.95em; z-index: 1000;">
+    <p style="margin: 0;">© 2026 Portfolio de Albouy Kévin. Tous droits réservés.</p>
 </footer>
 
 </body>
 </html>
+
+
+
