@@ -135,24 +135,35 @@ html, body {
 }
 
 /* =================== HEADER =================== */
+/* =================== HEADER =================== */
 header {
   width: 100%;
-  padding: 40px 20px;
+  /* On met le padding latéral à 0 pour être sûr que le centre est le vrai centre */
+  padding: 40px 0; 
   text-align: center;
   background: transparent; 
   backdrop-filter: none;
   border-bottom: none;
   position: relative;
   z-index: 1000;
+  /* On s'assure qu'aucune marge parasite ne pousse le bloc */
+  margin: 0;
 }
 
 header h1 {
-  font-size: 2.5em;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  margin-bottom: 25px;
-  color: #00d2ff;; /* Texte Cyan */
-  text-shadow: 0 0 20px rgba(5, 8, 8, 0.6);
+  font-size: 2.5em !important;
+  text-transform: uppercase !important;
+  letter-spacing: 4px !important;
+  margin-bottom: 25px !important;
+  color: #00d2ff !important;
+  
+  /* RÉGLAGE MANUEL FORCÉ */
+  position: relative !important;
+  left: -10px !important; /* Teste avec -10px pour voir si ça bouge enfin */
+  
+  display: block !important;
+  width: 100% !important;
+  text-align: center !important;
 }
 
 /* NAVIGATION */
