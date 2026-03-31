@@ -349,15 +349,7 @@ footer {
 }
 
 .comp-list li::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 8px;
-    width: 8px;
-    height: 8px;
-    background-color: #00d2ff; /* Puce Cyan */
-    box-shadow: 0 0 8px #00d2ff;
-    border-radius: 2px;
+    display: none;
 }
 
 /* =================== DROPDOWN =================== */
@@ -417,15 +409,16 @@ footer {
 
 h2 {
     font-size: 1.4em !important; /* Force la taille plus petite */
-    color: #000709 !important;
+    color: #2ab7de !important;
     font-style: italic !important;
     font-weight: 400 !important;
     padding: 10px 15px !important; /* Réduit aussi un peu l'épaisseur de la bulle */
     border-radius: 15px !important;
     display: inline-block !important;
-    border: 2px solid rgba(0, 0, 0, 0.941) !important;
+    
     margin-bottom: 25px !important;
     backdrop-filter: blur(5px) !important;
-    text-shadow: 0 0 10px rgb(0, 64, 255) !important;
+    text-shadow: 0 0 10px rgb(41, 79, 194) !important;
     letter-spacing: 1px !important;
 }
+
