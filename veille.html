@@ -7,21 +7,34 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         /* Style des H2 en Italique avec fond comme sur les autres pages */
-        h2 {
-            font-size: 1.6em;
-            color: #123147;
-            font-style: italic;
-            background: rgba(204, 213, 74, 0.15);
-            padding: 10px 25px;
-            border-radius: 12px;
-            display: inline-block;
-            border: 1px solid rgba(17, 65, 97, 0.1);
-            margin-bottom: 25px;
-            backdrop-filter: blur(5px);
+       h2 {
+    font-size: 1.5em; /* Modifié de 1.8em à 1.5em */
+    color: #0b4b50;
+    font-style: italic;
+    font-weight: 400;
+    padding: 10px 15px; /* Optionnel : j'ai réduit un peu le padding (de 15px à 10px) pour équilibrer */
+    border-radius: 15px;
+    display: inline-block;
+    border: 2px solid rgba(0, 196, 250, 0.941);
+    margin-bottom: 25px;
+    backdrop-filter: blur(5px);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.915);
+    letter-spacing: 1px;
+}
+
+        /* --- CLASSE COMMUNE POUR LE FOND BLEU/GRIS UNIFORME --- */
+        .info-section-style {
+            background: #91aec3ce !important; /* La couleur de fond exacte demandée */
+            padding: 30px;
+            border-radius: 20px;
+            margin-bottom: 40px;
+            border-left: 5px solid #ccd54a;
+            box-shadow: 0 4px 6px rgb(255, 255, 255);
         }
 
+        /* Style de base des cartes de sources */
         .source-card {
-            background: #ffffff;
+            background: #ededed;
             border: 1px solid rgba(17, 65, 97, 0.1);
             border-radius: 12px;
             padding: 20px;
@@ -36,78 +49,97 @@
             text-decoration: none;
             color: inherit;
         }
-        .source-card:hover {
+
+        /* Style des cartes de sources dans un fond uni (correction couleur texte) */
+        .info-section-style .source-card {
+            background: rgba(255, 255, 255, 0.1); /* Légère transparence pour voir le fond */
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(5px);
+            color: white; /* Texte en blanc pour le contraste */
+        }
+
+        /* Interaction au survol pour toutes les cartes */
+        .source-card:hover, .projet-card:hover {
             transform: translateY(-5px);
             border-color: #ccd54a;
             box-shadow: 0 8px 15px rgba(204, 213, 74, 0.2);
         }
 
-        .info-section {
-            background: #ffffff;
-            padding: 30px;
-            border-radius: 20px;
-            margin-bottom: 40px;
-            border-left: 5px solid #ccd54a;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        }
-
-        .comp-card {
-            background: rgba(17, 65, 97, 0.05);
-            border: 1px solid rgba(17, 65, 97, 0.1);
+        /* Style spécifique pour les cartes de certification (pour qu'elles ressemblent aux source-cards) */
+        .projet-card {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(5px);
+            padding: 25px;
             border-radius: 15px;
-            transition: 0.3s;
+            text-align: center;
+            transition: all 0.3s ease;
         }
+
         /* =================== HEADER (RESTORED TO TRANSPARENT) =================== */
-header {
-  width: 100%;
-  padding: 40px 20px;
-  text-align: center;
-  
-  /* --- CETTE LIGNE EST LA CORRECTION --- */
-  background: transparent !important; /* Force le fond à être transparent */
-  /* ------------------------------------ */
-  
-  backdrop-filter: none;
-  border-bottom: none;
-  position: relative;
-  z-index: 1000;
-}
+        header {
+          width: 100%;
+          padding: 40px 20px;
+          text-align: center;
+          background: transparent !important; /* Force le fond à être transparent */
+          backdrop-filter: none;
+          border-bottom: none;
+          position: relative;
+          z-index: 1000;
+        }
 
-header h1 {
-  font-size: 2.5em;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  margin-bottom: 25px;
-  color: #00d2ff;
-  text-shadow: 0 0 20px rgba(0, 210, 255, 0.6);
-}
+        header h1 {
+          font-size: 2.5em;
+          text-transform: uppercase;
+          letter-spacing: 4px;
+          margin-bottom: 25px;
+          color: #00d2ff;
+          text-shadow: 0 0 20px rgba(0, 210, 255, 0.6);
+        }
 
-header a {
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 600;
-  padding: 12px 25px;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 50px;
-  transition: all 0.3s ease;
-}
+        header a {
+          color: #ffffff;
+          text-decoration: none;
+          font-weight: 600;
+          padding: 12px 25px;
+          background: rgba(255, 255, 255, 0.1);
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          border-radius: 50px;
+          transition: all 0.3s ease;
+        }
 
-header a:hover {
-  background: #00d2ff;
-  color: #03262c;
-  transform: scale(1.08);
-  box-shadow: 0 0 20px rgba(0, 210, 255, 0.5);
+        header a:hover {
+          background: #00d2ff;
+          color: #03262c;
+          transform: scale(1.08);
+          box-shadow: 0 0 20px rgba(0, 210, 255, 0.5);
+        }
+
+        /* Ajustements mineurs de couleurs internes */
+        .source-title {
+            color: #04192b;
+            font-weight: bold;
+        }
+        
+        .info-section-style .source-desc {
+            color: rgba(0, 0, 0, 0.8) !important; /* Description en blanc/gris clair */
+        }
+        
+       .projet-card h3 {
+    color: #0c2e4a;
+    font-size: 1.1em; /* Réduisez cette valeur (par exemple de 1.2em à 1.1em ou 1em) */
 }
+        
+        .projet-card p {
+            color: rgba(0, 0, 0, 0.9) !important; /* Texte certifs en blanc */
+        }
+
     </style>
 </head>
 <body style="background-color: #f4f7f6; color: #333; font-family: 'Segoe UI', sans-serif; margin: 0; padding-bottom: 100px;">
 
-<header style="width: 100%; padding: 40px 20px; text-align: center; background: transparent !important; position: relative; z-index: 1000;">
-   
-    
+<header>
     <div class="nav-container" style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
-        
         <div class="dropdown">
             <a href="index.html" class="headerButton">à propos ▾</a>
             <div class="dropdown-content">
@@ -118,7 +150,6 @@ header a:hover {
                 <a href="index.html#environnement">Environnement</a>
             </div>
         </div>
-
         <div class="dropdown">
             <a href="projets.html" class="headerButton">projets ▾</a>
             <div class="dropdown-content">
@@ -127,7 +158,6 @@ header a:hover {
                 <a href="projets.html#developpement">Développement</a>
             </div>
         </div>
-
         <div class="dropdown">
             <a href="competences.html" class="headerButton">compétences ▾</a>
             <div class="dropdown-content">
@@ -136,7 +166,6 @@ header a:hover {
                 <a href="competences.html#synthese">Synthèse</a>
             </div>
         </div>
-
         <div class="dropdown">
             <a href="veille.html" class="headerButton">veille ▾</a>
             <div class="dropdown-content">
@@ -146,7 +175,6 @@ header a:hover {
                 <a href="veille.html#outils">Environnement</a>
             </div>
         </div>
-
         <div class="dropdown">
             <a href="conformite.html" class="headerButton">conformité ▾</a>
             <div class="dropdown-content">
@@ -156,7 +184,6 @@ header a:hover {
                 <a href="conformite.html#hebergement">Hébergement</a>
             </div>
         </div>
-
        <div class="dropdown">
             <a href="contact.html" class="headerButton">contact ▾</a>
             <div class="dropdown-content">
@@ -165,129 +192,122 @@ header a:hover {
                 <a href="contact.html#contact">Me contacter</a>
             </div>
         </div>
-
     </div>
 </header>
 
 <main style="max-width: 1100px; margin: 0 auto; padding: 40px 20px; text-align: center;">
     
     <div style="margin-bottom: 60px;">
-        <h1 style="color: #0f3c5c; text-shadow: 0 0 15px rgba(0,210,255,0.5); margin-bottom: 30px;">Veille technologique et stratégique
-        </h1>
+        <h1 style="color: #0f3c5c; text-shadow: 0 0 15px rgba(0,210,255,0.5); margin-bottom: 30px;">Veille technologique et stratégique</h1>
         <p style="color: #0a286d; max-width: 750px; margin: 0 auto; font-style: italic;">
             "Anticiper les menaces, découvrir les innovations et adapter mes compétences pour les infrastructures de demain."
         </p>
     </div>
 
-    <section id="methode" class="info-section">
+    <section id="methode" class="info-section-style">
         <h2><i class="fas fa-sync-alt"></i> Méthodologie : Le Cycle de Veille</h2>
-        <p>Ma démarche se décompose en quatre étapes itératives permettant de transformer une donnée brute en information exploitable :</p>
+        <p style="color: #0a286d;">Ma démarche se décompose en quatre étapes itératives permettant de transformer une donnée brute en information exploitable :</p>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 20px;">
-            <div>
+            <div style="color: #0a286d;">
                 <i class="fas fa-search-plus" style="font-size: 2em; color: #ccd54a;"></i>
-                <h4 style="margin: 10px 0;">Sourcing</h4>
+                <h4 style="margin: 10px 0; color: #0f3c5c;">Sourcing</h4>
                 <p style="font-size: 0.85em;">Identification des flux RSS et experts du secteur SISR.</p>
             </div>
-            <div>
+            <div style="color: #0a286d;">
                 <i class="fas fa-filter" style="font-size: 2em; color: #ccd54a;"></i>
-                <h4 style="margin: 10px 0;">Curation</h4>
+                <h4 style="margin: 10px 0; color: #0f3c5c;">Curation</h4>
                 <p style="font-size: 0.85em;">Filtrage via Feedly pour éliminer le "bruit" numérique.</p>
             </div>
-            <div>
+            <div style="color: #0a286d;">
                 <i class="fas fa-file-invoice" style="font-size: 2em; color: #ccd54a;"></i>
-                <h4 style="margin: 10px 0;">Analyse</h4>
+                <h4 style="margin: 10px 0; color: #0f3c5c;">Analyse</h4>
                 <p style="font-size: 0.85em;">Étude de l'impact technique des vulnérabilités détectées.</p>
             </div>
-            <div>
+            <div style="color: #0a286d;">
                 <i class="fas fa-share-square" style="font-size: 2em; color: #ccd54a;"></i>
-                <h4 style="margin: 10px 0;">Diffusion</h4>
+                <h4 style="margin: 10px 0; color: #0f3c5c;">Diffusion</h4>
                 <p style="font-size: 0.85em;">Partage des connaissances et mise à jour des procédures.</p>
             </div>
         </div>
     </section>
 
- <section id="certif" style="margin-bottom: 50px;">
-    <h2><i class="fas fa-certificate"></i> Mes Certifications</h2>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 20px;">
-        
-     <div class="projet-card" style="display: flex; flex-direction: column; align-items: center; padding: 25px; text-align: center; margin: 0;">
-    <img src="cisco.png" alt="Cisco" style="height: 60px; margin-bottom: 15px; filter: drop-shadow(0 0 5px rgba(0,210,255,0.3));">
-    <div style="flex: 1;">
-        <h3 style="margin: 0; font-size: 1.2em; color: #00d2ff;">Cisco Networking Academy</h3>
-        <p style="margin: 8px 0 0 0; font-size: 0.9em; color: rgba(255,255,255,0.8); text-align: center;">
-            Introduction à la Cybersécurité (2025)
-        </p>
-    </div>
-</div>
-
-<div class="projet-card" style="display: flex; flex-direction: column; align-items: center; padding: 25px; text-align: center; margin: 0;">
-    <img src="anssi.png" alt="ANSSI" style="height: 60px; margin-bottom: 15px; filter: drop-shadow(0 0 5px rgba(0,210,255,0.3));">
-    <div style="flex: 1;">
-        <h3 style="margin: 0; font-size: 1.2em; color: #00d2ff;">ANSSI - SecNumAcadémie</h3>
-        <p style="margin: 8px 0 0 0; font-size: 0.9em; color: rgba(255,255,255,0.8); text-align: center;">
-            Initiation à la cybersécurité
-        </p>
-    </div>
-</div>
-</section>
-
-<section id="sources">
-    <h2><i class="fas fa-book-reader"></i> Références & Conformité</h2>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 20px; margin-bottom: 50px;">
-        
-        <a href="https://www.cnil.fr/fr/actualites" target="_blank" class="source-card" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); backdrop-filter: blur(5px); color: white; padding: 25px; border-radius: 15px; text-decoration: none;">
-            <div style="height: 60px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px;">
-                <img src="logo-cnil.jpg" alt="CNIL" style="max-height: 50px; border-radius: 5px;">
+    <section id="certif" class="info-section-style">
+        <h2><i class="fas fa-certificate"></i> Mes Certifications</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 20px;">
+            
+            <div class="projet-card">
+                <img src="cisco.png" alt="Cisco" style="height: 60px; margin-bottom: 15px; filter: drop-shadow(0 0 5px rgba(0,210,255,0.3));">
+                <div style="flex: 1;">
+                    <h3>Cisco Networking Academy</h3>
+                    <p style="margin: 8px 0 0 0; font-size: 0.9em; text-align: center;">
+                        Introduction à la Cybersécurité (2025)
+                    </p>
+                </div>
             </div>
-            <div class="source-title" style="color: #ccd54a; font-weight: bold;">CNIL Actualités</div>
-            <div class="source-desc" style="color: rgba(255,255,255,0.7); font-size: 0.85em;">Suivi juridique du RGPD.</div>
-        </a>
 
-        <a href="https://www.cert.ssi.gouv.fr/" target="_blank" class="source-card" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); backdrop-filter: blur(5px); color: white; padding: 25px; border-radius: 15px; text-decoration: none;">
-            <div style="height: 60px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px;">
-                <img src="anssi.png" alt="ANSSI" style="max-height: 50px;">
+            <div class="projet-card">
+                <img src="anssi.png" alt="ANSSI" style="height: 60px; margin-bottom: 15px; filter: drop-shadow(0 0 5px rgba(0,210,255,0.3));">
+                <div style="flex: 1;">
+                    <h3>ANSSI - SecNumAcadémie</h3>
+                    <p style="margin: 8px 0 0 0; font-size: 0.9em; text-align: center;">
+                        Initiation à la cybersécurité
+                    </p>
+                </div>
             </div>
-            <div class="source-title" style="color: #ccd54a; font-weight: bold;">CERT-FR (ANSSI)</div>
-            <div class="source-desc" style="color: rgba(255,255,255,0.7); font-size: 0.85em;">Alertes critiques de sécurité.</div>
-        </a>
-
-        <a href="https://www.legifrance.gouv.fr/" target="_blank" class="source-card" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); backdrop-filter: blur(5px); color: white; padding: 25px; border-radius: 15px; text-decoration: none;">
-            <div style="height: 60px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px;">
-                <i class="fas fa-balance-scale" style="font-size: 2.5em; color: #00d2ff;"></i>
-            </div>
-            <div class="source-title" style="color: #ccd54a; font-weight: bold;">Légifrance</div>
-            <div class="source-desc" style="color: rgba(255,255,255,0.7); font-size: 0.85em;">Veille réglementaire numérique.</div>
-        </a>
-    </div> <h2 style="margin-top: 50px;"><i class="fas fa-play-circle"></i> Médias Audio & Vidéo</h2>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 20px;">
-        <a href="https://www.nolimitsecu.fr/" target="_blank" class="source-card" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); backdrop-filter: blur(5px); color: white; padding: 25px; border-radius: 15px; text-decoration: none;">
-            <i class="fas fa-microphone-alt" style="color: #ff6b6b; font-size: 2.5em; margin-bottom: 15px;"></i>
-            <div class="source-title" style="color: #ccd54a; font-weight: bold;">NoLimitSecu</div>
-            <div class="source-desc" style="color: rgba(255,255,255,0.7); font-size: 0.85em;">Podcast technique SSI.</div>
-        </a>
-        <a href="https://www.youtube.com/@ANSSI_FR" target="_blank" class="source-card" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); backdrop-filter: blur(5px); color: white; padding: 25px; border-radius: 15px; text-decoration: none;">
-            <i class="fab fa-youtube" style="color: #ff0000; font-size: 2.5em; margin-bottom: 15px;"></i>
-            <div class="source-title" style="color: #ccd54a; font-weight: bold;">ANSSI TV</div>
-            <div class="source-desc" style="color: rgba(255,255,255,0.7); font-size: 0.85em;">Conférences techniques.</div>
-        </a>
-        <a href="https://www.youtube.com/@CookieConnecte" target="_blank" class="source-card" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); backdrop-filter: blur(5px); color: white; padding: 25px; border-radius: 15px; text-decoration: none;">
-            <i class="fab fa-youtube" style="color: #ff0000; font-size: 2.5em; margin-bottom: 15px;"></i>
-            <div class="source-title" style="color: #ccd54a; font-weight: bold;">Cookie Connecté</div>
-            <div class="source-desc" style="color: rgba(255,255,255,0.7); font-size: 0.85em;">Tutos réseaux et infrastructure.</div>
-        </a>
-    </div> </section>
-
-<section id="outils" style="margin-top: 80px;">
-    <h2><i class="fas fa-layer-group"></i> Environnement de Veille</h2>
-    <div style="margin-top: 30px; display: flex; gap: 40px; align-items: center; flex-wrap: wrap; text-align: left; background: rgba(255,255,255,0.05); padding: 30px; border-radius: 20px;">
-        <div style="flex: 1; min-width: 300px;">
-            <p style="line-height: 1.8; color: white;">
-                Pour centraliser et traiter ce volume d'informations, j'utilise <strong>Feedly</strong>. Cet agrégateur me permet d'organiser ma lecture par dossiers thématiques (Cyber, Infrastructure, Cloud). Les articles pertinents sont archivés sur <strong>Notion</strong>.
-            </p>
         </div>
-        <img src="feedly.png" alt="Feedly" style="width: 450px; border-radius: 12px; border: 2px solid #00d2ff; box-shadow: 0 0 20px rgba(0,210,255,0.2);">
-    </div>
-</section>
+    </section>
+
+    <section id="sources" class="info-section-style">
+        <h2><i class="fas fa-book-reader"></i> Références & Conformité</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 20px;">
+            
+            <a href="https://www.cnil.fr/fr/actualites" target="_blank" class="source-card">
+                <div style="height: 60px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px;">
+                    <img src="logo-cnil.jpg" alt="CNIL" style="max-height: 50px; border-radius: 5px;">
+                </div>
+                <div class="source-title">CNIL Actualités</div>
+                <div class="source-desc" style="font-size: 0.85em;">Suivi juridique du RGPD.</div>
+            </a>
+
+            <a href="https://www.cert.ssi.gouv.fr/" target="_blank" class="source-card">
+                <div style="height: 60px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px;">
+                    <img src="anssi.png" alt="ANSSI" style="max-height: 50px;">
+                </div>
+                <div class="source-title">CERT-FR (ANSSI)</div>
+                <div class="source-desc" style="font-size: 0.85em;">Alertes critiques de sécurité.</div>
+            </a>
+
+            <a href="https://www.legifrance.gouv.fr/" target="_blank" class="source-card">
+                <div style="height: 60px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px;">
+                    <i class="fas fa-balance-scale" style="font-size: 2.5em; color: #00d2ff;"></i>
+                </div>
+                <div class="source-title">Légifrance</div>
+                <div class="source-desc" style="font-size: 0.85em;">Veille réglementaire numérique.</div>
+            </a>
+        </div> 
+
+        <h2 style="margin-top: 50px;"><i class="fas fa-play-circle"></i> Médias Audio & Vidéo</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 20px;">
+            <a href="https://www.nolimitsecu.fr/" target="_blank" class="source-card">
+                <i class="fas fa-microphone-alt" style="color: #ff6b6b; font-size: 2.5em; margin-bottom: 15px;"></i>
+                <div class="source-title">NoLimitSecu</div>
+                <div class="source-desc" style="font-size: 0.85em;">Podcast technique SSI.</div>
+            </a>
+            <a href="https://www.feedly.com/" target="_blank" class="source-card">
+                <div style="height: 60px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px;">
+                    <img src="feedly.png" alt="Feedly" style="max-height: 50px;">
+                </div>
+                <div class="source-title">Feedly</div>
+                <div class="source-desc" style="font-size: 0.85em;">Agrégateur d'actualités.</div>
+            </a>
+            <a href="https://www.youtube.com/@CookieConnecte" target="_blank" class="source-card">
+                <i class="fab fa-youtube" style="color: #ff0000; font-size: 2.5em; margin-bottom: 15px;"></i>
+                <div class="source-title">Cookie Connecté</div>
+                <div class="source-desc" style="font-size: 0.85em;">Tutos réseaux et infrastructure.</div>
+            </a>
+        </div> 
+    </section>
+
 </main>
 
 <footer style="position: fixed; left: 0; bottom: 0; width: 100%; background: #b3ced6; text-align: center; padding: 10px; font-size: 0.9em; z-index: 100;">
