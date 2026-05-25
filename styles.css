@@ -80,7 +80,7 @@ html, body {
 }
 
 .badge-lieu {
-    background:  #053535bd;;
+    background: #053535bd;
     color:  #f6ff00;
     padding: 4px 12px;
     border-radius: 20px;
@@ -397,6 +397,11 @@ footer {
 .dropdown:hover .dropdown-content {
     display: block;
     animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-8px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 /* =================== RESPONSIVE =================== */
