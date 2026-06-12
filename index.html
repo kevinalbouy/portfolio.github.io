@@ -3,258 +3,233 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio de Kévin Albouy, Technicien Informatique & Administrateur Systèmes et Réseaux à la recherche de nouvelles opportunités.">
-    <title>Kévin Albouy | Technicien Informatique & Systèmes</title>
+    <meta name="description" content="Portfolio de Albouy Kévin - Étudiant en BTS SIO SISR. Découvrez mon parcours, mes compétences et mes projets en informatique.">
+    <title>Portfolio de Albouy Kévin</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-
-    <!-- NAVIGATION -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="#hero" class="logo">Kévin <span>Albouy</span></a>
-            <button class="hamburger" aria-label="Menu">
-                <i class="fas fa-bars"></i>
-            </button>
-            <ul class="nav-links">
-                <li><a href="#hero" class="nav-item">Accueil</a></li>
-                <li><a href="#about" class="nav-item">À propos</a></li>
-                <li><a href="#skills" class="nav-item">Compétences</a></li>
-                <li><a href="#experience" class="nav-item">Expériences</a></li>
-                <li><a href="#contact" class="nav-item">Contact</a></li>
-            </ul>
+<header style="width: 100%; padding: 40px 20px; text-align: center; background: transparent !important; position: relative; z-index: 1000;">
+ 
+    
+    <button class="hamburger" aria-label="Menu">☰</button>
+    <div class="nav-container" style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+           <a href="#bienvenue" class="headerButton">Accueil</a>
+        <a href="#presentation" class="headerButton">Présentation</a>
+        <a href="#experiences" class="headerButton">Expériences</a>
+        <a href="#formations" class="headerButton">Formations</a>
+        <a href="contact.html" class="headerButton">Contact</a>       </div>
         </div>
-    </nav>
 
-    <!-- HERO SECTION -->
-    <section id="hero" class="hero">
-        <div class="container hero-content">
-            <div class="hero-text">
-                <h2 style="font-weight: 500; letter-spacing: 2px;">Bonjour, je suis</h2>
-                <h1>Kévin Albouy</h1>
-                <h2 style="color: var(--text-primary); font-size: 1.8rem; margin-top: -10px;">Technicien Informatique <span style="color: var(--accent-primary);">&</span> Systèmes</h2>
-                <p>
-                    Passionné par l'infrastructure, le support utilisateur et la cybersécurité. Récemment diplômé et doté d'une solide expérience pratique, je suis activement à la recherche de nouvelles opportunités professionnelles pour relever vos défis IT.
-                </p>
-                <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">Me Contacter</a>
-                    <a href="CV-Albouy-Kevin.pdf" target="_blank" class="btn btn-outline">Voir mon CV</a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <!-- Using the existing image of Kévin from the repository -->
-                <img src="kevin1.jpg" alt="Portrait Kévin Albouy">
-            </div>
-        </div>
-    </section>
+    </div>
+</header>
 
-    <!-- ABOUT & SERVICES -->
-    <section id="about" style="background: rgba(0,0,0,0.2);">
-        <div class="container">
-            <h2 class="section-title">Ce que je peux apporter</h2>
-            
-            <div class="services-grid">
-                <div class="service-card">
-                    <i class="fas fa-server service-icon"></i>
-                    <h3>Administration Systèmes</h3>
-                    <p>Déploiement et gestion d'infrastructures Windows Server et Linux. Maîtrise d'Active Directory, GPO, DNS, DHCP et virtualisation (Proxmox, VMware).</p>
-                </div>
-                
-                <div class="service-card">
-                    <i class="fas fa-network-wired service-icon"></i>
-                    <h3>Réseaux & Sécurité</h3>
-                    <p>Configuration d'équipements réseaux (Cisco). Mise en place de VLANs, routage, pare-feux et suivi rigoureux des recommandations de sécurité (ANSSI, bonnes pratiques).</p>
-                </div>
-                
-                <div class="service-card">
-                    <i class="fas fa-headset service-icon"></i>
-                    <h3>Support & ITIL</h3>
-                    <p>Gestion des incidents et demandes utilisateurs via des outils de ticketing (GLPI). Résolution de problèmes N1/N2, déploiement de postes et accompagnement utilisateur.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<main class="projets-main">
+  <section id="bienvenue" class="projet-card entreprise" style="max-width: 900px; margin: 0 auto 40px auto; text-align: center; display: flex; flex-direction: column; align-items: center; padding: 50px 30px; box-sizing: border-box; border-radius: 20px;">
+    
+    <h1 class="main-title" style="margin-top: 0; text-align: center; margin-bottom: 30px; font-size: 2.2em; line-height: 1.2;">Bienvenue sur mon Portfolio</h1>
+    
+    <div style="width: 100%; max-width: 800px; margin: 0 auto; line-height: 1.7; text-align: center;">
+        <p style="margin-bottom: 20px; font-size: 1.2em; color: rgba(255,255,255,0.9); text-align: center;">
+            <strong>Technicien Informatique | Administrateur Systèmes et Réseaux</strong>
+        </p>
+        <p style="margin-bottom: 0; font-size: 1.05em; color: rgba(255,255,255,0.9); text-align: center;">
+            Passionné par l'infrastructure réseau, la cybersécurité et le support utilisateur. Récemment diplômé d'un BTS SIO SISR, je suis activement à la recherche de nouvelles opportunités professionnelles pour accompagner le développement de votre système d'information.
+        </p>
+    </div>
+    
 
-    <!-- SKILLS SECTION -->
-    <section id="skills">
-        <div class="container">
-            <h2 class="section-title">Stack Technique</h2>
-            
-            <div style="text-align: center; max-width: 800px; margin: 0 auto;">
-                <p style="color: var(--text-secondary); margin-bottom: 2rem;">Un aperçu des technologies et outils que j'utilise au quotidien pour concevoir, maintenir et sécuriser des systèmes d'information.</p>
-                
-                <div class="skills-container">
-                    <div class="skill-tag"><i class="fab fa-windows"></i> Windows Server / AD</div>
-                    <div class="skill-tag"><i class="fab fa-linux"></i> GNU/Linux (Debian, Ubuntu)</div>
-                    <div class="skill-tag"><i class="fas fa-network-wired"></i> Cisco / VLAN / Routage</div>
-                    <div class="skill-tag"><i class="fas fa-shield-alt"></i> Pare-feu / Cybersécurité</div>
-                    <div class="skill-tag"><i class="fas fa-ticket-alt"></i> GLPI / Ticketing</div>
-                    <div class="skill-tag"><i class="fas fa-database"></i> SQL / Bases de données</div>
-                    <div class="skill-tag"><i class="fas fa-server"></i> Proxmox / Virtualisation</div>
-                    <div class="skill-tag"><i class="fas fa-hdd"></i> Acronis / Sauvegardes</div>
-                    <div class="skill-tag"><i class="fab fa-python"></i> Python / Bash</div>
-                </div>
-            </div>
+  </section>
+
+  
+    <div id="presentation" class="category-header" style="display: flex; justify-content: center; align-items: center; gap: 15px; width: 99%;">
+    <h2 style="color: #0f3c5c; text-shadow: 0 0 15px rgba(0,210,255,0.5); margin-bottom: 5px;">Présentation</h2>
+   </div>
+
+    <section class="projet-card entreprise" style="max-width: 900px; margin: 0 auto 40px auto; text-align: center; display: flex; flex-direction: column; align-items: center; padding: 50px 30px; box-sizing: border-box; border-radius: 20px;">
+
+    <div style="width: 100%; max-width: 800px; margin: 0 auto; line-height: 1.8; text-align: center;">
+        
+        <p style="font-size: 1.1em; color: white; margin-bottom: 25px;">
+            Je m'appelle <strong>Albouy Kévin</strong>. Passionné par l'informatique depuis toujours, j'ai entrepris une <strong>reconversion professionnelle</strong> pour concrétiser mon projet dans le numérique.
+        </p>
+
+        <p style="font-size: 1.05em; color: rgba(255,255,255,0.9); margin-bottom: 25px;">
+            Aujourd'hui technicien qualifié, mon objectif est de mettre mes compétences en administration réseaux et systèmes au service d'une entreprise innovante, tout en continuant à monter en expertise sur la cybersécurité.
+        </p>
+
+    </div>
+
+</section>
+
+<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; margin: 3em 0; padding: 0;">
+    
+    <img src="kevin1.jpg" alt="Albouy Kévin" 
+         style="width: 380px; border-radius:10px; box-shadow:0 4px 15px rgba(0,0,0,0.3); margin: 0; display: block;">
+    
+    <div style="height: 30px;"></div> 
+    
+    <a href="CV-Albouy-Kevin.pdf" class="btn-cv" target="_blank" download 
+       style="display: inline-block; color: #ccd54a; text-decoration: none; font-weight: bold; border: 1px solid #ccd54a; padding: 10px 20px; border-radius: 5px; margin: 0; transition: 0.3s;">
+        <i class="fas fa-file-download"></i> Télécharger mon CV
+    </a>
+    
+</div>
+
+
+    <!-- Section BTS supprimée pour focaliser sur le pro -->
+
+    <div id="competences" class="category-header" style="display: flex; justify-content: center; align-items: center; gap: 15px; width: 99%;">
+        <h2 style="color: #0f3c5c; text-shadow: 0 0 15px rgba(0,210,255,0.5); margin-bottom: 5px;">Compétences Techniques</h2>
+    </div>
+
+    <section class="projet-card" style="max-width: 900px; margin: 0 auto 40px auto; display: flex; flex-direction: column; padding: 30px; box-sizing: border-box; border-radius: 20px;">
+        <div style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center;">
+            <span class="tag" style="background: rgba(0,210,255,0.15); padding: 10px 20px; font-size: 1.1em; border-radius: 8px; color: #fff;"><i class="fab fa-windows"></i> Windows Server / AD</span>
+            <span class="tag" style="background: rgba(0,210,255,0.15); padding: 10px 20px; font-size: 1.1em; border-radius: 8px; color: #fff;"><i class="fab fa-linux"></i> GNU/Linux (Debian)</span>
+            <span class="tag" style="background: rgba(0,210,255,0.15); padding: 10px 20px; font-size: 1.1em; border-radius: 8px; color: #fff;"><i class="fas fa-network-wired"></i> Réseaux (Cisco, VLAN)</span>
+            <span class="tag" style="background: rgba(0,210,255,0.15); padding: 10px 20px; font-size: 1.1em; border-radius: 8px; color: #fff;"><i class="fas fa-shield-alt"></i> Cybersécurité</span>
+            <span class="tag" style="background: rgba(0,210,255,0.15); padding: 10px 20px; font-size: 1.1em; border-radius: 8px; color: #fff;"><i class="fas fa-ticket-alt"></i> GLPI / Ticketing</span>
+            <span class="tag" style="background: rgba(0,210,255,0.15); padding: 10px 20px; font-size: 1.1em; border-radius: 8px; color: #fff;"><i class="fas fa-server"></i> Virtualisation (Proxmox)</span>
         </div>
     </section>
 
-    <!-- EXPERIENCE SECTION -->
-    <section id="experience" style="background: rgba(0,0,0,0.2);">
-        <div class="container">
-            <h2 class="section-title">Parcours & Expériences</h2>
-            
-            <div class="timeline">
-                
-                <!-- Experience 1 -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">2026</span>
-                        <h3 class="timeline-title">Diplôme BTS SIO - Option SISR</h3>
-                        <p class="timeline-subtitle">Services Informatiques aux Organisations - Solutions d'Infrastructure, Systèmes et Réseaux</p>
-                        <p class="timeline-text">
-                            Validation d'un cursus technique intensif. Acquisition de solides compétences en administration de serveurs, architecture réseau, cybersécurité et gestion de projets IT.
-                        </p>
-                    </div>
-                </div>
+    <div id="experiences" class="category-header" style="display: flex; justify-content: center; align-items: center; gap: 15px; width: 99%;">
+    <h2 style="color: #0f3c5c; text-shadow: 0 0 15px rgba(0,210,255,0.5); margin-bottom: 5px;">Expériences Professionnelles</h2>
+</div>
 
-                <!-- Experience 2 -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">2025</span>
-                        <h3 class="timeline-title">Stage : Technicien Support et Infrastructure</h3>
-                        <p class="timeline-subtitle">Mairie de La Grande Motte</p>
-                        <p class="timeline-text">
-                            - Déploiement et configuration d'une solution GLPI pour la gestion du parc informatique et du ticketing.<br>
-                            - Audit de sécurité et refonte de l'infrastructure réseau locale.<br>
-                            - Support utilisateur N1/N2 et rédaction de documentations techniques.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Experience 3 -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">2024 - 2026</span>
-                        <h3 class="timeline-title">Projets d'Infrastructure Indépendants</h3>
-                        <p class="timeline-subtitle">Réalisations techniques (Laboratoires)</p>
-                        <p class="timeline-text">
-                            Mise en place de maquettes réseaux complexes (Packet Tracer, GNS3). Création de domaines Active Directory avec stratégies de groupe (GPO) avancées. Automatisation de sauvegardes via Acronis et scripts Bash.
-                        </p>
-                    </div>
-                </div>
-                
-                <!-- Experience 4 -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">Avant 2024</span>
-                        <h3 class="timeline-title">Reconversion Professionnelle & DAEU</h3>
-                        <p class="timeline-subtitle">Fondations techniques et scientifiques</p>
-                        <p class="timeline-text">
-                            Reprise d'études réussie démontrant une forte capacité d'adaptation, d'autonomie et une motivation sans faille pour le domaine de l'informatique.
-                        </p>
-                    </div>
-                </div>
-
+    <div class="projet-container">
+        <section class="projet-card entreprise">
+            <div class="projet-header">
+                <h3>Technicien informatique (Stage)</h3>
+                <span class="badge-lieu">Mairie du Grau du Roi</span>
             </div>
+            <div class="projet-content">
+                <p>Missions techniques au sein du service informatique de la ville. Participation à la maintenance et à l'évolution de l'infrastructure.</p>
+                <div class="skill-tags">
+                    <span class="tag">Juin 2025</span>
+                    <span class="tag">Janvier 2026</span>
+                </div>
+               
+            </div>
+        </section>
+
+        <section class="projet-card entreprise">
+            <div class="projet-header">
+                <h3>Data Analyst / Data Entry Clerk (Stage)</h3>
+                <span class="badge-lieu">DataPulse Suez Nîmes</span>
+            </div>
+            <div class="projet-content">
+                <p>Analyse de données et gestion des flux d'informations au sein du centre DataPulse.</p>
+                <div class="skill-tags">
+                    <span class="tag">Février / Mars 2026</span>
+                </div>
+                
+            </div>
+        </section>
+    </div>
+
+       <div id="formations" class="category-header" style="display: flex; justify-content: center; align-items: center; gap: 15px; width: 99%;">
+    <h2 style="color: #0f3c5c; text-shadow: 0 0 15px rgba(0,210,255,0.5); margin-bottom: 5px;">Formations</h2>
+</div>
+
+    <div class="projet-container">
+        <section class="projet-card ecole">
+            <div class="projet-header">
+                <h3>Projet pour l'avenir - Bachelor</h3>
+                <span class="badge-lieu">Bac +3</span>
+            </div>
+            <div class="projet-content">
+                <p style="text-align: left;">Poursuite d'études envisagée pour approfondir mes compétences en ingénierie système et réseau.</p>
+                <div class="skill-tags">
+                    <span class="tag">2026 - 2027</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="projet-card ecole">
+            <div class="projet-header">
+                <h3>BTS SIO SISR (2ème Année)</h3>
+                <span class="badge-lieu">MydigitalSchool</span>
+            </div>
+            <div class="projet-content" style="display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                    <p>Formation spécialisée en infrastructure, systèmes et réseaux. MydigitalSchool offre un parcours moderne axé sur les technologies actuelles et les certifications professionnelles.</p>
+                    <div class="skill-tags">
+                        <span class="tag">2025 - 2026</span>
+                    </div>
+                </div>
+                <a href="https://www.mydigitalschool.com/" target="_blank">
+                    <img src="MDSL.jpg" alt="Logo MydigitalSchool" style="height: 60px; border-radius: 5px; background: white; padding: 2px;">
+                </a>
+            </div>
+        </section>
+
+        <section class="projet-card ecole">
+            <div class="projet-header">
+                <h3>BTS SIO SISR (1ère Année)</h3>
+                <span class="badge-lieu">Esicad</span>
+            </div>
+            <div class="projet-content" style="display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                    <p>École fondatrice de ma formation BTS, Esicad m'a permis d'acquérir les bases solides en informatique de gestion et réseaux, essentielles à ma progression.</p>
+                    <div class="skill-tags">
+                        <span class="tag">2024 - 2025</span>
+                    </div>
+                </div>
+                <a href="https://www.esicad.com/" target="_blank">
+                    <img src="esicad.png" alt="Logo Esicad" style="height: 60px; border-radius: 5px; background: white; padding: 2px;">
+                </a>
+            </div>
+        </section>
+
+        <section class="projet-card ecole">
+            <div class="projet-header">
+                <h3>DAEU B (Scientifique)</h3>
+                <span class="badge-lieu">IUT Montpellier</span>
+            </div>
+            <div class="projet-content" style="display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                    <p>Point de départ de ma reconversion, le DAEU m'a offert les fondations scientifiques nécessaires pour accéder au BTS SIO et concrétiser mon projet professionnel.</p>
+                    <div class="skill-tags">
+                        <span class="tag">2023 - 2024</span>
+                    </div>
+                </div>
+                <a href="https://iut-montpellier-sete.edu.umontpellier.fr/" target="_blank">
+                    <img src="iut.jpg" alt="Logo IUT" style="height: 60px; border-radius: 5px; background: white; padding: 2px;">
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <div id="contact" class="category-header" style="display: flex; justify-content: center; align-items: center; gap: 15px; width: 99%; margin-top: 20px;">
+        <h2 style="color: #0f3c5c; text-shadow: 0 0 15px rgba(0,210,255,0.5); margin-bottom: 5px;">Me Contacter</h2>
+    </div>
+
+    <section class="projet-card" style="max-width: 600px; margin: 0 auto 40px auto; text-align: center; padding: 30px; box-sizing: border-box; border-radius: 20px;">
+        <p style="color: rgba(255,255,255,0.9); margin-bottom: 30px; font-size: 1.1em;">
+            Vous êtes à la recherche d'un profil motivé et compétent ? N'hésitez pas à me contacter !
+        </p>
+        <div style="display: flex; flex-direction: column; gap: 20px; align-items: center;">
+            <a href="mailto:votre-email@gmail.com" class="btn-cv" style="width: 100%; color: #fff; text-decoration: none; border: 1px solid #00d2ff; padding: 15px; border-radius: 10px; background: rgba(0,210,255,0.1); transition: 0.3s; font-size: 1.2em;">
+                <i class="fas fa-envelope"></i> Me contacter par Email
+            </a>
+            <a href="https://www.linkedin.com/in/kevin-albouy" target="_blank" class="btn-cv" style="width: 100%; color: #fff; text-decoration: none; border: 1px solid #0077b5; padding: 15px; border-radius: 10px; background: rgba(0,119,181,0.2); transition: 0.3s; font-size: 1.2em;">
+                <i class="fab fa-linkedin"></i> Profil LinkedIn
+            </a>
         </div>
     </section>
 
-    <!-- CONTACT SECTION -->
-    <section id="contact">
-        <div class="container">
-            <h2 class="section-title">Prêt à collaborer ?</h2>
-            
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Discutons de vos besoins IT</h3>
-                    <p>Vous recherchez un profil motivé, rigoureux et opérationnel pour renforcer votre équipe technique ? Je suis disponible immédiatement pour échanger sur vos projets.</p>
-                    
-                    <div class="contact-cards">
-                        <div class="contact-card">
-                            <div class="contact-icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div class="contact-details">
-                                <h4>Email</h4>
-                                <span>albouy.kevin@example.com</span> <!-- Remplacer par la vraie adresse -->
-                            </div>
-                        </div>
-                        
-                        <a href="https://www.linkedin.com/in/kevin-albouy" target="_blank" class="contact-card">
-                            <div class="contact-icon">
-                                <i class="fab fa-linkedin-in"></i>
-                            </div>
-                            <div class="contact-details">
-                                <h4>LinkedIn</h4>
-                                <span>linkedin.com/in/kevin-albouy</span>
-                            </div>
-                        </a>
+</main>
 
-                        <div class="contact-card">
-                            <div class="contact-icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div class="contact-details">
-                                <h4>Localisation</h4>
-                                <span>Région Occitanie (Montpellier et alentours)</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="contact-form-container">
-                    <form class="contact-form" onsubmit="event.preventDefault(); alert('Ce formulaire est une démonstration. Veuillez me contacter par email ou LinkedIn.');">
-                        <div class="form-group">
-                            <label for="name">Nom / Entreprise</label>
-                            <input type="text" id="name" class="form-control" placeholder="Votre nom" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" class="form-control" placeholder="votre@email.com" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" class="form-control" placeholder="Comment puis-je vous aider ?" required></textarea>
-                        </div>
-                        
-                        <button type="submit" class="btn btn-primary" style="width: 100%;">Envoyer le message</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
+<footer style="position: fixed; left: 0; bottom: 0; width: 100%; background: #b3ced6; text-align: center; padding: 0.4em 0; font-size: 0.95em; z-index: 100;">
+    <p style="margin: 0;">© 2026 Portfolio de Albouy Kévin. Tous droits réservés.</p>
+</footer>
 
-    <!-- FOOTER -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 Kévin Albouy. Tous droits réservés.</p>
-            <div style="margin-top: 10px; font-size: 0.85em; color: var(--text-secondary);">
-                Construit avec passion pour l'infrastructure IT.
-            </div>
-        </div>
-    </footer>
 
-    <!-- BACK TO TOP BUTTON -->
-    <button id="backToTop" title="Retour en haut">
-        <i class="fas fa-arrow-up"></i>
-    </button>
 
-    <!-- Scripts -->
-    <script src="nav.js"></script>
+<script src="nav.js"></script>
 </body>
 </html>

@@ -1,86 +1,81 @@
-document.addEventListener('DOMContentLoaded', () => {
-    
-    // --- Mobile Navigation Toggle ---
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
-    const navItems = document.querySelectorAll('.nav-item');
+// =================== MOBILE NAVIGATION ===================
+document.addEventListener('DOMContentLoaded', function() {
+    var hamburger = document.querySelector('.hamburger');
+    var navContainer = document.querySelector('.nav-container');
 
-    if (hamburger) {
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('open');
-            // Toggle hamburger icon between bars and times
-            const icon = hamburger.querySelector('i');
-            if (navLinks.classList.contains('open')) {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times');
-            } else {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            }
-        });
-    }
+    if (!hamburger || !navContainer) return;
 
-    // Close mobile menu when a link is clicked
-    navItems.forEach(item => {
-        item.addEventListener('click', () => {
-            if (navLinks.classList.contains('open')) {
-                navLinks.classList.remove('open');
-                const icon = hamburger.querySelector('i');
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
+    // Toggle menu open/close
+    hamburger.addEventListener('click', function() {
+        navContainer.classList.toggle('open');
+        this.textContent = navContainer.classList.contains('open') ? '✕' : '☰';
+    });
+
+    // Mobile dropdown toggle (click instead of hover)
+    document.querySelectorAll('.dropdown > a').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                var parent = this.parentElement;
+                // Close other open dropdowns
+                document.querySelectorAll('.dropdown').forEach(function(d) {
+                    if (d !== parent) d.classList.remove('active');
+                });
+                parent.classList.toggle('active');
             }
         });
     });
 
-
-    // --- Scroll Active State Highlighting ---
-    const sections = document.querySelectorAll('section');
-    
-    window.addEventListener('scroll', () => {
-        let current = '';
-        const scrollY = window.pageYOffset;
-
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-            
-            // Adjust the offset value (e.g., 100) based on your fixed navbar height
-            if (scrollY >= (sectionTop - 150)) {
-                current = section.getAttribute('id');
-            }
-        });
-
-        // Add special case for hero section when at the very top
-        if (scrollY < 100) {
-            current = 'hero';
-        }
-
-        navItems.forEach(item => {
-            item.classList.remove('active');
-            if (item.getAttribute('href') === `#${current}`) {
-                item.classList.add('active');
-            }
-        });
-    });
-
-
-    // --- Back to Top Button ---
-    const backToTopButton = document.getElementById('backToTop');
-
-    if (backToTopButton) {
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                backToTopButton.style.display = 'block';
-            } else {
-                backToTopButton.style.display = 'none';
-            }
-        });
-
-        backToTopButton.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
+    // Close menu when clicking a sub-link
+    document.querySelectorAll('.dropdown-content a').forEach(function(a) {
+        a.addEventListener('click', function() {
+            navContainer.classList.remove('open');
+            hamburger.textContent = '☰';
+            document.querySelectorAll('.dropdown').forEach(function(d) {
+                d.classList.remove('active');
             });
         });
-    }
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function(e) {
+        if (window.innerWidth <= 768 && !e.target.closest('header')) {
+            navContainer.classList.remove('open');
+            hamburger.textContent = '☰';
+            document.querySelectorAll('.dropdown').forEach(function(d) {
+                d.classList.remove('active');
+            });
+        }
+    });
+
+    // =================== ACTIVE PAGE INDICATOR ===================
+    var currentPath = window.location.pathname.split("/").pop();
+    if (currentPath === "") currentPath = "index.html"; // Default to index
+    
+    document.querySelectorAll('.headerButton').forEach(function(link) {
+        // Strip # anchors to compare just the filename
+        var linkPath = link.getAttribute('href').split("#")[0]; 
+        if (linkPath === currentPath) {
+            link.classList.add('active-nav');
+        }
+    });
+
+    // =================== BACK TO TOP BUTTON ===================
+    var backToTopBtn = document.createElement("button");
+    backToTopBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
+    backToTopBtn.id = "backToTop";
+    backToTopBtn.title = "Retour en haut";
+    document.body.appendChild(backToTopBtn);
+
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+            backToTopBtn.style.display = "block";
+        } else {
+            backToTopBtn.style.display = "none";
+        }
+    });
+
+    backToTopBtn.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
 });
