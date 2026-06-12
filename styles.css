@@ -11,8 +11,8 @@ html,
 body {
     min-height: 100vh;
     scroll-behavior: smooth;
-    /* RESTAURATION DU FOND D'ORIGINE */
-    background: linear-gradient(135deg, rgba(76, 120, 126, 0.9), rgba(17, 55, 62, 0.842)), url("fond.jpg");
+    /* NOUVEAU FOND SOMBRE PREMIUM (Slate/Indigo) */
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(9, 14, 23, 0.98)), url("fond.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -60,14 +60,20 @@ body {
 }
 
 .projet-card {
-    background: rgba(69, 111, 119, 0.842);
-    /* Couleur Vert/Bleu d'origine */
+    background: rgba(30, 41, 59, 0.75);
+    /* Couleur moderne Slate Glassmorphism */
     border-radius: 15px;
     padding: 25px;
     margin-bottom: 30px;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgb(0, 200, 255);
-    transition: transform 0.3s;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.projet-card:hover {
+    transform: scale(1.01);
+    border-color: rgba(0, 210, 255, 0.4);
 }
 
 
